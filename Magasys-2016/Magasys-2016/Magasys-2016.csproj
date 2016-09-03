@@ -57,6 +57,79 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Site_Administrator\Administrator.Master" />
+    <Content Include="Site_Administrator\images\icons\loading.gif" />
+    <Content Include="Site_Administrator\index.aspx" />
+    <Content Include="Site_Administrator\script\animation.js" />
+    <Content Include="Site_Administrator\script\bootstrap-hover-dropdown.js" />
+    <Content Include="Site_Administrator\script\bootstrap.min.js" />
+    <Content Include="Site_Administrator\script\charts-chartjs.js" />
+    <Content Include="Site_Administrator\script\charts-flotchart.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-area.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-column-bar.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-combinations.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-dynamic.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-line.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-more.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-pie.js" />
+    <Content Include="Site_Administrator\script\charts-highchart-scatter-bubble.js" />
+    <Content Include="Site_Administrator\script\custom.min.js" />
+    <Content Include="Site_Administrator\script\data.js" />
+    <Content Include="Site_Administrator\script\drilldown.js" />
+    <Content Include="Site_Administrator\script\exporting.js" />
+    <Content Include="Site_Administrator\script\funnel.js" />
+    <Content Include="Site_Administrator\script\highchart.js" />
+    <Content Include="Site_Administrator\script\highcharts-more.js" />
+    <Content Include="Site_Administrator\script\highcharts.js" />
+    <Content Include="Site_Administrator\script\holder.js" />
+    <Content Include="Site_Administrator\script\html5shiv.js" />
+    <Content Include="Site_Administrator\script\icheck.min.js" />
+    <Content Include="Site_Administrator\script\index.js" />
+    <Content Include="Site_Administrator\script\jplist.js" />
+    <Content Include="Site_Administrator\script\jplist.min.js" />
+    <Content Include="Site_Administrator\script\jquery-1.10.2.min.js" />
+    <Content Include="Site_Administrator\script\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Site_Administrator\script\jquery-ui.js" />
+    <Content Include="Site_Administrator\script\jquery.cookie.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.categories.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.fillbetween.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.pie.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.resize.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.spline.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.stack.js" />
+    <Content Include="Site_Administrator\script\jquery.flot.tooltip.js" />
+    <Content Include="Site_Administrator\script\jquery.menu.js" />
+    <Content Include="Site_Administrator\script\jquery.metisMenu.js" />
+    <Content Include="Site_Administrator\script\jquery.nestable.js" />
+    <Content Include="Site_Administrator\script\jquery.news-ticker.js" />
+    <Content Include="Site_Administrator\script\jquery.slimscroll.js" />
+    <Content Include="Site_Administrator\script\main.js" />
+    <Content Include="Site_Administrator\script\mobiscroll-1.5.js" />
+    <Content Include="Site_Administrator\script\mobiscroll-1.5.min.js" />
+    <Content Include="Site_Administrator\script\modernizr.min.js" />
+    <Content Include="Site_Administrator\script\pace.min.js" />
+    <Content Include="Site_Administrator\script\respond.min.js" />
+    <Content Include="Site_Administrator\script\responsive-tabs.js" />
+    <Content Include="Site_Administrator\script\ui-nestable-list.js" />
+    <Content Include="Site_Administrator\script\zabuto_calendar.min.js" />
+    <Content Include="Site_Administrator\styles\all.css" />
+    <Content Include="Site_Administrator\styles\animate.css" />
+    <Content Include="Site_Administrator\styles\bootstrap.min.css" />
+    <Content Include="Site_Administrator\styles\font-awesome.min.css" />
+    <Content Include="Site_Administrator\styles\introjs.css" />
+    <Content Include="Site_Administrator\styles\jplist-custom.css" />
+    <Content Include="Site_Administrator\styles\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Site_Administrator\styles\jquery.news-ticker.css" />
+    <Content Include="Site_Administrator\styles\main.css" />
+    <Content Include="Site_Administrator\styles\mobiscroll-1.5.css" />
+    <Content Include="Site_Administrator\styles\mobiscroll-1.5.min.css" />
+    <Content Include="Site_Administrator\styles\nestable.css" />
+    <Content Include="Site_Administrator\styles\pace.css" />
+    <Content Include="Site_Administrator\styles\style-responsive.css" />
+    <Content Include="Site_Administrator\styles\zabuto_calendar.min.css" />
+    <Content Include="Site_Administrator\UserControls\MenuPrincipal.ascx" />
+    <Content Include="Site_Customers\Customer.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -69,11 +142,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site_Administrator\Administrator.Master.cs">
+      <DependentUpon>Administrator.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Administrator.Master.designer.cs">
+      <DependentUpon>Administrator.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\UserControls\MenuPrincipal.ascx.cs">
+      <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\UserControls\MenuPrincipal.ascx.designer.cs">
+      <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Customers\Customer.Master.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Customers\Customer.Master.designer.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Site_Administrator\" />
-    <Folder Include="Site_Customers\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
