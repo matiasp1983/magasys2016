@@ -60,6 +60,7 @@
     <Content Include="Site_Administrator\Administrator.Master" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.svg" />
     <Content Include="Site_Administrator\images\icons\loading.gif" />
+    <Content Include="Site_Administrator\Index.aspx" />
     <Content Include="Site_Administrator\script\animation.js" />
     <Content Include="Site_Administrator\script\bootstrap-hover-dropdown.js" />
     <Content Include="Site_Administrator\script\bootstrap.min.js" />
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="Site_Administrator\Administrator.Master.designer.cs">
       <DependentUpon>Administrator.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site_Administrator\UserControls\MenuPrincipal.ascx.cs">
       <DependentUpon>MenuPrincipal.ascx</DependentUpon>
