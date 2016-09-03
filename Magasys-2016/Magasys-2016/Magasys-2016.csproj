@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site_Administrator\Administrator.Master" />
+    <Content Include="Site_Administrator\fonts\fontawesome-webfont.svg" />
     <Content Include="Site_Administrator\images\icons\loading.gif" />
     <Content Include="Site_Administrator\index.aspx" />
     <Content Include="Site_Administrator\script\animation.js" />
@@ -130,6 +131,10 @@
     <Content Include="Site_Administrator\styles\zabuto_calendar.min.css" />
     <Content Include="Site_Administrator\UserControls\MenuPrincipal.ascx" />
     <Content Include="Site_Customers\Customer.Master" />
+    <Content Include="Site_Administrator\fonts\fontawesome-webfont.eot" />
+    <Content Include="Site_Administrator\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Site_Administrator\fonts\fontawesome-webfont.woff" />
+    <Content Include="Site_Administrator\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
