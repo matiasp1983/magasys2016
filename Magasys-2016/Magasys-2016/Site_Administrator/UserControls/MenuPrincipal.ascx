@@ -10,7 +10,7 @@
                 <div class="icon-bg bg-pink"></div>
             </i><span class="menu-title">Clientes</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" style="height: 0px;">
-                    <li><a href="layout-left-sidebar.html"><i class="fa fa-align-left"></i><span class="submenu-title">Left Sidebar</span></a></li>
+                    <li><a href="/Site_Administrator/Cliente.aspx"><i class="fa fa-align-left"></i><span class="submenu-title">Registrar Cliente</span></a></li>
                     <li><a href="layout-left-sidebar-collapsed.html"><i class="fa fa-angle-double-left"></i><span class="submenu-title">Left Sidebar Collapsed</span></a></li>
                     <li><a href="layout-right-sidebar.html"><i class="fa fa-align-right"></i><span class="submenu-title">Right Sidebar</span></a></li>
                 </ul>

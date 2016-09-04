@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site_Administrator\Administrator.Master" />
+    <Content Include="Site_Administrator\Cliente.aspx" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.svg" />
     <Content Include="Site_Administrator\images\avatar\128.jpg" />
     <Content Include="Site_Administrator\images\avatar\48.jpg" />
@@ -332,6 +333,13 @@
     </Compile>
     <Compile Include="Site_Administrator\Administrator.Master.designer.cs">
       <DependentUpon>Administrator.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Cliente.aspx.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Cliente.aspx.designer.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site_Administrator\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
