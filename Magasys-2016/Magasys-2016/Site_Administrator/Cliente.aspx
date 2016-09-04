@@ -6,7 +6,7 @@
     <div class="panel panel-yellow">
         <div class="panel-heading">Form 2 Columns Horizontal</div>
         <div class="panel-body pan">
-            <form action="#" class="form-horizontal">
+            <form class="form-horizontal" runat="server">
                 <div class="form-body pal">
                     <h3>Personal</h3>
 
