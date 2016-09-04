@@ -72,7 +72,7 @@
             <!--END TOPBAR-->
             <div id="wrapper">
                 <!--BEGIN SIDEBAR MENU-->
-                <uc1:MenuPrincipal runat="server" id="MenuPrincipal" />
+                <uc1:MenuPrincipal runat="server" ID="MenuPrincipal" />
                 <!--END SIDEBAR MENU-->
                 <!--BEGIN CHAT FORM-->
                 <div id="chat-form" class="fixed">
@@ -155,9 +155,7 @@
                     <!--BEGIN CONTENT-->
                     <div class="page-content">
                         <div id="tab-general">
-                            <form id="form1" runat="server">
-                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
-                            </form>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
                         </div>
                     </div>
                     <!--END CONTENT-->
