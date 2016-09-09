@@ -59,7 +59,11 @@
   <ItemGroup>
     <Content Include="Site_Administrator\Administrator.Master" />
     <Content Include="Site_Administrator\Cliente.aspx" />
+    <Content Include="Site_Administrator\Cobro.aspx" />
+    <Content Include="Site_Administrator\Deposito.aspx" />
+    <Content Include="Site_Administrator\Entrega.aspx" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.svg" />
+    <Content Include="Site_Administrator\Genero.aspx" />
     <Content Include="Site_Administrator\images\avatar\128.jpg" />
     <Content Include="Site_Administrator\images\avatar\48.jpg" />
     <Content Include="Site_Administrator\images\avatar\profile-pic.png" />
@@ -129,6 +133,16 @@
     <Content Include="Site_Administrator\images\thumbs\winter-sun.jpg" />
     <Content Include="Site_Administrator\images\thumbs\woodstump.jpg" />
     <Content Include="Site_Administrator\Index.aspx" />
+    <Content Include="Site_Administrator\ListadoCliente.aspx" />
+    <Content Include="Site_Administrator\ListadoCobro.aspx" />
+    <Content Include="Site_Administrator\ListadoDeposito.aspx" />
+    <Content Include="Site_Administrator\ListadoGenero.aspx" />
+    <Content Include="Site_Administrator\ListadoProducto.aspx" />
+    <Content Include="Site_Administrator\ListadoReserva.aspx" />
+    <Content Include="Site_Administrator\ListadoVenta.aspx" />
+    <Content Include="Site_Administrator\Producto.aspx" />
+    <Content Include="Site_Administrator\Proveedor.aspx" />
+    <Content Include="Site_Administrator\Reserva.aspx" />
     <Content Include="Site_Administrator\script\animation.js" />
     <Content Include="Site_Administrator\script\bootstrap-hover-dropdown.js" />
     <Content Include="Site_Administrator\script\bootstrap.min.js" />
@@ -310,6 +324,7 @@
     <Content Include="Site_Administrator\styles\style-responsive.css" />
     <Content Include="Site_Administrator\styles\zabuto_calendar.min.css" />
     <Content Include="Site_Administrator\UserControls\MenuPrincipal.ascx" />
+    <Content Include="Site_Administrator\Venta.aspx" />
     <Content Include="Site_Customers\Customer.Master" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.eot" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.ttf" />
@@ -341,6 +356,34 @@
     <Compile Include="Site_Administrator\Cliente.aspx.designer.cs">
       <DependentUpon>Cliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site_Administrator\Cobro.aspx.cs">
+      <DependentUpon>Cobro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Cobro.aspx.designer.cs">
+      <DependentUpon>Cobro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Deposito.aspx.cs">
+      <DependentUpon>Deposito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Deposito.aspx.designer.cs">
+      <DependentUpon>Deposito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Entrega.aspx.cs">
+      <DependentUpon>Entrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Entrega.aspx.designer.cs">
+      <DependentUpon>Entrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Genero.aspx.cs">
+      <DependentUpon>Genero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Genero.aspx.designer.cs">
+      <DependentUpon>Genero.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site_Administrator\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -348,12 +391,89 @@
     <Compile Include="Site_Administrator\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site_Administrator\ListadoCliente.aspx.cs">
+      <DependentUpon>ListadoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoCliente.aspx.designer.cs">
+      <DependentUpon>ListadoCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoCobro.aspx.cs">
+      <DependentUpon>ListadoCobro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoCobro.aspx.designer.cs">
+      <DependentUpon>ListadoCobro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoDeposito.aspx.cs">
+      <DependentUpon>ListadoDeposito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoDeposito.aspx.designer.cs">
+      <DependentUpon>ListadoDeposito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoGenero.aspx.cs">
+      <DependentUpon>ListadoGenero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoGenero.aspx.designer.cs">
+      <DependentUpon>ListadoGenero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoProducto.aspx.cs">
+      <DependentUpon>ListadoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoProducto.aspx.designer.cs">
+      <DependentUpon>ListadoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoReserva.aspx.cs">
+      <DependentUpon>ListadoReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoReserva.aspx.designer.cs">
+      <DependentUpon>ListadoReserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoVenta.aspx.cs">
+      <DependentUpon>ListadoVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoVenta.aspx.designer.cs">
+      <DependentUpon>ListadoVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Producto.aspx.cs">
+      <DependentUpon>Producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Producto.aspx.designer.cs">
+      <DependentUpon>Producto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Proveedor.aspx.cs">
+      <DependentUpon>Proveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Proveedor.aspx.designer.cs">
+      <DependentUpon>Proveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Reserva.aspx.cs">
+      <DependentUpon>Reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Reserva.aspx.designer.cs">
+      <DependentUpon>Reserva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site_Administrator\UserControls\MenuPrincipal.ascx.cs">
       <DependentUpon>MenuPrincipal.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site_Administrator\UserControls\MenuPrincipal.ascx.designer.cs">
       <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\Venta.aspx.cs">
+      <DependentUpon>Venta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Venta.aspx.designer.cs">
+      <DependentUpon>Venta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site_Customers\Customer.Master.cs">
       <DependentUpon>Customer.Master</DependentUpon>

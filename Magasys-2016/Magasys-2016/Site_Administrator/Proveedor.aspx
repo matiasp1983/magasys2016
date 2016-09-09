@@ -1,23 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site_Administrator/Administrator.Master" AutoEventWireup="true" CodeBehind="Cliente.aspx.cs" Inherits="Magasys_2016.Site_Administrator.Cliente" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site_Administrator/Administrator.Master" AutoEventWireup="true" CodeBehind="Proveedor.aspx.cs" Inherits="Magasys_2016.Site_Administrator.Proveedor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="panel panel-pink">
-        <div class="panel-heading">Registrar Cliente</div>
+<div class="panel panel-pink">
+        <div class="panel-heading">Registrar Proveedor</div>
         <div class="panel-body pan">
             <form class="form-horizontal" runat="server">
                 <div class="form-body pal">
-                    <h3> Cliente</h3>
+                    <h3> Proveedor</h3>
                    
                     <div class="row">
                         <!--fila para la caja sin modificacion-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputNumCliene" class="col-md-3 control-label">Numero <span class="require"></span></label>
+                                <label for="inputNumProveedor" class="col-md-3 control-label">Numero <span class="require"></span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputNumCliene" type="text" placeholder="-------" disabled="disabled" class="form-control"/></div>
+                                    <input id="inputNumProveedor" type="text" placeholder="-------" disabled="disabled" class="form-control"/></div>
                             </div>
                         </div>
                     </div>
@@ -48,18 +47,18 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputNombre" class="col-md-3 control-label">Nombre <span class="require">*</span></label>
+                                <label for="inputFirstName" class="col-md-3 control-label">Nombre <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputNombre" type="text" placeholder="Nombre " class="form-control"></div>
+                                    <input id="inputFirstName" type="text" placeholder="Nombre " class="form-control"></div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputApellido" class="col-md-3 control-label">Apellido <span class="require">*</span></label>
+                                <label for="inputLastName" class="col-md-3 control-label">Apellido <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputApellido" type="text" placeholder="Apellido" class="form-control"></div>
+                                    <input id="inputLastName" type="text" placeholder="Apellido" class="form-control"></div>
                             </div>
                         </div>
                     </div>
