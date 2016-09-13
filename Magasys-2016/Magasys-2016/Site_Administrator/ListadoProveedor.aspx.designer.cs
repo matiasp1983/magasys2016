@@ -10,6 +10,6 @@
 namespace Magasys_2016.Site_Administrator {
     
     
-    public partial class ListadoProducto {
+    public partial class ListadoProveedor {
     }
 }

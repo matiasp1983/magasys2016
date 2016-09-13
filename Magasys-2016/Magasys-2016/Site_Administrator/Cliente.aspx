@@ -107,12 +107,23 @@
                                     <input id="inputBirthday" type="text" placeholder="dd/mm/yyyy" class="form-control"></div>
                             </div>
                         </div>
+                        
+                    </div>
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputPhone" class="col-md-3 control-label">Telefono<span class="require">*</span></label>
+                                <label for="inputCelular" class="col-md-3 control-label">Telefono Celular<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputPhone" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputCelular" type="text" placeholder="" class="form-control"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputFijo" class="col-md-3 control-label">Telefono Fijo<span class="require">*</span></label>
+
+                                <div class="col-md-9">
+                                    <input id="inputFijo" type="text" placeholder="" class="form-control"></div>
                             </div>
                         </div>
                     </div>

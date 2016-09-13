@@ -13,44 +13,47 @@
                         <!--fila para la caja sin modificacion-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputNumProveedor" class="col-md-3 control-label">Numero <span class="require"></span></label>
+                                <label for="inputNumProveedor" class="col-md-3 control-label">Numero  <span class="require"></span></label>
 
                                 <div class="col-md-9">
                                     <input id="inputNumProveedor" type="text" placeholder="-------" disabled="disabled" class="form-control"/></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="selTipo" class="col-md-3 control-label">Tipo DNI <span class="require">*</span></label>
+                                <label for="inputFechaAlta" class="col-md-3 control-label">Fecha Alta  <span class="require"></span></label>
 
                                 <div class="col-md-9">
-                                    <select id="selTIPO" class="form-control">
-                                        <option value="">DNI</option>
-                                        <option value="">CE</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="inputDNI" class="col-md-3 control-label">Numero DNI <span class="require">*</span></label>
-
-                                <div class="col-md-9">
-                                    <div class="input-icon"><i class="fa fa-envelope"></i>
-                                        <input type="text" placeholder="Numero DNI" class="form-control"/></div>
-                                </div>
+                                    <input id="inputFechaAlta" type="text" placeholder="" disabled="disabled" class="form-control"/></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputFirstName" class="col-md-3 control-label">Nombre <span class="require">*</span></label>
+                                <label for="inputCUIT" class="col-md-3 control-label">Numero de CUIT <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputFirstName" type="text" placeholder="Nombre " class="form-control"></div>
+                                    <input id="inputCUIT" type="text" placeholder=" " class="form-control"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputRazon" class="col-md-3 control-label">Razón Social <span class="require">*</span></label>
+
+                                <div class="col-md-9">
+                                    <input id="inputRazon" type="text" placeholder=" " class="form-control"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputNombreR" class="col-md-3 control-label">Nombre del Responsable <span class="require">*</span></label>
+
+                                <div class="col-md-9">
+                                    <input id="inputNombreR" type="text" placeholder="" class="form-control"></div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -58,18 +61,25 @@
                                 <label for="inputLastName" class="col-md-3 control-label">Apellido <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputLastName" type="text" placeholder="Apellido" class="form-control"></div>
+                                    <input id="inputLastName" type="text" placeholder="" class="form-control"></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <!--fila para la caja sin modificacion-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputAlias" class="col-md-3 control-label">Alias<span class="require">*</span></label>
+                                <label for="inputCelular" class="col-md-3 control-label">Telefono Celular<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputAlias" type="text" placeholder="Alias" class="form-control"/></div>
+                                    <input id="inputCelular" type="text" placeholder="" class="form-control"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputFijo" class="col-md-3 control-label">Telefono Fijo<span class="require">*</span></label>
+
+                                <div class="col-md-9">
+                                    <input id="inputFijo" type="text" placeholder="" class="form-control"></div>
                             </div>
                         </div>
                     </div>
@@ -80,41 +90,12 @@
 
                                 <div class="col-md-9">
                                     <div class="input-icon"><i class="fa fa-envelope"></i>
-                                        <input type="text" placeholder="Email" class="form-control"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="selSexo" class="col-md-3 control-label">Sexo <span class="require">*</span></label>
-
-                                <div class="col-md-9">
-                                    <select id="selSexo" class="form-control">
-                                        <option value="">Masculino</option>
-                                        <option value="">Femenino</option>
-                                    </select>
+                                        <input type="text" placeholder="" class="form-control"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="inputBirthday" class="col-md-3 control-label">Fecha de Nacimiento<span class="require">*</span></label>
-
-                                <div class="col-md-9">
-                                    <input id="inputBirthday" type="text" placeholder="dd/mm/yyyy" class="form-control"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="inputPhone" class="col-md-3 control-label">Telefono<span class="require">*</span></label>
-
-                                <div class="col-md-9">
-                                    <input id="inputPhone" type="text" placeholder="" class="form-control"></div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <h3>Dirección</h3>
 
                     <div class="row">
@@ -153,17 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="inputCodigoPostal" class="col-md-3 control-label">Código Postal<span class="require">*</span></label>
-
-                                <div class="col-md-9">
-                                    <input id="inputCodigoPostal" type="text" placeholder="" class="form-control"></div>
-                            </div>
-                        </div>
-                        
-                    </div>
+                    
                      <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -207,6 +178,14 @@
                                         <option value="">S</option>
                                     </select>
                                 </div>
+                            </div>
+                        </div>
+                    <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputCodigoPostal" class="col-md-3 control-label">Código Postal<span class="require">*</span></label>
+
+                                <div class="col-md-9">
+                                    <input id="inputCodigoPostal" type="text" placeholder="" class="form-control"></div>
                             </div>
                         </div>
                     </div>

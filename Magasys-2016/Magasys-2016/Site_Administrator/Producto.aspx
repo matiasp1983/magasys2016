@@ -32,18 +32,31 @@
                     <hr class="mtxl mbxl">
                     <h3>Ingrese los siguientes Datos</h3>
                     <div class="row">
+                        <!--fila para la caja sin modificacion-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputCodigoProducto" class="col-md-3 control-label">Código del Producto <span class="require"></span></label>
+
+                                <div class="col-md-9">
+                                    <input id="inputCodigoProducto" type="text" placeholder="" disabled="disabled" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="inputNombre" class="col-md-3 control-label">Nombre del Producto: <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputNombre" type="text" placeholder="Nombre " class="form-control">
+                                    <input id="inputNombre" type="text" placeholder=" " class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mbn">
-                                <label for="inputDescripcion" class="col-md-3 control-label">Descripción</label>
+                                <label for="inputDescripcion" class="col-md-3 control-label">Descripción:<span class="require">*</span></label>
 
                                 <div class="col-md-9">
                                     <textarea id="inputDescripcion" rows="3" class="form-control"></textarea>
@@ -51,7 +64,25 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="selDiario" class="col-md-3 control-label">Diario<span class="require">*</span></label>
 
+                                <div class="col-md-9">
+                                    <select id="selDiario" class="form-control">
+                                        <option value="">La Voz</option>
+                                        <option value="">Editor</option>
+                                        <option value="">Dia</option>
+                                        <option value="">--</option>
+                                        <option value="">--</option>
+                                        <option value="">--</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

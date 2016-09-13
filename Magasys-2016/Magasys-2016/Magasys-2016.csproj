@@ -138,6 +138,7 @@
     <Content Include="Site_Administrator\ListadoDeposito.aspx" />
     <Content Include="Site_Administrator\ListadoGenero.aspx" />
     <Content Include="Site_Administrator\ListadoProducto.aspx" />
+    <Content Include="Site_Administrator\ListadoProveedor.aspx" />
     <Content Include="Site_Administrator\ListadoReserva.aspx" />
     <Content Include="Site_Administrator\ListadoVenta.aspx" />
     <Content Include="Site_Administrator\Producto.aspx" />
@@ -425,6 +426,13 @@
     </Compile>
     <Compile Include="Site_Administrator\ListadoProducto.aspx.designer.cs">
       <DependentUpon>ListadoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoProveedor.aspx.cs">
+      <DependentUpon>ListadoProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoProveedor.aspx.designer.cs">
+      <DependentUpon>ListadoProveedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site_Administrator\ListadoReserva.aspx.cs">
       <DependentUpon>ListadoReserva.aspx</DependentUpon>
