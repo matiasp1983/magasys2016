@@ -90,49 +90,6 @@
                 </ul>
             </li>
 
-            <li><a href="#"><i class="fa fa-send-o fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">UI Elements</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse">
-                    <li><a href="ui-generals.html"><i class="fa fa-briefcase"></i><span class="submenu-title">Generals</span></a></li>
-                    <li><a href="ui-panels.html"><i class="fa fa-th-large"></i><span class="submenu-title">Panels</span></a></li>
-                    <li><a href="ui-buttons.html"><i class="fa fa-hand-o-up"></i><span class="submenu-title">Buttons</span></a></li>
-                </ul>
-            </li>
-
-            <li><a href="#"><i class="fa fa-edit fa-fw">
-                <div class="icon-bg bg-violet"></div>
-            </i><span class="menu-title">Forms</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse">
-                    <li><a href="form-layouts.html"><i class="fa fa-columns"></i><span class="submenu-title">Form Layouts</span></a></li>
-                    <li><a href="form-basic.html"><i class="fa fa-file-text-o"></i><span class="submenu-title">Form Basics</span></a></li>
-                    <li><a href="form-components.html"><i class="fa fa-cubes"></i><span class="submenu-title">Form Components</span></a></li>
-                </ul>
-            </li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
-            <li><a href="animations.html"><i class="fa fa-slack fa-fw">
-                <div class="icon-bg bg-green"></div>
-            </i><span class="menu-title">Animations</span></a></li>
         </ul>
     </div>
 </nav>

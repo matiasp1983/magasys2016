@@ -27,7 +27,8 @@
 
                                 <div class="col-md-4">
                                     <div class="input-group datetimepicker-disable-time date">
-                                        <input class="form-control" type="text"><span class="input-group-addon"><i class="fa fa-calendar"></i></span></div>
+                                        <input class="form-control" type="text"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -52,15 +53,18 @@
                                     <label class="radio-inline">
                                         <div style="position: relative;" class="iradio_minimal-grey checked">
                                             <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" id="optionsRadios4" name="optionsRadios" value="option1" checked="checked" type="radio">
-                                            <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                            <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                        </div>
                                         &nbsp;
                                                     Si</label><label class="radio-inline"><div style="position: relative;" class="iradio_minimal-grey">
-                                            <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" id="optionsRadios5" name="optionsRadios" value="option2" type="radio">
-                                            <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
-                                            &nbsp;
+                                                        <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" id="optionsRadios5" name="optionsRadios" value="option2" type="radio">
+                                                        <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                    </div>
+                                                        &nbsp;
                                                     No</label><label class="radio-inline"><div style="position: relative;" class="iradio_minimal-grey disabled">
-                                                <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" id="optionsRadios6" name="optionsRadios" value="option3" disabled="disabled" type="radio">
-                                                <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                                        <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" id="optionsRadios6" name="optionsRadios" value="option3" disabled="disabled" type="radio">
+                                                        <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                    </div>
                                     &nbsp;
                                                    
                                 </div>
@@ -68,7 +72,7 @@
                         </div>
                     </div>
                     <hr class="mtxl mbxl">
-                    <h3>Seleccionar Cliente</h3>
+                    <h3>Buscar Cliente</h3>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -102,13 +106,18 @@
                                 <label for="selTipoProveedor" class="col-md-3 control-label">Proveedor<span class="require">*</span></label>
                                 <div class="col-md-9">
                                     <select id="selTipoProveedor" class="form-control">
-                                        <option value="">la voz</option>
+                                        <option value="">TODOS</option>
                                         <option value="">dia</option>
                                         <option value="">libro</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="row">
+
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="inputNombreProducto" class="col-md-3 control-label">Nombre del Produco <span class="require">*</span></label>
@@ -119,12 +128,9 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-actions text-center pal">
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </div>
-
-
                     <hr class="mtxl mbxl">
 
                     <div class="row">
@@ -139,12 +145,12 @@
                                                         &nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-left"></i></a>&nbsp;<input maxlenght="5" value="1" class="pagination-panel-input form-control input-mini input-inline input-sm text-center" type="text">&nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-right"></i></a>&nbsp;
                                                         of 6 | View
                                                         &nbsp;<select class="form-control input-xsmall input-sm input-inline">
-                                                <option value="20" selected="selected">20</option>
-                                                <option value="50">50</option>
-                                                <option value="100">100</option>
-                                                <option value="150">150</option>
-                                                <option value="-1">All</option>
-                                            </select>&nbsp;
+                                                            <option value="20" selected="selected">20</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                            <option value="150">150</option>
+                                                            <option value="-1">All</option>
+                                                        </select>&nbsp;
                                                         records | Found total 58 records
                                                    
                                         </div>
@@ -169,7 +175,8 @@
                                             <th width="3%">
                                                 <div style="position: relative;" class="icheckbox_minimal-grey">
                                                     <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="checkall" type="checkbox">
-                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                </div>
                                             </th>
                                             <th width="9%">Record #</th>
                                             <th>Apellido</th>
@@ -187,7 +194,8 @@
                                             <td>
                                                 <div style="position: relative;" class="icheckbox_minimal-grey">
                                                     <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" type="checkbox">
-                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                </div>
                                             </td>
                                             <td>1</td>
                                             <td>Henry</td>
@@ -214,7 +222,8 @@
                                             <td>
                                                 <div style="position: relative;" class="icheckbox_minimal-grey">
                                                     <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" type="checkbox">
-                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                </div>
                                             </td>
                                             <td>2</td>
                                             <td>John</td>
@@ -241,7 +250,8 @@
                                             <td>
                                                 <div style="position: relative;" class="icheckbox_minimal-grey">
                                                     <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" type="checkbox">
-                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                </div>
                                             </td>
                                             <td>3</td>
                                             <td>Larry</td>
@@ -268,7 +278,8 @@
                                             <td>
                                                 <div style="position: relative;" class="icheckbox_minimal-grey">
                                                     <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" type="checkbox">
-                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                </div>
                                             </td>
                                             <td>4</td>
                                             <td>Lahm</td>
@@ -295,7 +306,8 @@
                                             <td>
                                                 <div style="position: relative;" class="icheckbox_minimal-grey">
                                                     <input style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" type="checkbox">
-                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
+                                                    <ins style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;" class="iCheck-helper"></ins>
+                                                </div>
                                             </td>
                                             <td>5</td>
                                             <td>Henry</td>
@@ -327,12 +339,12 @@
                                                         &nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-left"></i></a>&nbsp;<input maxlenght="5" value="1" class="pagination-panel-input form-control input-mini input-inline input-sm text-center" type="text">&nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-right"></i></a>&nbsp;
                                                         of 6 | View
                                                         &nbsp;<select class="form-control input-xsmall input-sm input-inline">
-                                                <option value="20" selected="selected">20</option>
-                                                <option value="50">50</option>
-                                                <option value="100">100</option>
-                                                <option value="150">150</option>
-                                                <option value="-1">All</option>
-                                            </select>&nbsp;
+                                                            <option value="20" selected="selected">20</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                            <option value="150">150</option>
+                                                            <option value="-1">All</option>
+                                                        </select>&nbsp;
                                                         records | Found total 58 records
                                                    
                                         </div>
