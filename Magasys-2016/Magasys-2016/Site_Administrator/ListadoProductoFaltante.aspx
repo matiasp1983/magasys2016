@@ -1,47 +1,71 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site_Administrator/Administrator.Master" AutoEventWireup="true" CodeBehind="ListadoProducto.aspx.cs" Inherits="Magasys_2016.Site_Administrator.ListadoProducto" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site_Administrator/Administrator.Master" AutoEventWireup="true" CodeBehind="ListadoProductoFaltante.aspx.cs" Inherits="Magasys_2016.Site_Administrator.ListadoProductoFaltante" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="panel panel-pink">
-        <div class="panel-heading">Listado Productos</div>
+        <div class="panel-heading">Listado de Ventas</div>
         <div class="panel-body pan">
             <form class="form-horizontal" runat="server">
                 <div class="form-body pal">
                     <h3>Buscar por:</h3>
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="selProveedor" class="col-md-3 control-label">Proveedor<span class="require">*</span></label>
+                                <label class="col-md-3 control-label">Fecha Inicial:</label>
+                                <div class="col-md-4">
+                                    <div class="input-group datetimepicker-disable-time date">
+                                        <input class="form-control" type="text"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Fecha Final:</label>
+                                <div class="col-md-4">
+                                    <div class="input-group datetimepicker-disable-time date">
+                                        <input class="form-control" type="text"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="selTipo" class="col-md-3 control-label">Forma de Pago<span class="require">*</span></label>
                                 <div class="col-md-9">
-                                    <select id="selProveedor" class="form-control">
-                                        <option value="">La Voz</option>
-                                        <option value="">Editor</option>
-                                        <option value="">Dia</option>
-                                        <option value="">--</option>
-                                        <option value="">--</option>
-                                        <option value="">--</option>
+                                    <select id="selTIPO" class="form-control">
+                                        <option value="">Contado</option>
+                                        <option value="">Credito</option>
+                                        <option value="">Debito</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputNombreProducto" class="col-md-3 control-label">Nombre del Producto<span class="require">*</span></label>
-
+                                <label for="selTipo" class="col-md-3 control-label">Estado<span class="require">*</span></label>
                                 <div class="col-md-9">
-                                    <input id="inputNombreProducto" type="text" placeholder=" " class="form-control">
+                                    <select id="selTIPO" class="form-control">
+                                        <option value="">Pagado</option>
+                                        <option value="">No Pagado</option>
+                                        <option value="">Entregado</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
+                    <div class="form-actions text-center pal">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </div>
                     <hr class="mtxl mbxl">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h4 class="box-heading">Listado de Productos</h4>
+                            <h4 class="box-heading">Listado de Ventas</h4>
 
                             <div class="table-container">
                                 <div class="row mbm">
@@ -51,13 +75,14 @@
                                                         &nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-left"></i></a>&nbsp;<input maxlenght="5" value="1" class="pagination-panel-input form-control input-mini input-inline input-sm text-center" type="text">&nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-right"></i></a>&nbsp;
                                                         of 6 | View
                                                         &nbsp;<select class="form-control input-xsmall input-sm input-inline">
-                                                            <option value="20" selected="selected">20</option>
-                                                            <option value="50">50</option>
-                                                            <option value="100">100</option>
-                                                            <option value="150">150</option>
-                                                            <option value="-1">All</option>
-                                                        </select>&nbsp;
+                                                <option value="20" selected="selected">20</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                                <option value="150">150</option>
+                                                <option value="-1">All</option>
+                                            </select>&nbsp;
                                                         records | Found total 58 records
+                                                   
                                         </div>
                                     </div>
                                     <div class="col-lg-6 text-right">
@@ -84,11 +109,11 @@
                                                 </div>
                                             </th>
                                             <th width="9%">Record #</th>
-                                            <th>N° Producto</th>
-                                            <th width="10%">Nombre</th>
-                                            <th width="10%">Descripción</th>
-                                            <th width="7%">Tipo Producto</th>
-                                            <th width="12%">Nombre Proveedor</th>
+                                            <th>Codigo de Venta</th>
+                                            <th width="10%">Fecha de Venta</th>
+                                            <th width="10%">---</th>
+                                            <th width="7%">---</th>
+                                            <th width="12%">---</th>
                                             <th width="10%">---</th>
                                             <th width="9%">---</th>
                                             <th width="12%">Acción</th>
@@ -111,19 +136,15 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-success">Approved</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Modificar
-                                                </button>
+                                                
                                                 <button type="button" class="btn btn-danger btn-xs">
                                                     <i class="fa fa-trash-o"></i>&nbsp;
-                                                Borrar
+                                                Anular
                                                 </button>
                                                 <button class="btn btn-xs btn-success filter-submit">
                                                     <i class="fa fa-search"></i>&nbsp;
                                                     Visualizar
                                                 </button>
-
                                             </td>
                                         </tr>
                                         <tr>
@@ -142,9 +163,14 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-info">Pending</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
+                                                 
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -164,9 +190,13 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-warning">Suspended</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
+                                              <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -186,9 +216,14 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-danger">Blocked</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
+                                                
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -208,9 +243,14 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-success">Approved</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
+                                                 
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -223,13 +263,14 @@
                                                         &nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-left"></i></a>&nbsp;<input maxlenght="5" value="1" class="pagination-panel-input form-control input-mini input-inline input-sm text-center" type="text">&nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-right"></i></a>&nbsp;
                                                         of 6 | View
                                                         &nbsp;<select class="form-control input-xsmall input-sm input-inline">
-                                                            <option value="20" selected="selected">20</option>
-                                                            <option value="50">50</option>
-                                                            <option value="100">100</option>
-                                                            <option value="150">150</option>
-                                                            <option value="-1">All</option>
-                                                        </select>&nbsp;
+                                                <option value="20" selected="selected">20</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                                <option value="150">150</option>
+                                                <option value="-1">All</option>
+                                            </select>&nbsp;
                                                         records | Found total 58 records
+                                                   
                                         </div>
                                     </div>
                                     <div class="col-lg-6 text-right">

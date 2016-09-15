@@ -137,10 +137,14 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-success">Approved</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
-                                                       
+                                                
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -160,10 +164,14 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-info">Pending</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
-                                                       
+                                                 
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -183,10 +191,13 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-warning">Suspended</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
-                                                       
+                                              <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -206,10 +217,14 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-danger">Blocked</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
-                                                       
+                                                
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>
@@ -229,10 +244,14 @@
                                             <td>$240.50</td>
                                             <td><span class="label label-sm label-success">Approved</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-default btn-xs">
-                                                    <i class="fa fa-edit"></i>&nbsp;
-                                                            Edit
-                                                       
+                                                 
+                                                <button type="button" class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash-o"></i>&nbsp;
+                                                Anular
+                                                </button>
+                                                <button class="btn btn-xs btn-success filter-submit">
+                                                    <i class="fa fa-search"></i>&nbsp;
+                                                    Visualizar
                                                 </button>
                                             </td>
                                         </tr>

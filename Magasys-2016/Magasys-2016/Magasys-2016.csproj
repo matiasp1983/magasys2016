@@ -61,6 +61,7 @@
     <Content Include="Site_Administrator\Cliente.aspx" />
     <Content Include="Site_Administrator\Cobro.aspx" />
     <Content Include="Site_Administrator\Deposito.aspx" />
+    <Content Include="Site_Administrator\Devoluciones.aspx" />
     <Content Include="Site_Administrator\Entrega.aspx" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.svg" />
     <Content Include="Site_Administrator\Genero.aspx" />
@@ -133,15 +134,18 @@
     <Content Include="Site_Administrator\images\thumbs\winter-sun.jpg" />
     <Content Include="Site_Administrator\images\thumbs\woodstump.jpg" />
     <Content Include="Site_Administrator\Index.aspx" />
+    <Content Include="Site_Administrator\IngresoProducto.aspx" />
     <Content Include="Site_Administrator\ListadoCliente.aspx" />
     <Content Include="Site_Administrator\ListadoCobro.aspx" />
     <Content Include="Site_Administrator\ListadoDeposito.aspx" />
     <Content Include="Site_Administrator\ListadoGenero.aspx" />
     <Content Include="Site_Administrator\ListadoProducto.aspx" />
+    <Content Include="Site_Administrator\ListadoProductoFaltante.aspx" />
     <Content Include="Site_Administrator\ListadoProveedor.aspx" />
     <Content Include="Site_Administrator\ListadoReserva.aspx" />
     <Content Include="Site_Administrator\ListadoVenta.aspx" />
     <Content Include="Site_Administrator\Producto.aspx" />
+    <Content Include="Site_Administrator\ProductoFaltante.aspx" />
     <Content Include="Site_Administrator\Proveedor.aspx" />
     <Content Include="Site_Administrator\Reserva.aspx" />
     <Content Include="Site_Administrator\script\animation.js" />
@@ -371,6 +375,13 @@
     <Compile Include="Site_Administrator\Deposito.aspx.designer.cs">
       <DependentUpon>Deposito.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site_Administrator\Devoluciones.aspx.cs">
+      <DependentUpon>Devoluciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\Devoluciones.aspx.designer.cs">
+      <DependentUpon>Devoluciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site_Administrator\Entrega.aspx.cs">
       <DependentUpon>Entrega.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -391,6 +402,13 @@
     </Compile>
     <Compile Include="Site_Administrator\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\IngresoProducto.aspx.cs">
+      <DependentUpon>IngresoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\IngresoProducto.aspx.designer.cs">
+      <DependentUpon>IngresoProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site_Administrator\ListadoCliente.aspx.cs">
       <DependentUpon>ListadoCliente.aspx</DependentUpon>
@@ -427,6 +445,13 @@
     <Compile Include="Site_Administrator\ListadoProducto.aspx.designer.cs">
       <DependentUpon>ListadoProducto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site_Administrator\ListadoProductoFaltante.aspx.cs">
+      <DependentUpon>ListadoProductoFaltante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ListadoProductoFaltante.aspx.designer.cs">
+      <DependentUpon>ListadoProductoFaltante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site_Administrator\ListadoProveedor.aspx.cs">
       <DependentUpon>ListadoProveedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -454,6 +479,13 @@
     </Compile>
     <Compile Include="Site_Administrator\Producto.aspx.designer.cs">
       <DependentUpon>Producto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\ProductoFaltante.aspx.cs">
+      <DependentUpon>ProductoFaltante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\ProductoFaltante.aspx.designer.cs">
+      <DependentUpon>ProductoFaltante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site_Administrator\Proveedor.aspx.cs">
       <DependentUpon>Proveedor.aspx</DependentUpon>
