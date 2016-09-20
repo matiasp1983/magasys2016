@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="panel panel-pink">
-        <div class="panel-heading"> Faltantes </div>
+        <div class="panel-heading"> Pedido de Productos Faltantes </div>
         <div class="panel-body pan">
             <form class="form-horizontal" runat="server">
                 <div class="form-body pal">
@@ -104,11 +104,11 @@
                                                 <td><span class="label label-sm label-success">Approved</span></td>
                                                 <td>
                                                     <button type="button" class="btn btn-default btn-xs"><i class="fa fa-edit"></i>&nbsp;
-                                                        Edit
+                                                        Agregar
                                                     </button>
                                                     &nbsp;
                                                     <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>&nbsp;
-                                                        Delete
+                                                        Quitar
                                                     </button>
                                                 </td>
                                             </tr>

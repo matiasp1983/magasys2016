@@ -3,12 +3,30 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="panel panel-pink">
-        <div class="panel-heading">Listado de Ventas</div>
+        <div class="panel-heading">Listado de Pedidos</div>
         <div class="panel-body pan">
             <form class="form-horizontal" runat="server">
                 <div class="form-body pal">
                     <h3>Buscar por:</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="selProveedor" class="col-md-3 control-label">Proveedor<span class="require">*</span></label>
 
+                                <div class="col-md-9">
+                                    <select id="selProveedor" class="form-control">
+                                        <option value="">Todos</option>
+                                        <option value="">Editor</option>
+                                        <option value="">Dia</option>
+                                        <option value="">La Voz</option>
+                                        <option value="">--</option>
+                                        <option value="">--</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -32,32 +50,7 @@
                         </div>
 
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="selTipo" class="col-md-3 control-label">Forma de Pago<span class="require">*</span></label>
-                                <div class="col-md-9">
-                                    <select id="selTIPO" class="form-control">
-                                        <option value="">Contado</option>
-                                        <option value="">Credito</option>
-                                        <option value="">Debito</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="selTipo" class="col-md-3 control-label">Estado<span class="require">*</span></label>
-                                <div class="col-md-9">
-                                    <select id="selTIPO" class="form-control">
-                                        <option value="">Pagado</option>
-                                        <option value="">No Pagado</option>
-                                        <option value="">Entregado</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="form-actions text-center pal">
                         <button type="submit" class="btn btn-primary">Buscar</button>
@@ -65,7 +58,7 @@
                     <hr class="mtxl mbxl">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h4 class="box-heading">Listado de Ventas</h4>
+                            <h4 class="box-heading">Listado de Pedidos</h4>
 
                             <div class="table-container">
                                 <div class="row mbm">
@@ -109,10 +102,10 @@
                                                 </div>
                                             </th>
                                             <th width="9%">Record #</th>
-                                            <th>Codigo de Venta</th>
+                                            <th>Numero de Pedido</th>
                                             <th width="10%">Fecha de Venta</th>
-                                            <th width="10%">---</th>
-                                            <th width="7%">---</th>
+                                            <th width="10%">Nombre del Proveedor</th>
+                                            <th width="7%">Estado del Pedido</th>
                                             <th width="12%">---</th>
                                             <th width="10%">---</th>
                                             <th width="9%">---</th>

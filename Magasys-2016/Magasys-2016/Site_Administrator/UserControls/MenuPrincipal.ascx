@@ -62,7 +62,7 @@
                     <li><a href="/Site_Administrator/Genero.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Genero</span></a></li>
                 <li><a href="/Site_Administrator/ListadoGenero.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Genero</span></a></li>
                       <li><a href="/Site_Administrator/ProductoFaltante.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Pedido Producto Faltante</span></a></li>
-                 <li><a href="/Site_Administrator/ListadoProductoFaltante.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado de Productos Faltantes</span></a></li>
+                 <li><a href="/Site_Administrator/ListadoProductoFaltante.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado de Pedodos de Productos Faltantes</span></a></li>
                 </ul>
             </li>
 
