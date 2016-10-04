@@ -42,12 +42,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BML\BML.csproj">
-      <Project>{10d57d2e-cb0a-4511-8ac9-15e40e7d798c}</Project>
-      <Name>BML</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
