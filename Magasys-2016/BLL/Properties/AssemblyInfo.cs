@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("BLL")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Bussiness Logic Layer")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("MAGASYS-2016")]
 [assembly: AssemblyProduct("BLL")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]

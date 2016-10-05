@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Magasys_2016")]
-[assembly: AssemblyDescription("Presentation Layer")]
+[assembly: AssemblyTitle("COMMON")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("MAGASYS-2016")]
-[assembly: AssemblyProduct("Magasys_2016")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("COMMON")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cbd3b5a0-9b51-4ee9-a394-c1ea961ca59e")]
+[assembly: Guid("6ea9d5c4-a540-4588-8357-4019771f3ff2")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,7 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
+// You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

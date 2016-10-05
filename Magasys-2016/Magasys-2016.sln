@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magasys-2016", "Magasys-2016\Magasys-2016.csproj", "{6C22F8F7-7872-4F30-8029-668FED91EBB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMMON", "COMMON\COMMON.csproj", "{34740EA4-5EB2-48B2-A790-4A81324977FF}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -31,6 +33,10 @@ Global
 		{6C22F8F7-7872-4F30-8029-668FED91EBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C22F8F7-7872-4F30-8029-668FED91EBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C22F8F7-7872-4F30-8029-668FED91EBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34740EA4-5EB2-48B2-A790-4A81324977FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34740EA4-5EB2-48B2-A790-4A81324977FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34740EA4-5EB2-48B2-A790-4A81324977FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34740EA4-5EB2-48B2-A790-4A81324977FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
