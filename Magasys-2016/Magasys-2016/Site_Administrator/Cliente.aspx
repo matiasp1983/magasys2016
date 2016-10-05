@@ -20,6 +20,14 @@
                                     <input id="inputNumCliene" type="text" placeholder="-------" disabled="disabled" class="form-control"/></div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputFechaAlta" class="col-md-3 control-label">Fecha Alta <span class="require"></span></label>
+
+                                <div class="col-md-9">
+                                    <input id="inputFechaAlta" type="text" placeholder="-------" disabled="disabled" class="form-control"/></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
