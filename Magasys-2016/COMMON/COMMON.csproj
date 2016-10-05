@@ -39,19 +39,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anio.cs" />
     <Compile Include="Barrio.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="DetalleVenta.cs" />
     <Compile Include="DiaSemana.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="FormaPago.cs" />
     <Compile Include="Genero.cs" />
     <Compile Include="Localidad.cs" />
     <Compile Include="Periodicidad.cs" />
+    <Compile Include="ProductoColeccion.cs" />
+    <Compile Include="ProductoDiario.cs" />
+    <Compile Include="ProductoLibro.cs" />
+    <Compile Include="ProductoPelicula.cs" />
     <Compile Include="ProductoRevista.cs" />
+    <Compile Include="ProductoSuplemento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="Sexo.cs" />
     <Compile Include="TipoDni.cs" />
     <Compile Include="TipoProducto.cs" />
+    <Compile Include="Venta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

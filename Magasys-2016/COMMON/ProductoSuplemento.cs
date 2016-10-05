@@ -1,8 +1,9 @@
 ﻿using System;
 
+
 namespace COMMON
 {
-    public class ProductoRevista
+    public class ProductoSuplemento
     {
         private Int32 _codigoProducto;
         private DateTime _fechaAlta;
@@ -11,9 +12,11 @@ namespace COMMON
         private String _descripcion;
         private Int32 _idProveedor;
         private Int32 _precio;
-        private Int32 _idPeriodicidad;
+        private Int32 _cantidadEdicion;
         private Int32 _idDiaSemana;
-        private Int32 _idGenero;
+        private Int32 _idProductoDiario;
+
+        
 
         public Int32 pCodigoProducto
         {
@@ -51,20 +54,21 @@ namespace COMMON
             get { return _precio; }
             set { _precio = value; }
         }
-        public Int32 pIdPeriodicidad
+        public Int32 pCantidadEdicion
         {
-            get { return _idPeriodicidad; }
-            set { _idPeriodicidad = value; }
+            get { return _cantidadEdicion; }
+            set { _cantidadEdicion = value; }
         }
         public Int32 pIdDiaSemana
         {
             get { return _idDiaSemana; }
             set { _idDiaSemana = value; }
         }
-        public Int32 pIdGenero
+        
+        public Int32 pIdProductoDiario
         {
-            get { return _idGenero; }
-            set { _idGenero = value; }
+            get { return _idProductoDiario; }
+            set { _idProductoDiario = value; }
         }
     }
 }
