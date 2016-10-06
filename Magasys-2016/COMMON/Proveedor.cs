@@ -4,7 +4,7 @@ namespace COMMON
 {
     public class Proveedor
     {
-        private Int32 _numeroProveedor;
+        private Int32 _idProveedor;
         private DateTime _fechaAlta;
         private Int32 _cuit;
         private String _razonSocial;
@@ -22,10 +22,31 @@ namespace COMMON
         private Int32 _idBarrio;
         private Int32 _codigoPostal;
 
-        public int pNumeroProveedor
+        public Proveedor(Int32 cuit, String razonSocial, String nombre, String apellido, String telefonoMovil, String telefonoFijo, String email, String calle, Int16 numero, Int16 piso, String departamento, Provincia objProvincia, Localidad objLocalidad, Barrio objBarrio, Int32 codigoPostal)
         {
-            get { return _numeroProveedor; }
-            set { _numeroProveedor = value; }
+            /*pNumeroProveedor se genera desde la base de datos*/
+            pFechaAlta = DateTime.Now; /*Fecha y Hora actual*/
+            pCuit = cuit;
+            pRazonSocial = razonSocial;
+            pNombre = nombre;
+            pApellido = apellido;
+            pTelefonoMovil = telefonoMovil;
+            pTelefonoFijo = telefonoFijo;
+            pEmail = email;
+            pCalle = calle;
+            pNumero = numero;
+            pPiso = piso;
+            pDepartamento = departamento;
+            pIdProvincia = objProvincia.pIdProvincia;
+            pIdLocalidad = objLocalidad.pIdLocalidad;
+            pIdBarrio = objBarrio.pIdBarrio;
+            pCodigoPostal = codigoPostal;
+        }
+
+        public int p_IdProveedor
+        {
+            get { return _idProveedor; }
+            set { _idProveedor = value; }
         }
 
         public DateTime pFechaAlta
