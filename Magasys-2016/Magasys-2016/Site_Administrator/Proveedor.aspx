@@ -206,7 +206,7 @@
                     </div>
                 </div>
                 <div class="form-actions text-right pal">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" />
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
                     &nbsp;
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar"  CssClass="btn btn-green"/>
                 </div>
