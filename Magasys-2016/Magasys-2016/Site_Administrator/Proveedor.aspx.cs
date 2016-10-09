@@ -6,7 +6,7 @@ namespace Magasys_2016.Site_Administrator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)

@@ -8,8 +8,8 @@
         <div class="panel-body pan">
             <form class="form-horizontal" runat="server">
                 <div class="form-body pal">
-                    <h3> Cliente</h3>
-                   
+                    <h3>Cliente</h3>
+
                     <div class="row">
                         <!--fila para la caja sin modificacion-->
                         <div class="col-md-6">
@@ -17,7 +17,8 @@
                                 <label for="inputNumCliene" class="col-md-3 control-label">Numero <span class="require"></span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputNumCliene" type="text" placeholder="-------" disabled="disabled" class="form-control"/></div>
+                                    <input id="inputNumCliene" type="text" placeholder="-------" disabled="disabled" class="form-control" />
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -25,7 +26,8 @@
                                 <label for="inputFechaAlta" class="col-md-3 control-label">Fecha Alta <span class="require"></span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputFechaAlta" type="text" placeholder="-------" disabled="disabled" class="form-control"/></div>
+                                    <input id="inputFechaAlta" type="text" placeholder="-------" disabled="disabled" class="form-control" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -47,8 +49,10 @@
                                 <label for="inputDNI" class="col-md-3 control-label">Numero DNI <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <div class="input-icon"><i class="fa fa-envelope"></i>
-                                        <input type="text" placeholder="Numero DNI" class="form-control"/></div>
+                                    <div class="input-icon">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="text" placeholder="Numero DNI" class="form-control" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +63,8 @@
                                 <label for="inputNombre" class="col-md-3 control-label">Nombre <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputNombre" type="text" placeholder="Nombre " class="form-control"></div>
+                                    <input id="inputNombre" type="text" placeholder="Nombre " class="form-control">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -67,7 +72,8 @@
                                 <label for="inputApellido" class="col-md-3 control-label">Apellido <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputApellido" type="text" placeholder="Apellido" class="form-control"></div>
+                                    <input id="inputApellido" type="text" placeholder="Apellido" class="form-control">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -78,7 +84,8 @@
                                 <label for="inputAlias" class="col-md-3 control-label">Alias<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputAlias" type="text" placeholder="Alias" class="form-control"/></div>
+                                    <input id="inputAlias" type="text" placeholder="Alias" class="form-control" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,8 +95,10 @@
                                 <label for="inputEmail" class="col-md-3 control-label">Email <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <div class="input-icon"><i class="fa fa-envelope"></i>
-                                        <input type="text" placeholder="Email" class="form-control"></div>
+                                    <div class="input-icon">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="text" placeholder="Email" class="form-control">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -112,10 +121,11 @@
                                 <label for="inputBirthday" class="col-md-3 control-label">Fecha de Nacimiento<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputBirthday" type="text" placeholder="dd/mm/yyyy" class="form-control"></div>
+                                    <input id="inputBirthday" type="text" placeholder="dd/mm/yyyy" class="form-control">
+                                </div>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -123,7 +133,8 @@
                                 <label for="inputCelular" class="col-md-3 control-label">Telefono Celular<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputCelular" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputCelular" type="text" placeholder="" class="form-control">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -131,7 +142,8 @@
                                 <label for="inputFijo" class="col-md-3 control-label">Telefono Fijo<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputFijo" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputFijo" type="text" placeholder="" class="form-control">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -143,7 +155,8 @@
                                 <label for="inputCalle" class="col-md-3 control-label">Calle <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputCalle" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputCalle" type="text" placeholder="" class="form-control">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -151,7 +164,8 @@
                                 <label for="inputNumero" class="col-md-3 control-label">Número<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputNumero" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputNumero" type="text" placeholder="" class="form-control">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -161,7 +175,8 @@
                                 <label for="inputPiso" class="col-md-3 control-label">Piso<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputPiso" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputPiso" type="text" placeholder="" class="form-control">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -169,7 +184,8 @@
                                 <label for="inputDepartamento" class="col-md-3 control-label">Departamento <span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputDepartamento" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputDepartamento" type="text" placeholder="" class="form-control">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -179,12 +195,13 @@
                                 <label for="inputCodigoPostal" class="col-md-3 control-label">Código Postal<span class="require">*</span></label>
 
                                 <div class="col-md-9">
-                                    <input id="inputCodigoPostal" type="text" placeholder="" class="form-control"></div>
+                                    <input id="inputCodigoPostal" type="text" placeholder="" class="form-control">
+                                </div>
                             </div>
                         </div>
-                        
+
                     </div>
-                     <div class="row">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="selProvincia" class="col-md-3 control-label">Provincia<span class="require">*</span></label>
@@ -193,7 +210,7 @@
                                     <select id="selProvincia" class="form-control">
                                         <option value="">Cordoba</option>
                                         <option value="">Buenos Aires</option>
-                                    
+
                                     </select>
                                 </div>
                             </div>
@@ -205,19 +222,16 @@
                                 <div class="col-md-9">
                                     <select id="selLocalidad" class="form-control">
                                         <option value="">Capital</option>
-                                      
+
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                        
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="selBarrio" class="col-md-3 control-label">Barrio<span class="require">*</span></label>
-
                                 <div class="col-md-9">
                                     <select id="selBarrio" class="form-control">
                                         <option value="">S</option>
@@ -230,6 +244,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 <div class="form-actions text-right pal">
                     <button type="submit" class="btn btn-primary">Guardar</button>
                     &nbsp;
