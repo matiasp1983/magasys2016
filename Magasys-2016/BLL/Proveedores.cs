@@ -11,10 +11,10 @@ namespace BLL
             return oProveedores.GetAll();
         }
 
-        public Proveedor GetOneById(int idProveedor)
+        public Proveedor GetById(int idProveedor)
         {
             var oProveedores = new DAL.Proveedores();
-            return oProveedores.GetOneById(idProveedor);
+            return oProveedores.GetById(idProveedor);
         }
     }
 }

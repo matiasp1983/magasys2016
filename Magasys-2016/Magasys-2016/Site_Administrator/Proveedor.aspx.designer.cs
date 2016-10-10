@@ -13,13 +13,13 @@ namespace Magasys_2016.Site_Administrator {
     public partial class Proveedor {
         
         /// <summary>
-        /// divFilaSinMod control.
+        /// divRowHidden control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divFilaSinMod;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divRowHidden;
         
         /// <summary>
         /// lblIdProveedor control.
@@ -112,6 +112,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCuit;
         
         /// <summary>
+        /// revCuit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCuit;
+        
+        /// <summary>
         /// lblRazonSocial control.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRazonSocial;
+        
+        /// <summary>
+        /// revRazonSocial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revRazonSocial;
         
         /// <summary>
         /// lblNombreResponsable control.
@@ -184,6 +202,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombreResponsable;
         
         /// <summary>
+        /// revNombreResponsable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombreResponsable;
+        
+        /// <summary>
         /// lblApellidoResponsable control.
         /// </summary>
         /// <remarks>
@@ -218,6 +245,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvApellidoResponsable;
+        
+        /// <summary>
+        /// revApellidoResponsable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revApellidoResponsable;
         
         /// <summary>
         /// lblTelefonoMovil control.
@@ -256,6 +292,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTelefonoMovil;
         
         /// <summary>
+        /// revTelefonoMovil control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTelefonoMovil;
+        
+        /// <summary>
         /// lblTelefonoFijo control.
         /// </summary>
         /// <remarks>
@@ -281,6 +326,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefonoFijo;
+        
+        /// <summary>
+        /// revTelefonoFijo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTelefonoFijo;
         
         /// <summary>
         /// lblEmail control.
@@ -319,6 +373,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
         
         /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+        
+        /// <summary>
         /// lblCalle control.
         /// </summary>
         /// <remarks>
@@ -353,6 +416,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCalle;
+        
+        /// <summary>
+        /// revCalle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCalle;
         
         /// <summary>
         /// lblNumero control.
@@ -391,6 +463,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNumero;
         
         /// <summary>
+        /// revNumero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNumero;
+        
+        /// <summary>
         /// lblPiso control.
         /// </summary>
         /// <remarks>
@@ -416,6 +497,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPiso;
+        
+        /// <summary>
+        /// revPiso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPiso;
         
         /// <summary>
         /// lblDepartamento control.
@@ -452,6 +542,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator cvDepartamento;
+        
+        /// <summary>
+        /// revDepartamento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDepartamento;
         
         /// <summary>
         /// lblProvincia control.
@@ -596,6 +695,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCodigoPostal;
+        
+        /// <summary>
+        /// revCodigoPostal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCodigoPostal;
         
         /// <summary>
         /// btnGuardar control.

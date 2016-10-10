@@ -8,5 +8,15 @@ namespace COMMON
         {
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(cadena);
         }
+
+        public static string UpperCase(string cadena)
+        {
+            return CultureInfo.CurrentUICulture.TextInfo.ToUpper(cadena);
+        }
+
+        public static string RemoveSpace(string cadena)
+        {
+            return cadena.Trim();
+        }
     }
 }
