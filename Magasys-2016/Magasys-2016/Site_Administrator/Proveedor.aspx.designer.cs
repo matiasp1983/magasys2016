@@ -13,6 +13,15 @@ namespace Magasys_2016.Site_Administrator {
     public partial class Proveedor {
         
         /// <summary>
+        /// divTitleHeading control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divTitleHeading;
+        
+        /// <summary>
         /// divRowHidden control.
         /// </summary>
         /// <remarks>
@@ -101,24 +110,6 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCuit;
-        
-        /// <summary>
-        /// rfvCuit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCuit;
-        
-        /// <summary>
-        /// revCuit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCuit;
         
         /// <summary>
         /// lblRazonSocial control.

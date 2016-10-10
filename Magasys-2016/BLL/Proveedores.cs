@@ -16,5 +16,23 @@ namespace BLL
             var oProveedores = new DAL.Proveedores();
             return oProveedores.GetById(idProveedor);
         }
+
+        public Proveedor GetByCuit(string cuit)
+        {
+            var oProveedores = new DAL.Proveedores();
+            return oProveedores.GetByCuit(cuit);
+        }
+
+        public int Insert(Proveedor oProveedor)
+        {
+            var oProveedores = new DAL.Proveedores();
+            return oProveedores.Insert(oProveedor);
+        }
+
+        public bool Update(Proveedor oProveedor)
+        {
+            var oProveedores = new DAL.Proveedores();
+            return oProveedores.Update(oProveedor);
+        }
     }
 }

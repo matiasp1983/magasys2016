@@ -329,6 +329,7 @@
     <Content Include="Site_Administrator\styles\style-responsive.css" />
     <Content Include="Site_Administrator\styles\zabuto_calendar.min.css" />
     <Content Include="Site_Administrator\UserControls\MenuPrincipal.ascx" />
+    <Content Include="Site_Administrator\UserControls\ModalCuitProveedor.ascx" />
     <Content Include="Site_Administrator\Venta.aspx" />
     <Content Include="Site_Customers\Customer.Master" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.eot" />
@@ -507,6 +508,13 @@
     </Compile>
     <Compile Include="Site_Administrator\UserControls\MenuPrincipal.ascx.designer.cs">
       <DependentUpon>MenuPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\UserControls\ModalCuitProveedor.ascx.cs">
+      <DependentUpon>ModalCuitProveedor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\UserControls\ModalCuitProveedor.ascx.designer.cs">
+      <DependentUpon>ModalCuitProveedor.ascx</DependentUpon>
     </Compile>
     <Compile Include="Site_Administrator\Venta.aspx.cs">
       <DependentUpon>Venta.aspx</DependentUpon>

@@ -6,10 +6,11 @@ namespace Magasys_2016.Site_Administrator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                
-            }
+            /*Comprueba si es la primera vez que se carga la página*/
+            if (IsPostBack) return;
+            /*Comprueba si es una alta*/
+            if (String.IsNullOrEmpty(txtIdProveedor.Text)) return;
+            Modificacion();
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -20,13 +21,30 @@ namespace Magasys_2016.Site_Administrator
             var oProveedor = CargarProveedor();
             var oProveedores = new BLL.Proveedores();
 
-            if (oProveedor.PIdProveedor == 0)
+            try
             {
-                /*Nuevo proveedor*/
+                if (oProveedor.PIdProveedor == 0)
+                {
+                    var resultado = oProveedores.Insert(oProveedor);
+
+                    if (resultado > 0)
+                    {
+
+                    }
+                }
+                else
+                {
+                    var resultado = oProveedores.Update(oProveedor);
+
+                    if (resultado)
+                    {
+
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                /*Modificación proveedor*/
+                Response.Write(ex.Message);
             }
         }
 
@@ -86,6 +104,12 @@ namespace Magasys_2016.Site_Administrator
                 oProveedor.PCodigoPostal = txtCodigoPostal.Text;
 
             return oProveedor;
+        }
+
+        internal void Modificacion()
+        {
+            divTitleHeading.InnerText = "Modificar Proveedor";
+            divRowHidden.Visible = true;
         }
     }
 }

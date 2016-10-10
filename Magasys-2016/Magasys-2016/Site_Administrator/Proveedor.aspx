@@ -70,7 +70,7 @@
         }
     </script>
     <div class="panel panel-pink">
-        <div id="divTitleHeading" class="panel-heading">Registrar Proveedor</div>
+        <div id="divTitleHeading" class="panel-heading" runat="server">Registrar Proveedor</div>
         <div class="panel-body pan">
             <form class="form-horizontal" runat="server">
                 <div class="form-body pal">
@@ -100,12 +100,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <asp:Label ID="lblCuit" runat="server" CssClass="col-md-3 control-label" Text="N&uacute;mero de CUIT">
-                                    <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
+                                <asp:Label ID="lblCuit" runat="server" CssClass="col-md-3 control-label" Text="CUIT">
+                                    <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtCuit" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtCuit" ForeColor="Red" SetFocusOnError="True" Display="Dynamic" />
-                                    <asp:RegularExpressionValidator ID="revCuit" runat="server" ErrorMessage="Formato incorrecto (ej: 99-99999999-9)" ValidationExpression="^[0-9]{2}-[0-9]{8}-[0-9]$" ControlToValidate="txtCuit" ForeColor="Red" SetFocusOnError="True" Display="Dynamic" />
+                                    <asp:TextBox ID="txtCuit" runat="server" Enabled="False" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -300,7 +298,7 @@
                 <div class="form-actions text-right pal">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" OnClientClick="GetFocus();" />
                     &nbsp;
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" CausesValidation="False" />
                 </div>
             </form>
         </div>
