@@ -8,6 +8,13 @@ namespace Magasys_2016.Site_Administrator
         {
             /*Comprueba si es la primera vez que se carga la página*/
             if (IsPostBack) return;
+
+            if (Session["CUIT"] != null)
+            {
+                txtCuit.Text = Session["CUIT"].ToString();
+                Session.Abandon();
+            }
+            
             /*Comprueba si es una alta*/
             if (String.IsNullOrEmpty(txtIdProveedor.Text)) return;
             Modificacion();
