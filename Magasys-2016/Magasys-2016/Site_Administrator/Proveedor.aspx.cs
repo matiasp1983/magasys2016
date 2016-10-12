@@ -55,6 +55,11 @@ namespace Magasys_2016.Site_Administrator
             }
         }
 
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListadoProveedor.aspx", false);
+        }
+
         internal COMMON.Entities.Proveedor CargarProveedor()
         {
             var oProveedor = new COMMON.Entities.Proveedor();

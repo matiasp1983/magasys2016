@@ -298,7 +298,7 @@
                 <div class="form-actions text-right pal">
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" OnClientClick="GetFocus();" />
                     &nbsp;
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" CausesValidation="False" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" />
                 </div>
             </form>
         </div>

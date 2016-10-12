@@ -25,6 +25,18 @@
         var cuit = document.getElementById('<%= txtProveedorCuit.ClientID %>');
         setTimeout(function () { $(cuit).focus(); }, 1000);
     }
+    
+    function MessageHidden() {
+        var rfvCuit = document.getElementById('<%= rfvCuit.ClientID %>');
+        var revCuit = document.getElementById('<%= revCuit.ClientID %>');
+        var mensaje = document.getElementById('<%= lblMensaje.ClientID %>');
+
+        var inline = "inline";
+
+        if (rfvCuit.style.display == inline || revCuit.style.display == inline) {
+            mensaje.style.display = "none";
+        }
+    }
 </script>
 
 <asp:ScriptManager ID="ScriptManager" runat="server" />
@@ -40,7 +52,7 @@
                     <div class="modal-body">
                         <asp:Label ID="lblProveedorCuit" runat="server" CssClass="col-md-3 control-label" Text="CUIT">
                             <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label><div class="col-md-9" style="width: 65%">
-                                <asp:TextBox ID="txtProveedorCuit" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
+                                <asp:TextBox ID="txtProveedorCuit" runat="server" CssClass="form-control" MaxLength="13" onchange="MessageHidden();"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtProveedorCuit" ForeColor="Red" SetFocusOnError="True" Display="Dynamic" />
                                 <asp:RegularExpressionValidator ID="revCuit" runat="server" ErrorMessage="Formato incorrecto (ej: 99-99999999-9)" ValidationExpression="^[0-9]{2}-[0-9]{8}-[0-9]$" ControlToValidate="txtProveedorCuit" ForeColor="Red" Display="Dynamic" />
                                 <asp:Label ID="lblMensaje" runat="server" ForeColor="Red" Visible="False">El CUIT ingresado ya existe</asp:Label>
