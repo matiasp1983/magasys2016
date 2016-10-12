@@ -15,16 +15,25 @@ namespace Magasys_2016.Site_Administrator.UserControls
             var oProveedores = new BLL.Proveedores();
 
             if (String.IsNullOrEmpty(txtProveedorCuit.Text)) return;
-            var oProveedor = oProveedores.GetByCuit(txtProveedorCuit.Text);
 
-            if (oProveedor == null)
+            try
             {
-                Session["CUIT"] = txtProveedorCuit.Text;
-                Response.Redirect("Proveedor.aspx");
+                var oProveedor = oProveedores.GetByCuit(txtProveedorCuit.Text);
+
+                if (oProveedor == null)
+                {
+                    Session["CUIT"] = txtProveedorCuit.Text;
+                    Response.Redirect("Proveedor.aspx", false);
+                }
+                else
+                {
+                    lblMensaje.Visible = true;
+                    upModalCuitProveedor.Update();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblMensaje.Visible = true;
+                ;
             }
         }
     }
