@@ -18,7 +18,10 @@
         if (revCuit.style.display == "inline") {
             revCuit.style.display = "none";
         }
-        mensaje.style.display = "none";
+
+        if (mensaje != null) {
+            mensaje.style.display = "none";
+        }
     }
 
     function GetFocus() {
