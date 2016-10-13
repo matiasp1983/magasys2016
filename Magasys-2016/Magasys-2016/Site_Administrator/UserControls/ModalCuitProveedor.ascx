@@ -40,25 +40,25 @@
 </script>
 
 <asp:ScriptManager ID="ScriptManager" runat="server" />
-<div id="modal-header-primary" tabindex="-1" role="dialog" aria-labelledby="modal-header-primary-label" aria-hidden="true" class="modal fade">
+<div id="modal-header-primary" tabindex="-1" role="dialog" aria-labelledby="modal-header-primary-label" aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
         <asp:UpdatePanel ID="upModalCuitProveedor" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
             <ContentTemplate>
                 <div class="modal-content">
                     <div class="modal-header modal-header-primary">
-                        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                        <asp:Button ID="btnCerrar" runat="server" CausesValidation="False" Text="x" data-dismiss="modal" aria-hidden="true" class="close" OnClientClick="FieldClear();" />
                         <h4 id="modal-header-primary-label" class="modal-title">Proveedor - Ingrese el CUIT</h4>
                     </div>
                     <div class="modal-body">
                         <asp:Label ID="lblProveedorCuit" runat="server" CssClass="col-md-3 control-label" Text="CUIT">
                             <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label><div class="col-md-9" style="width: 65%">
                                 <asp:TextBox ID="txtProveedorCuit" runat="server" CssClass="form-control" MaxLength="13" onchange="MessageHidden();"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtProveedorCuit" ForeColor="Red" SetFocusOnError="True" Display="Dynamic" />
-                                <asp:RegularExpressionValidator ID="revCuit" runat="server" ErrorMessage="Formato incorrecto (ej: 99-99999999-9)" ValidationExpression="^[0-9]{2}-[0-9]{8}-[0-9]$" ControlToValidate="txtProveedorCuit" ForeColor="Red" Display="Dynamic" />
-                                <asp:Label ID="lblMensaje" runat="server" ForeColor="Red" Visible="False">El CUIT ingresado ya existe</asp:Label>
+                                <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtProveedorCuit" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error"/>
+                                <asp:RegularExpressionValidator ID="revCuit" runat="server" ErrorMessage="Formato incorrecto (ej: 99-99999999-9)" ValidationExpression="^[0-9]{2}-[0-9]{8}-[0-9]$" ControlToValidate="txtProveedorCuit" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error"/>
+                                <asp:Label ID="lblMensaje" runat="server" Visible="False" CssClass="custom-error">El CUIT ingresado ya existe</asp:Label>
                             </div>
                     </div>
-                    <div class="modal-footer" style="margin-top: 40px">
+                    <div class="modal-footer" style="margin-top: 50px">
                         <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="btnAceptar_Click" />
                         <asp:Button ID="btnCancelar" runat="server" data-dismiss="modal" Text="Cancelar" CssClass="btn btn-default" CausesValidation="False" OnClientClick="FieldClear();" />
                     </div>

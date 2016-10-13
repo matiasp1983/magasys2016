@@ -1462,7 +1462,11 @@ input[type=date] {
 	line-height: 34px
 }
 .form-group {
-	margin-bottom: 15px
+	/*margin-bottom: 15px*/
+    /*Se cambio el valor de 15px a 35px para que se
+      se vean bien los mensajes de error de los 
+      Custom Validator*/
+    margin-bottom: 35px;
 }
 .radio, .checkbox {
 	display: block;

@@ -27,8 +27,8 @@
     <link type="text/css" rel="stylesheet" href="styles/main.css" />
     <link type="text/css" rel="stylesheet" href="styles/style-responsive.css" />
     <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css" />
-    <%--<link type="text/css" rel="stylesheet" href="styles/pace.css" />--%>
     <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css" />
+    <link type="text/css" rel="stylesheet" href="styles/magasys_custom.css"/>
 </head>
 <body>
     <div>
@@ -186,7 +186,6 @@
     <script src="script/custom.min.js"></script>
     <script src="script/jquery.news-ticker.js"></script>
     <script src="script/jquery.menu.js"></script>
-    <%--<script src="script/pace.min.js"></script>--%>
     <script src="script/holder.js"></script>
     <script src="script/responsive-tabs.js"></script>
     <script src="script/jquery.flot.js"></script>

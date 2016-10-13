@@ -14,6 +14,10 @@ namespace Magasys_2016.Site_Administrator
                 txtCuit.Text = Session["CUIT"].ToString();
                 Session.Abandon();
             }
+            else
+            {
+                Response.Redirect("ListadoProveedor.aspx",false);
+            }
             
             /*Comprueba si es una alta*/
             if (String.IsNullOrEmpty(txtIdProveedor.Text)) return;

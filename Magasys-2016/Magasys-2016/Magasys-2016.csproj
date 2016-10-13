@@ -256,6 +256,7 @@
     <Content Include="Site_Administrator\styles\line\purple.css" />
     <Content Include="Site_Administrator\styles\line\red.css" />
     <Content Include="Site_Administrator\styles\line\yellow.css" />
+    <Content Include="Site_Administrator\styles\magasys_custom.css" />
     <Content Include="Site_Administrator\styles\main.css" />
     <Content Include="Site_Administrator\styles\minimal\aero%402x.png" />
     <Content Include="Site_Administrator\styles\minimal\aero.css" />

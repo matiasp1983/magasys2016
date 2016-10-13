@@ -1,0 +1,9 @@
+﻿.custom-error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 2px 0px;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+}
