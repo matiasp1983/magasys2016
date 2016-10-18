@@ -353,11 +353,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mensajes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Mensajes.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site_Administrator\Administrator.Master.cs">
       <DependentUpon>Administrator.Master</DependentUpon>
@@ -558,13 +553,6 @@
       <Project>{34740ea4-5eb2-48b2-a790-4a81324977ff}</Project>
       <Name>COMMON</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Mensajes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Mensajes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
