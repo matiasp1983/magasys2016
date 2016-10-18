@@ -6,7 +6,7 @@
             <ContentTemplate>
                 <div class="modal-content">
                     <div class="modal-header modal-header-primary" style="background-color: #428bca">
-                        <asp:Button ID="btnModalMensajex" runat="server" Text="x" data-dismiss="modal" aria-hidden="true" CssClass="close" CausesValidation="False" OnClick="btnModalMensajex_Click" />
+                        <asp:Button ID="btnModalMensajex" runat="server" Text="x" CssClass="close" OnClick="btnModalMensajex_Click" />
                         <h4 id="modal-header-primary-label" class="modal-title">Mensaje</h4>
                     </div>
                     <div class="modal-body" style="padding: 15px">
