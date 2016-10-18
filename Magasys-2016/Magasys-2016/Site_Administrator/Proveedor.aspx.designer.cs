@@ -713,5 +713,14 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelar;
+        
+        /// <summary>
+        /// ModalMensaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Magasys_2016.Site_Administrator.UserControls.ModalMensaje ModalMensaje;
     }
 }

@@ -29,6 +29,9 @@
     <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css" />
     <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css" />
     <link type="text/css" rel="stylesheet" href="styles/magasys_custom.css"/>
+    <!--Estas referencias se colocaron aquí para que funcione el Mesaje Modal-->
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
 </head>
 <body>
     <div>
@@ -171,11 +174,9 @@
             </div>
         </div>
     </div>
-
-    <script src="script/jquery-1.10.2.min.js"></script>
+    
     <script src="script/jquery-migrate-1.2.1.min.js"></script>
     <script src="script/jquery-ui.js"></script>
-    <script src="script/bootstrap.min.js"></script>
     <script src="script/bootstrap-hover-dropdown.js"></script>
     <script src="script/html5shiv.js"></script>
     <script src="script/respond.min.js"></script>

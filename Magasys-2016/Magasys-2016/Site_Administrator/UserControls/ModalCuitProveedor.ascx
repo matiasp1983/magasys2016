@@ -49,7 +49,7 @@
             <ContentTemplate>
                 <div class="modal-content">
                     <div class="modal-header modal-header-primary">
-                        <asp:Button ID="btnCerrar" runat="server" CausesValidation="False" Text="x" data-dismiss="modal" aria-hidden="true" class="close" OnClientClick="FieldClear();" />
+                        <asp:Button ID="btnCerrar" runat="server" CausesValidation="False" Text="x" data-dismiss="modal" aria-hidden="true" CssClass="close" OnClientClick="FieldClear();" />
                         <h4 id="modal-header-primary-label" class="modal-title">Proveedor - Ingrese el CUIT</h4>
                     </div>
                     <div class="modal-body">

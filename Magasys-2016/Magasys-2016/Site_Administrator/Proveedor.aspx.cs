@@ -16,9 +16,9 @@ namespace Magasys_2016.Site_Administrator
             }
             else
             {
-                Response.Redirect("ListadoProveedor.aspx",false);
+                Response.Redirect("ListadoProveedor.aspx", false);
             }
-            
+
             /*Comprueba si es una alta*/
             if (String.IsNullOrEmpty(txtIdProveedor.Text)) return;
             Modificacion();
@@ -52,10 +52,12 @@ namespace Magasys_2016.Site_Administrator
 
                     }
                 }
+
+                COMMON.Message.Show(Page, COMMON.Enums.TipoMensaje.Success, Mensajes.Proveedor_Success);
             }
             catch (Exception ex)
             {
-                Response.Write(ex.Message);
+                COMMON.Message.Show(Page, COMMON.Enums.TipoMensaje.Error, String.Format(Mensajes.Proveedor_Error, ex.Message));
             }
         }
 

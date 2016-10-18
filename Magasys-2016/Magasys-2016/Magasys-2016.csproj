@@ -99,7 +99,11 @@
     <Content Include="Site_Administrator\images\gallery\8.jpg" />
     <Content Include="Site_Administrator\images\gallery\9.jpg" />
     <Content Include="Site_Administrator\images\gallery\blog_item1.jpg" />
+    <Content Include="Site_Administrator\images\icons\error.png" />
+    <Content Include="Site_Administrator\images\icons\info.png" />
     <Content Include="Site_Administrator\images\icons\loading.gif" />
+    <Content Include="Site_Administrator\images\icons\success.png" />
+    <Content Include="Site_Administrator\images\icons\warning.png" />
     <Content Include="Site_Administrator\images\thumbs\arch-1.jpg" />
     <Content Include="Site_Administrator\images\thumbs\arch-2.jpg" />
     <Content Include="Site_Administrator\images\thumbs\autumn-1.jpg" />
@@ -331,6 +335,7 @@
     <Content Include="Site_Administrator\styles\zabuto_calendar.min.css" />
     <Content Include="Site_Administrator\UserControls\MenuPrincipal.ascx" />
     <Content Include="Site_Administrator\UserControls\ModalCuitProveedor.ascx" />
+    <Content Include="Site_Administrator\UserControls\ModalMensaje.ascx" />
     <Content Include="Site_Administrator\Venta.aspx" />
     <Content Include="Site_Customers\Customer.Master" />
     <Content Include="Site_Administrator\fonts\fontawesome-webfont.eot" />
@@ -348,6 +353,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mensajes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensajes.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site_Administrator\Administrator.Master.cs">
       <DependentUpon>Administrator.Master</DependentUpon>
@@ -517,6 +527,13 @@
     <Compile Include="Site_Administrator\UserControls\ModalCuitProveedor.ascx.designer.cs">
       <DependentUpon>ModalCuitProveedor.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Site_Administrator\UserControls\ModalMensaje.ascx.cs">
+      <DependentUpon>ModalMensaje.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\UserControls\ModalMensaje.ascx.designer.cs">
+      <DependentUpon>ModalMensaje.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Site_Administrator\Venta.aspx.cs">
       <DependentUpon>Venta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -541,6 +558,13 @@
       <Project>{34740ea4-5eb2-48b2-a790-4a81324977ff}</Project>
       <Name>COMMON</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mensajes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -4,11 +4,10 @@
     {
         public enum TipoMensaje
         {
-            Mensaje = 0,
-            Advertencia = 1,
-            Pregunta = 2,
-            Error = 3,
-            Vacio = 4
+            Info = 0,
+            Success = 1,
+            Warning = 2,
+            Error = 3
         }
     }
 }

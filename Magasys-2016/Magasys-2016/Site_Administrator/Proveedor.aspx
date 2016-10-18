@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site_Administrator/Administrator.Master" AutoEventWireup="true" CodeBehind="Proveedor.aspx.cs" Inherits="Magasys_2016.Site_Administrator.Proveedor" %>
 
+<%@ Register Src="~/Site_Administrator/UserControls/ModalMensaje.ascx" TagPrefix="uc1" TagName="ModalMensaje" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server" />
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script type="text/javascript">
@@ -300,6 +303,7 @@
                     &nbsp;
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" />
                 </div>
+                <uc1:ModalMensaje runat="server" id="ModalMensaje" />
             </form>
         </div>
     </div>

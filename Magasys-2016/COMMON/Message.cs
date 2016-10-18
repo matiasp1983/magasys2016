@@ -1,41 +1,26 @@
-﻿using System.Web.UI;
+﻿using System;
+using System.Web.UI;
 
 namespace COMMON
 {
     public class Message
     {
-        public static void Show(Page pagina, Enums.TipoMensaje tipoMensaje, string mensaje = "", string paginaDestino = "")
+        public static void Show(Page pagina, Enums.TipoMensaje tipoMensaje, string mensaje)
         {
-            var modal = string.Format(@"$('#modal-alert').modal('show');
-                                        <div id='modal-alert' tabindex='-1' role='dialog' aria-hidden='true' class='modal fade'>
-                                        <div class='modal-dialog'>
-                                        <div class='modal-content'>
-                                        <div class='modal-body'>{0}</div>
-                                        <div class='modal-footer'>
-                                        <button type='button' data-dismiss='modal' class='btn btn-primary'>{1}</button>'
-                                        </div>
-                                        </div>
-                                        </div>
-                                        </div>", mensaje, "Aceptar");
+            const string modal = "$('#divModalMensajeBody').addClass({0});$('#divModalMensajeBody').html('{1}');$('#modal-header-primary').modal('show');";
             switch (tipoMensaje)
             {
-                case Enums.TipoMensaje.Mensaje:
-                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "Modal", modal, true);
-                    //pagina.Response.Redirect(paginaDestino, false);
+                case Enums.TipoMensaje.Info:
+                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "ModalInfo", String.Format(modal, "'info'", mensaje), true);
                     break;
-                case Enums.TipoMensaje.Advertencia:
-                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "Modal", modal, true);
-                    pagina.Response.Redirect(paginaDestino, false);
+                case Enums.TipoMensaje.Success:
+                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "ModalSuccess", String.Format(modal, "'success'", mensaje), true);
                     break;
-                case Enums.TipoMensaje.Pregunta:
-                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "Modal", modal, true);
-                    pagina.Response.Redirect(paginaDestino, false);
+                case Enums.TipoMensaje.Warning:
+                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "ModalWarning", String.Format(modal, "'warning'", mensaje), true);
                     break;
                 case Enums.TipoMensaje.Error:
-                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "Modal", modal, true);
-                    break;
-                default:
-                    pagina.Response.Redirect(paginaDestino, false);
+                    ScriptManager.RegisterStartupScript(pagina, pagina.GetType(), "ModalError", String.Format(modal, "'error'", mensaje), true);
                     break;
             }
         }
