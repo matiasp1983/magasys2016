@@ -113,7 +113,7 @@
                             <ul class="chat-box-body">
                                 <li>
                                     <p>
-                                        <img src="images/avatar/128.jpg" class="avt" /><span class="user">John Doe</span><span
+                                        <img src="images/avatar/128.jpg" class="avt" alt=""/><span class="user">John Doe</span><span
                                             class="time">09:33</span>
                                     </p>
                                     <p>

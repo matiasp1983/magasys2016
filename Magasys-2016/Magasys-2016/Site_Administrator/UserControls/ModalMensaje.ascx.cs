@@ -13,5 +13,23 @@ namespace Magasys_2016.Site_Administrator.UserControls
 		{
 
 		}
+
+        protected void btnModalMensajeAceptar_Click(object sender, EventArgs e)
+        {
+            GetRedirect(Request.Url.Segments[Request.Url.Segments.Length - 1]);
+        }
+
+        protected void btnModalMensajex_Click(object sender, EventArgs e)
+        {
+            GetRedirect(Request.Url.Segments[Request.Url.Segments.Length - 1]);
+        }
+
+	    private void GetRedirect(string currentPage)
+	    {
+            if (currentPage.Equals("Proveedor.aspx"))
+            {
+                Response.Redirect(currentPage.Insert(0,"Listado"));
+            }
+	    }
 	}
 }

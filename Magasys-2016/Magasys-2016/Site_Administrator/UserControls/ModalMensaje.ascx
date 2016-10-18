@@ -6,14 +6,14 @@
             <ContentTemplate>
                 <div class="modal-content">
                     <div class="modal-header modal-header-primary" style="background-color: #428bca">
-                        <asp:Button ID="btnModalMensajex" runat="server" Text="x" data-dismiss="modal" aria-hidden="true" CssClass="close" CausesValidation="False" />
+                        <asp:Button ID="btnModalMensajex" runat="server" Text="x" data-dismiss="modal" aria-hidden="true" CssClass="close" CausesValidation="False" OnClick="btnModalMensajex_Click" />
                         <h4 id="modal-header-primary-label" class="modal-title">Mensaje</h4>
                     </div>
                     <div class="modal-body" style="padding: 15px">
                         <div id="divModalMensajeBody"></div>
                     </div>
                     <div class="modal-footer" style="background-color: #e5e5e5; padding: 10px 20px 10px">
-                        <asp:Button ID="btnModalMensajeAceptar" runat="server" Text="Aceptar" data-dismiss="modal" CssClass="btn btn-primary" CausesValidation="False" />
+                        <asp:Button ID="btnModalMensajeAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="btnModalMensajeAceptar_Click" />
                     </div>
                 </div>
             </ContentTemplate>
