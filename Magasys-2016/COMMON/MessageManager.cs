@@ -3,7 +3,7 @@ using System.Web.UI;
 
 namespace COMMON
 {
-    public class Message
+    public class MessageManager
     {
         public static void Show(Page pagina, Enums.TipoMensaje tipoMensaje, string mensaje)
         {

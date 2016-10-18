@@ -53,11 +53,11 @@ namespace Magasys_2016.Site_Administrator
                     }
                 }
 
-                COMMON.Message.Show(Page, COMMON.Enums.TipoMensaje.Success, Mensajes.Proveedor_Success);
+                COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Success, COMMON.Mensajes.Proveedor_Success);
             }
             catch (Exception ex)
             {
-                COMMON.Message.Show(Page, COMMON.Enums.TipoMensaje.Error, String.Format(Mensajes.Proveedor_Error, ex.Message));
+                COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Error, String.Format(COMMON.Mensajes.Proveedor_Error, ex.Message));
             }
         }
 

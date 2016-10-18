@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Magasys_2016 {
+namespace COMMON {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Magasys_2016 {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Magasys_2016.Mensajes", typeof(Mensajes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COMMON.Mensajes", typeof(Mensajes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
