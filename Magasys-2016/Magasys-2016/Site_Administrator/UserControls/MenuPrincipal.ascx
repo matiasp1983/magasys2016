@@ -72,6 +72,38 @@
                 <ul class="nav nav-second-level collapse" style="height: 0px;">
                       <li><a href="/Site_Administrator/Proveedor.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Proveedor</span></a></li>
                      <li><a href="/Site_Administrator/ListadoProveedor.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Proveedor</span></a></li>
+                    <li><a href="/Site_Administrator/ReclamoProveedor.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Reclamo a Proveedor</span></a></li>
+                    <li><a href="/Site_Administrator/ListadoReclamo.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado de Reclamos a Proveedor</span></a></li>
+                </ul>
+            </li>
+
+            <li><a href="#"><i class="fa fa-desktop fa-fw">
+                <div class="icon-bg bg-pink"></div>
+            </i><span class="menu-title">Empleados</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" style="height: 0px;">
+                      <li><a href="/Site_Administrator/Empleado.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Empleado</span></a></li>
+                     <li><a href="/Site_Administrator/ListadoEmpleado.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Empleados</span></a></li>
+                </ul>
+            </li>
+
+             <li><a href="#"><i class="fa fa-desktop fa-fw">
+                <div class="icon-bg bg-pink"></div>
+            </i><span class="menu-title">Portal</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" style="height: 0px;">
+                      <li><a href="/Site_Administrator/Publicacion.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Publicación</span></a></li>
+                     <li><a href="/Site_Administrator/ListadoPublicacion.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Publicaciones</span></a></li>
+                </ul>
+            </li>
+
+
+            <li><a href="#"><i class="fa fa-desktop fa-fw">
+                <div class="icon-bg bg-pink"></div>
+            </i><span class="menu-title">Informes y Reportes</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" style="height: 0px;">
+                      <li><a href="/Site_Administrator/InformeCliente.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Informe de Clientes</span></a></li>
+                     <li><a href="/Site_Administrator/InformeDeudasCliente.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Informe de Deudas de Clientes </span></a></li>
+                    <li><a href="/Site_Administrator/InformePorcentual.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Informe Porcentual de Productos y Devoluciones</span></a></li>
+                <li><a href="/Site_Administrator/ReporteReservas.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Reporte de Reservas</span></a></li>
                 </ul>
             </li>
 
@@ -81,16 +113,13 @@
                 <ul class="nav nav-second-level collapse" style="height: 0px;">
                       <li><a href="/Site_Administrator/Usuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Usuario</span></a></li>
                      <li><a href="/Site_Administrator/ListadoUsuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Usuario</span></a></li>
+                <li><a href="/Site_Administrator/Permiso.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Permiso</span></a></li>
+                     <li><a href="/Site_Administrator/ListadoPermiso.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Permiso</span></a></li>
+                    <li><a href="/Site_Administrator/RolUsuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Rol Usuario</span></a></li>
+                     <li><a href="/Site_Administrator/ListadoRolUsuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Rol Usuario</span></a></li>
                 </ul>
             </li>
-              <li><a href="#"><i class="fa fa-desktop fa-fw">
-                <div class="icon-bg bg-pink"></div>
-            </i><span class="menu-title">Seguridad</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse" style="height: 0px;">
-                      <li><a href="/Site_Administrator/Usuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Usuario</span></a></li>
-                     <li><a href="/Site_Administrator/ListadoUsuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Usuario</span></a></li>
-                </ul>
-            </li>
+            
 
         </ul>
     </div>
