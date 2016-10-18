@@ -34,26 +34,12 @@ namespace Magasys_2016.Site_Administrator
 
             try
             {
-                if (oProveedor.PIdProveedor == 0)
+               var resultado = oProveedor.PIdProveedor == 0 ? oProveedores.Insert(oProveedor) : oProveedores.Update(oProveedor);
+
+                if (resultado)
                 {
-                    var resultado = oProveedores.Insert(oProveedor);
-
-                    if (resultado > 0)
-                    {
-
-                    }
+                    COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Success, COMMON.Mensajes.Proveedor_Success);
                 }
-                else
-                {
-                    var resultado = oProveedores.Update(oProveedor);
-
-                    if (resultado)
-                    {
-
-                    }
-                }
-
-                COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Success, COMMON.Mensajes.Proveedor_Success);
             }
             catch (Exception ex)
             {

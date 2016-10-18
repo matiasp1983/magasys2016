@@ -23,7 +23,7 @@ namespace BLL
             return oProveedores.GetByCuit(cuit);
         }
 
-        public int Insert(Proveedor oProveedor)
+        public bool Insert(Proveedor oProveedor)
         {
             var oProveedores = new DAL.Proveedores();
             return oProveedores.Insert(oProveedor);

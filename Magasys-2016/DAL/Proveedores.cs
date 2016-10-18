@@ -347,10 +347,10 @@ namespace DAL
 
         #region [-- Insert, Update, Delete --]
 
-        public int Insert(Proveedor oProveedor)
+        public bool Insert(Proveedor oProveedor)
         {
             /*Agregar la fecha actual al inserta el registro "getdate ()"*/
-            return 0;
+            return false;
         }
 
         public bool Update(Proveedor oProveedor)
