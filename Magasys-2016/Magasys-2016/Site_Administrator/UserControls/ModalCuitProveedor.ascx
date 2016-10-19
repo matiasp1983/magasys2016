@@ -42,7 +42,6 @@
     }
 </script>
 
-<asp:ScriptManager ID="ScriptManager" runat="server" />
 <div id="modal-header-primary" tabindex="-1" role="dialog" aria-labelledby="modal-header-primary-label" aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
         <asp:UpdatePanel ID="upModalCuitProveedor" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
