@@ -86,5 +86,14 @@ namespace COMMON {
                 return ResourceManager.GetString("Proveedor_Success", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error: {0}.
+        /// </summary>
+        public static string Sistema_Error {
+            get {
+                return ResourceManager.GetString("Sistema_Error", resourceCulture);
+            }
+        }
     }
 }

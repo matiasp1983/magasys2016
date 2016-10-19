@@ -129,4 +129,8 @@
     <value>El proveedor se guardó correctamente.</value>
     <comment>El proveedor se guardó correctamente.</comment>
   </data>
+  <data name="Sistema_Error" xml:space="preserve">
+    <value>Error: {0}</value>
+    <comment>Error: {0}</comment>
+  </data>
 </root>

@@ -22,6 +22,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divTitleHeading;
         
         /// <summary>
+        /// ScriptManager control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager;
+        
+        /// <summary>
         /// divRowHidden control.
         /// </summary>
         /// <remarks>
@@ -560,6 +569,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRqrProvincia;
+        
+        /// <summary>
+        /// upProvincia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upProvincia;
         
         /// <summary>
         /// ddlProvincia control.

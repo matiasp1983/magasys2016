@@ -5,7 +5,5 @@
         public int PIdProvincia { get; set; }
 
         public string PNombre { get; set; }
-
-        public string PDescripcion { get; set; }
     }
 }

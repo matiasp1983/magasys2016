@@ -76,6 +76,7 @@
         <div id="divTitleHeading" class="panel-heading" runat="server">Registrar Proveedor</div>
         <div class="panel-body pan">
             <form class="form-horizontal" runat="server">
+                <asp:ScriptManager ID="ScriptManager" runat="server" />
                 <div class="form-body pal">
                     <h3>Proveedor</h3>
 
@@ -248,11 +249,12 @@
                                 <asp:Label ID="lblProvincia" runat="server" CssClass="col-md-3 control-label" Text="Provincia">
                                     <asp:Label ID="lblRqrProvincia" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="form-control">
-                                        <asp:ListItem Selected="True" Value=" "></asp:ListItem>
-                                        <asp:ListItem Value="1">prueba</asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlProvincia" Display="Dynamic" CssClass="custom-error" />
+                                    <asp:UpdatePanel ID="upProvincia" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" />
+                                            <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlProvincia" Display="Dynamic" CssClass="custom-error" />
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +263,7 @@
                                 <asp:Label ID="lblLocalidad" runat="server" CssClass="col-md-3 control-label" Text="Localidad">
                                     <asp:Label ID="lblRqrLocalidad" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="form-control">
+                                    <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged">
                                         <asp:ListItem Selected="True" Value=" "></asp:ListItem>
                                         <asp:ListItem Value="1">prueba</asp:ListItem>
                                     </asp:DropDownList>
@@ -277,7 +279,7 @@
                                 <asp:Label ID="lblBarrio" runat="server" CssClass="col-md-3 control-label" Text="Barrio">
                                     <asp:Label ID="lblRqrBarrio" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control">
+                                    <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged">
                                         <asp:ListItem Selected="True" Value=" "></asp:ListItem>
                                         <asp:ListItem Value="1">prueba</asp:ListItem>
                                     </asp:DropDownList>
@@ -303,7 +305,7 @@
                     &nbsp;
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" />
                 </div>
-                <uc1:ModalMensaje runat="server" id="ModalMensaje" />
+                <uc1:ModalMensaje runat="server" ID="ModalMensaje" />
             </form>
         </div>
     </div>

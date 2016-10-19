@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.UI.WebControls;
 
 namespace Magasys_2016.Site_Administrator
 {
@@ -20,8 +21,14 @@ namespace Magasys_2016.Site_Administrator
             }
 
             /*Comprueba si es una alta*/
-            if (String.IsNullOrEmpty(txtIdProveedor.Text)) return;
-            Modificacion();
+            if (String.IsNullOrEmpty(txtIdProveedor.Text))
+            {
+                LoadProvincia();
+            }
+            else
+            {
+                Modificacion();    
+            }
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -34,7 +41,7 @@ namespace Magasys_2016.Site_Administrator
 
             try
             {
-               var resultado = oProveedor.PIdProveedor == 0 ? oProveedores.Insert(oProveedor) : oProveedores.Update(oProveedor);
+                var resultado = oProveedor.PIdProveedor == 0 ? oProveedores.Insert(oProveedor) : oProveedores.Update(oProveedor);
 
                 if (resultado)
                 {
@@ -118,6 +125,41 @@ namespace Magasys_2016.Site_Administrator
         {
             divTitleHeading.InnerText = "Modificar Proveedor";
             divRowHidden.Visible = true;
+        }
+
+        protected void ddlProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddlLocalidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddlBarrio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadProvincia()
+        {
+            var oProvincia = new BLL.Pronvincia();
+
+            try
+            {
+                ddlProvincia.DataSource = oProvincia.GetAll();
+                ddlProvincia.DataTextField = "PNombre";
+                ddlProvincia.DataValueField = "PIdProvincia";
+                ddlProvincia.DataBind();
+                ddlProvincia.Items.Add(new ListItem(String.Empty, String.Empty));
+                ddlProvincia.SelectedValue = String.Empty;
+            }
+            catch (Exception ex)
+            {
+                COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Error, String.Format(COMMON.Mensajes.Sistema_Error, ex.Message));
+            }
+            
         }
     }
 }
