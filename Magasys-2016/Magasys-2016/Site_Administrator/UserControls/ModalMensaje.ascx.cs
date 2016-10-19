@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Magasys_2016.Site_Administrator.UserControls
 {
@@ -28,7 +23,7 @@ namespace Magasys_2016.Site_Administrator.UserControls
 	    {
             if (currentPage.Equals("Proveedor.aspx"))
             {
-                Response.Redirect(currentPage.Insert(0,"Listado"));
+                Response.Redirect("ListadoProveedor.aspx");
             }
 	    }
 	}

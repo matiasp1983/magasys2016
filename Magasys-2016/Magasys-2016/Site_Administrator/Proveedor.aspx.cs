@@ -40,6 +40,10 @@ namespace Magasys_2016.Site_Administrator
                 {
                     COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Success, COMMON.Mensajes.Proveedor_Success);
                 }
+                else
+                {
+                    COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Error, COMMON.Mensajes.Proveedor_Failure);
+                }
             }
             catch (Exception ex)
             {

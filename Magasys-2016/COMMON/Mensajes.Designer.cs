@@ -70,6 +70,15 @@ namespace COMMON {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to El proveedor no se pudo guardar..
+        /// </summary>
+        public static string Proveedor_Failure {
+            get {
+                return ResourceManager.GetString("Proveedor_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to El proveedor se guardó correctamente..
         /// </summary>
         public static string Proveedor_Success {

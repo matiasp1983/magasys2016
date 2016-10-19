@@ -121,6 +121,10 @@
     <value>Ocurrió un error y el proveedor no se pudo guardar.&lt;br /&gt;Error: {0}</value>
     <comment>Ocurrió un error y el proveedor no se pudo guardar. Error: {0}</comment>
   </data>
+  <data name="Proveedor_Failure" xml:space="preserve">
+    <value>El proveedor no se pudo guardar.</value>
+    <comment>El proveedor no se pudo guardar.</comment>
+  </data>
   <data name="Proveedor_Success" xml:space="preserve">
     <value>El proveedor se guardó correctamente.</value>
     <comment>El proveedor se guardó correctamente.</comment>
