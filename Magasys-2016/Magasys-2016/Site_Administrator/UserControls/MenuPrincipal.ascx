@@ -73,7 +73,7 @@
                       <li><a href="/Site_Administrator/Proveedor.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Proveedor</span></a></li>
                      <li><a href="/Site_Administrator/ListadoProveedor.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Proveedor</span></a></li>
                     <li><a href="/Site_Administrator/ReclamoProveedor.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Reclamo a Proveedor</span></a></li>
-                    <li><a href="/Site_Administrator/ListadoReclamo.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado de Reclamos a Proveedor</span></a></li>
+                    <li><a href="/Site_Administrator/ListadoReclamoProveedor.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado de Reclamos a Proveedor</span></a></li>
                 </ul>
             </li>
 
@@ -115,8 +115,8 @@
                      <li><a href="/Site_Administrator/ListadoUsuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Usuario</span></a></li>
                 <li><a href="/Site_Administrator/Permiso.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Permiso</span></a></li>
                      <li><a href="/Site_Administrator/ListadoPermiso.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Permiso</span></a></li>
-                    <li><a href="/Site_Administrator/RolUsuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Rol Usuario</span></a></li>
-                     <li><a href="/Site_Administrator/ListadoRolUsuario.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Rol Usuario</span></a></li>
+                    <li><a href="/Site_Administrator/Rol.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Registrar Rol Usuario</span></a></li>
+                     <li><a href="/Site_Administrator/ListadoRol.aspx"><i class="fa fa-th-large"></i><span class="submenu-title">Listado Rol Usuario</span></a></li>
                 </ul>
             </li>
             
