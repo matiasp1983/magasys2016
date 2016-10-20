@@ -27,7 +27,7 @@ namespace Magasys_2016.Site_Administrator
             }
             else
             {
-                Modificacion();    
+                Modificacion();
             }
         }
 
@@ -152,14 +152,14 @@ namespace Magasys_2016.Site_Administrator
                 ddlProvincia.DataTextField = "PNombre";
                 ddlProvincia.DataValueField = "PIdProvincia";
                 ddlProvincia.DataBind();
-                ddlProvincia.Items.Add(new ListItem(String.Empty, String.Empty));
-                ddlProvincia.SelectedValue = String.Empty;
+                ddlProvincia.Items.Insert(0, new ListItem(String.Empty, String.Empty));
+                ddlProvincia.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
                 COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Error, String.Format(COMMON.Mensajes.Sistema_Error, ex.Message));
             }
-            
+
         }
     }
 }

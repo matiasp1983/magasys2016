@@ -16,7 +16,7 @@ namespace DAL
 
         private string PConnectionString { get; set; }
 
-        #region [-- GetAll , GetById , GetByCuit --]
+        #region [-- GetAll , GetById --]
 
         public List<Provincia> GetAll()
         {
