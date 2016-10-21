@@ -39,7 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pronvincia.cs" />
+    <Compile Include="Localidades.cs" />
+    <Compile Include="Provincias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedores.cs" />
   </ItemGroup>

@@ -263,10 +263,11 @@
                                 <asp:Label ID="lblLocalidad" runat="server" CssClass="col-md-3 control-label" Text="Localidad">
                                     <asp:Label ID="lblRqrLocalidad" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged">
-                                        <asp:ListItem Selected="True" Value=" "></asp:ListItem>
-                                        <asp:ListItem Value="1">prueba</asp:ListItem>
-                                    </asp:DropDownList>
+                                    <asp:UpdatePanel ID="upLocalidad" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" />
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                     <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlLocalidad" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>
@@ -279,10 +280,11 @@
                                 <asp:Label ID="lblBarrio" runat="server" CssClass="col-md-3 control-label" Text="Barrio">
                                     <asp:Label ID="lblRqrBarrio" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged">
-                                        <asp:ListItem Selected="True" Value=" "></asp:ListItem>
-                                        <asp:ListItem Value="1">prueba</asp:ListItem>
-                                    </asp:DropDownList>
+                                    <asp:UpdatePanel ID="upBarrio" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" />
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                     <asp:RequiredFieldValidator ID="rfvBarrio" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlBarrio" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>

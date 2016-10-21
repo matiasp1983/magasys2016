@@ -7,7 +7,7 @@ using COMMON.Entities;
 
 namespace BLL
 {
-    public class Pronvincia
+    public class Provincias
     {
         public List<Provincia> GetAll()
         {

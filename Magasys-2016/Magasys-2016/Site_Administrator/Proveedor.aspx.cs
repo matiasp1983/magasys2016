@@ -49,7 +49,7 @@ namespace Magasys_2016.Site_Administrator
                 }
                 else
                 {
-                    COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Error, COMMON.Mensajes.Proveedor_Failure);
+                    COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Warning, COMMON.Mensajes.Proveedor_Failure);
                 }
             }
             catch (Exception ex)
@@ -129,7 +129,16 @@ namespace Magasys_2016.Site_Administrator
 
         protected void ddlProvincia_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (ddlProvincia.SelectedValue != String.Empty)
+            {
+                var idProvincia = Convert.ToInt32(ddlProvincia.SelectedValue);
+                LoadLocalidad(idProvincia);
+            }
+            else
+            {
+                ddlLocalidad.Items.Clear();
+                ddlBarrio.Items.Clear();
+            }
         }
 
         protected void ddlLocalidad_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,11 +153,11 @@ namespace Magasys_2016.Site_Administrator
 
         private void LoadProvincia()
         {
-            var oProvincia = new BLL.Pronvincia();
+            var oProvincias = new BLL.Provincias();
 
             try
             {
-                ddlProvincia.DataSource = oProvincia.GetAll();
+                ddlProvincia.DataSource = oProvincias.GetAll();
                 ddlProvincia.DataTextField = "PNombre";
                 ddlProvincia.DataValueField = "PIdProvincia";
                 ddlProvincia.DataBind();
@@ -160,6 +169,25 @@ namespace Magasys_2016.Site_Administrator
                 COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Error, String.Format(COMMON.Mensajes.Sistema_Error, ex.Message));
             }
 
+        }
+
+        private void LoadLocalidad(int idProvincia)
+        {
+            var oLocalidades = new BLL.Localidades();
+
+            try
+            {
+                ddlLocalidad.DataSource = oLocalidades.GetLocalidadByProvincia(idProvincia);
+                ddlLocalidad.DataTextField = "PNombre";
+                ddlLocalidad.DataValueField = "PIdLocalidad";
+                ddlLocalidad.DataBind();
+                ddlLocalidad.Items.Insert(0, new ListItem(String.Empty, String.Empty));
+                ddlLocalidad.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                COMMON.MessageManager.Show(Page, COMMON.Enums.TipoMensaje.Error, String.Format(COMMON.Mensajes.Sistema_Error, ex.Message));
+            }
         }
     }
 }
