@@ -1,4 +1,17 @@
-﻿.custom-error {
+﻿/*--INICIO Styles de Combos y DropDownList del Sitio--*/
+
+@import url("chosen.css"); /* Styles COMBOS */
+
+select.customSelect {
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    line-height: 30px;
+}
+/*--FIN Styles de Combos y DropDownList del Sitio--*/
+
+/*--INICIO Styles de Mensajes de error--*/
+.custom-error {
     color: #D8000C;
     background-color: #FFBABA;
     border: 1px solid;
@@ -9,7 +22,7 @@
 }
 
 .info, .success, .warning, .error {
-    font-size:13px;
+    font-size: 13px;
     margin: 10px 0;
     padding: 15px 10px 15px 70px;
     background-repeat: no-repeat;
@@ -35,3 +48,4 @@
     color: #D8000C;
     background-image: url('../images/icons/error.png');
 }
+/*--FIN Styles de Mensajes de error--*/

@@ -175,6 +175,8 @@
         </div>
     </div>
     
+    <script src="script/jquery.chosen.min.js"></script>
+    <script src="script/magasys_custom.js"></script>
     <script src="script/jquery-migrate-1.2.1.min.js"></script>
     <script src="script/jquery-ui.js"></script>
     <script src="script/bootstrap-hover-dropdown.js"></script>

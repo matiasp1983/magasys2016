@@ -100,6 +100,7 @@
     <Content Include="Site_Administrator\images\gallery\8.jpg" />
     <Content Include="Site_Administrator\images\gallery\9.jpg" />
     <Content Include="Site_Administrator\images\gallery\blog_item1.jpg" />
+    <Content Include="Site_Administrator\images\icons\chosen-sprite.png" />
     <Content Include="Site_Administrator\images\icons\error.png" />
     <Content Include="Site_Administrator\images\icons\info.png" />
     <Content Include="Site_Administrator\images\icons\loading.gif" />
@@ -195,6 +196,7 @@
     <Content Include="Site_Administrator\script\jquery-1.10.2.min.js" />
     <Content Include="Site_Administrator\script\jquery-migrate-1.2.1.min.js" />
     <Content Include="Site_Administrator\script\jquery-ui.js" />
+    <Content Include="Site_Administrator\script\jquery.chosen.min.js" />
     <Content Include="Site_Administrator\script\jquery.cookie.js" />
     <Content Include="Site_Administrator\script\jquery.flot.categories.js" />
     <Content Include="Site_Administrator\script\jquery.flot.fillbetween.js" />
@@ -209,6 +211,7 @@
     <Content Include="Site_Administrator\script\jquery.nestable.js" />
     <Content Include="Site_Administrator\script\jquery.news-ticker.js" />
     <Content Include="Site_Administrator\script\jquery.slimscroll.js" />
+    <Content Include="Site_Administrator\script\magasys_custom.js" />
     <Content Include="Site_Administrator\script\main.js" />
     <Content Include="Site_Administrator\script\mobiscroll-1.5.js" />
     <Content Include="Site_Administrator\script\mobiscroll-1.5.min.js" />
@@ -221,6 +224,7 @@
     <Content Include="Site_Administrator\styles\all.css" />
     <Content Include="Site_Administrator\styles\animate.css" />
     <Content Include="Site_Administrator\styles\bootstrap.min.css" />
+    <Content Include="Site_Administrator\styles\chosen.css" />
     <Content Include="Site_Administrator\styles\flat\aero%402x.png" />
     <Content Include="Site_Administrator\styles\flat\aero.css" />
     <Content Include="Site_Administrator\styles\flat\aero.png" />

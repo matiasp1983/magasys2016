@@ -37,40 +37,6 @@
                 }
             }
         }
-
-        function GetFocus() {
-            var rfvProvincia = document.getElementById('<%= rfvProvincia.ClientID %>');
-            var provincia = document.getElementById('<%= ddlProvincia.ClientID %>');
-            var rfvLocalidad = document.getElementById('<%= rfvLocalidad.ClientID %>');
-            var localidad = document.getElementById('<%= ddlLocalidad.ClientID %>');
-            var rfvBarrio = document.getElementById('<%= rfvBarrio.ClientID %>');
-            var barrio = document.getElementById('<%= ddlBarrio.ClientID %>');
-            var rfvCodigoPostal = document.getElementById('<%= rfvCodigoPostal.ClientID %>');
-            var codigoPostal = document.getElementById('<%= txtCodigoPostal.ClientID %>');
-
-            /*Se controla si los mensajes de validación de 
-            Provincia, Localidad, Barrio y Código Postal se estan mostrando*/
-            if (rfvProvincia.style.display == "inline") {
-                provincia.focus();
-                return;
-            }
-
-            if (rfvLocalidad.style.display == "inline") {
-                localidad.focus();
-                return;
-            }
-
-            if (rfvBarrio.style.display == "inline") {
-                barrio.focus();
-                return;
-            }
-
-            if (rfvCodigoPostal.style.display == "inline") {
-                codigoPostal.focus();
-                return;
-            }
-
-        }
     </script>
     <div class="panel panel-pink">
         <div id="divTitleHeading" class="panel-heading" runat="server">Registrar Proveedor</div>
@@ -247,12 +213,11 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <asp:Label ID="lblProvincia" runat="server" CssClass="col-md-3 control-label" Text="Provincia">
-                                    <asp:Label ID="lblRqrProvincia" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
+                                    <asp:Label ID="lblRqrProvincia" runat="server" CssClass="require" Text="&nbsp;&lowast;"></asp:Label></asp:Label>
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upProvincia" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" />
-                                            <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlProvincia" Display="Dynamic" CssClass="custom-error" />
+                                            <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" data-rel="chosen" style="width: 100%;"></asp:DropDownList>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -265,10 +230,9 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upLocalidad" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" />
+                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" style="width: 100%;"/>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
-                                    <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlLocalidad" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>
                         </div>
@@ -282,10 +246,9 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upBarrio" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" />
+                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" data-rel="chosen" style="width: 100%;"/>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
-                                    <asp:RequiredFieldValidator ID="rfvBarrio" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlBarrio" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>
                         </div>
@@ -303,7 +266,7 @@
                     </div>
                 </div>
                 <div class="form-actions text-right pal">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" OnClientClick="GetFocus();" />
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click"/>
                     &nbsp;
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" />
                 </div>
