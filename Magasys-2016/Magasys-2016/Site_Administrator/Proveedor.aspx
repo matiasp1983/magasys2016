@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script type="text/javascript">
         $(document).ready(function () {
-            /*Esta función se utiliza para cargar los styles de lo combos luego de hacer el postback.*/
+            /*Esta función se utiliza para cargar los styles de los combos luego de hacer el POSTBACK.*/
             Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(PageLoaded);
         });
 
@@ -45,6 +45,32 @@
                         cvDepartamento.style.display = "inline";
                     }
                 }
+            }
+        }
+
+        function GetFocus() {
+            var rfvProvincia = document.getElementById('<%= rfvProvincia.ClientID %>');
+            var provincia = document.getElementById('<%= ddlProvincia.ClientID %>');
+            var rfvLocalidad = document.getElementById('<%= rfvLocalidad.ClientID %>');
+            var localidad = document.getElementById('<%= ddlLocalidad.ClientID %>');
+            var rfvCodigoPostal = document.getElementById('<%= rfvCodigoPostal.ClientID %>');
+            var codigoPostal = document.getElementById('<%= txtCodigoPostal.ClientID %>');
+
+            /*Se controla si los mensajes de validación de 
+            Provincia, Localidad y Código Postal se estan mostrando*/
+            if (rfvProvincia.style.display == "inline") {
+                provincia.focus();
+                return;
+            }
+
+            if (rfvLocalidad.style.display == "inline") {
+                localidad.focus();
+                return;
+            }
+
+            if (rfvCodigoPostal.style.display == "inline") {
+                codigoPostal.focus();
+                return;
             }
         }
     </script>
@@ -228,6 +254,7 @@
                                     <asp:UpdatePanel ID="upProvincia" runat="server">
                                         <ContentTemplate>
                                             <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;"></asp:DropDownList>
+                                            <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlProvincia" Display="Dynamic" CssClass="custom-error" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -241,6 +268,7 @@
                                     <asp:UpdatePanel ID="upLocalidad" runat="server">
                                         <ContentTemplate>
                                             <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" />
+                                            <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlLocalidad" Display="Dynamic" CssClass="custom-error" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -276,7 +304,7 @@
                     </div>
                 </div>
                 <div class="form-actions text-right pal">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" OnClientClick="GetFocus();" />
                     &nbsp;
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" />
                 </div>

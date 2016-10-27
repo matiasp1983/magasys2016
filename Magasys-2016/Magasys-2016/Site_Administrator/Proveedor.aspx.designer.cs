@@ -589,6 +589,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.DropDownList ddlProvincia;
         
         /// <summary>
+        /// rfvProvincia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProvincia;
+        
+        /// <summary>
         /// lblLocalidad control.
         /// </summary>
         /// <remarks>
@@ -623,6 +632,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlLocalidad;
+        
+        /// <summary>
+        /// rfvLocalidad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLocalidad;
         
         /// <summary>
         /// lblBarrio control.
