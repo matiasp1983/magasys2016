@@ -49,25 +49,68 @@
         }
 
         function GetFocus() {
-            var rfvProvincia = document.getElementById('<%= rfvProvincia.ClientID %>');
-            var provincia = document.getElementById('<%= ddlProvincia.ClientID %>');
-            var rfvLocalidad = document.getElementById('<%= rfvLocalidad.ClientID %>');
-            var localidad = document.getElementById('<%= ddlLocalidad.ClientID %>');
+            var razonSocial = document.getElementById('<%= txtRazonSocial.ClientID %>');
+            var nombreResponsable = document.getElementById('<%= txtNombreResponsable.ClientID %>');
+            var apellidoResponsable = document.getElementById('<%= txtApellidoResponsable.ClientID %>');
+            var telefonoMovil = document.getElementById('<%= txtTelefonoMovil.ClientID %>');
+            var email = document.getElementById('<%= txtEmail.ClientID %>');
+            var calle = document.getElementById('<%= txtCalle.ClientID %>');
+            var numero = document.getElementById('<%= txtNumero.ClientID %>');
+            var piso = document.getElementById('<%= txtPiso.ClientID %>');
+            var departamento = document.getElementById('<%= txtDepartamento.ClientID %>');
+            var provincia = $("#ContentPlaceHolder1_ddlProvincia_chzn");
+            var localidad = $("#ContentPlaceHolder1_ddlLocalidad_chzn");
             var rfvCodigoPostal = document.getElementById('<%= rfvCodigoPostal.ClientID %>');
             var codigoPostal = document.getElementById('<%= txtCodigoPostal.ClientID %>');
 
-            /*Se controla si los mensajes de validación de 
-            Provincia, Localidad y Código Postal se estan mostrando*/
-            if (rfvProvincia.style.display == "inline") {
-                provincia.focus();
+            /*Verificamos que los validadores anteriores a los combos no esten activados.*/
+            if (razonSocial.value.trim().length == 0 || nombreResponsable.value.trim().length == 0
+            || apellidoResponsable.value.trim().length == 0 || telefonoMovil.value.trim().length == 0
+            || email.value.trim().length == 0 || calle.value.trim().length == 0 || numero.value.trim().length == 0) {
                 return;
             }
 
-            if (rfvLocalidad.style.display == "inline") {
-                localidad.focus();
+            /*Verificamos que los validadores anteriores a los combos no esten activados.*/
+            if (piso.value.trim().length > 0) {
+                if (departamento.value.trim().length == 0) {
+                    return;
+                }
+            }
+
+            /*Si se llega a este punto se cargaron todos los campos obligatorios.*/
+
+            var id = 1;
+
+            /*Recorremos los link que tiene el texto de "Seleccione una opción" de los combos.*/
+            /*Le agregamos un "id" a los tags <span> que tienen los links.*/
+            $(".chzn-container-single .chzn-single").each(function () {
+                if (id == 1) {
+                    this.children[0].setAttribute("id", "spn" + id);
+                    id += 1;
+                } else {
+                    this.children[0].setAttribute("id", "spn" + id);
+                }
+            });
+
+            /*Obtenemos los elementos con id "spn1" y "spn2"*/
+            var spn1 = document.getElementById("spn1");
+            var spn2 = document.getElementById("spn2");
+
+            /*Combo de Provincia*/
+            if (spn1.innerText == "Seleccione una opción") {
+                /*Eliminamos dinamicamente una clase de style y la reemplazamos por otra para que de la sensación de Foco.*/
+                provincia.removeClass("chzn-container-single chzn-default").addClass("chzn-container chzn-container-single chzn-container-active");
                 return;
             }
 
+            /*Combo de Localidad*/
+            if (spn2.innerText == "Seleccione una opción") {
+                /*Eliminamos dinamicamente una clase de style y la reemplazamos por otra para que de la sensación de Foco.*/
+                localidad.removeClass("chzn-container-single chzn-default").addClass("chzn-container chzn-container-single chzn-container-active");
+                return;
+            }
+
+            /*Se controla si los mensajes de validación de Código Postal se estan mostrando*/
             if (rfvCodigoPostal.style.display == "inline") {
                 codigoPostal.focus();
                 return;
@@ -267,7 +310,7 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upLocalidad" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" />
+                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" />
                                             <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlLocalidad" Display="Dynamic" CssClass="custom-error" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
