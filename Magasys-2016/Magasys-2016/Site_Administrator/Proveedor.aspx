@@ -6,6 +6,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server" />
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script type="text/javascript">
+        $(document).ready(function () {
+            /*Esta función se utiliza para cargar los styles de lo combos luego de hacer el postback.*/
+            Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(PageLoaded);
+        });
+
+        function PageLoaded(sender, args) {
+            $("#<%=ddlProvincia.ClientID%>").chosen();
+            $("#<%=ddlLocalidad.ClientID%>").chosen();
+        }
+
         function ValidateEmptyDepartamento(oSrc, args) {
             var piso = document.getElementById('<%= txtPiso.ClientID %>');
             var departamento = document.getElementById('<%= txtDepartamento.ClientID %>');
@@ -217,7 +227,7 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upProvincia" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" data-rel="chosen" style="width: 100%;"></asp:DropDownList>
+                                            <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;"></asp:DropDownList>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -230,7 +240,7 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upLocalidad" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" style="width: 100%;"/>
+                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -246,7 +256,7 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upBarrio" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" data-rel="chosen" style="width: 100%;"/>
+                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -266,7 +276,7 @@
                     </div>
                 </div>
                 <div class="form-actions text-right pal">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click"/>
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
                     &nbsp;
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" />
                 </div>
