@@ -49,3 +49,15 @@ select.customSelect {
     background-image: url('../images/icons/error.png');
 }
 /*--FIN Styles de Mensajes de error--*/
+
+/*--INICIO Quitamos el background que pone automáticamente 
+    el Chrome cuando realiza el autocompletado --*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/*--FIN Quitamos el background que pone automáticamente...--*/
