@@ -143,7 +143,7 @@
                                 <asp:Label ID="lblFechaAlta" runat="server" CssClass="col-md-3 control-label" Text="Fecha Alta">
                                     <asp:Label ID="lblRqrFechaAlta" runat="server" CssClass="require" Text="&nbsp;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtFechaAlta" runat="server" Enabled="False" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtFechaAlta" runat="server" Enabled="False" CssClass="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                                 <asp:Label ID="lblCuit" runat="server" CssClass="col-md-3 control-label" Text="CUIT">
                                     <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtCuit" runat="server" Enabled="False" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtCuit" runat="server" Enabled="False" CssClass="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                                 <asp:Label ID="lblRazonSocial" runat="server" CssClass="col-md-3 control-label" Text="Raz&oacute;n Social">
                                     <asp:Label ID="lblRqrRazonSocial" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="form-control" MaxLength="50" TabIndex="1" />
                                     <asp:RequiredFieldValidator ID="rfvRazonSocial" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtRazonSocial" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     <asp:RegularExpressionValidator ID="revRazonSocial" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="[a-zA-ZñÑ.\s]{2,50}" ControlToValidate="txtRazonSocial" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                 </div>
@@ -177,7 +177,7 @@
                                 <asp:Label ID="lblNombreResponsable" runat="server" CssClass="col-md-3 control-label" Text="Nombre Responsable">
                                     <asp:Label ID="lblRqrNombreResponsable" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtNombreResponsable" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtNombreResponsable" runat="server" CssClass="form-control" MaxLength="50" TabIndex="2" />
                                     <asp:RequiredFieldValidator ID="rfvNombreResponsable" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtNombreResponsable" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     <asp:RegularExpressionValidator ID="revNombreResponsable" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="[a-zA-ZñÑ\s]{2,50}" ControlToValidate="txtNombreResponsable" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                 </div>
@@ -188,7 +188,7 @@
                                 <asp:Label ID="lblApellidoResponsable" runat="server" CssClass="col-md-3 control-label" Text="Apellido Responsable">
                                     <asp:Label ID="lblRqrApellidoResponsable" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtApellidoResponsable" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtApellidoResponsable" runat="server" CssClass="form-control" MaxLength="50" TabIndex="3" />
                                     <asp:RequiredFieldValidator ID="rfvApellidoResponsable" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtApellidoResponsable" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     <asp:RegularExpressionValidator ID="revApellidoResponsable" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="[a-zA-ZñÑ\s]{2,50}" ControlToValidate="txtApellidoResponsable" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                 </div>
@@ -203,7 +203,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon">
                                         <i class="fa fa-mobile-phone"></i>
-                                        <asp:TextBox ID="txtTelefonoMovil" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
+                                        <asp:TextBox ID="txtTelefonoMovil" runat="server" CssClass="form-control" MaxLength="13" TabIndex="4" />
                                         <asp:RequiredFieldValidator ID="rfvTelefonoMovil" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                         <asp:RegularExpressionValidator ID="revTelefonoMovil" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     </div>
@@ -217,7 +217,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon">
                                         <i class="fa fa-phone"></i>
-                                        <asp:TextBox ID="txtTelefonoFijo" runat="server" CssClass="form-control" MaxLength="11"></asp:TextBox>
+                                        <asp:TextBox ID="txtTelefonoFijo" runat="server" CssClass="form-control" MaxLength="11" TabIndex="5" />
                                         <asp:RegularExpressionValidator ID="revTelefonoFijo" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoFijo" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon">
                                         <i class="fa fa-envelope"></i>
-                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" MaxLength="50"></asp:TextBox>
+                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" MaxLength="50" TabIndex="6" />
                                         <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtEmail" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                         <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Formato incorrecto" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     </div>
@@ -249,7 +249,7 @@
                                 <asp:Label ID="lblCalle" runat="server" CssClass="col-md-3 control-label" Text="Calle">
                                     <asp:Label ID="lblRqrCalle" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtCalle" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtCalle" runat="server" CssClass="form-control" MaxLength="50" TabIndex="7" />
                                     <asp:RequiredFieldValidator ID="rfvCalle" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtCalle" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     <asp:RegularExpressionValidator ID="revCalle" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="^[[a-z A-ZñÑ0-9]{2,50}]*$" ControlToValidate="txtCalle" Display="Dynamic" CssClass="custom-error" />
                                 </div>
@@ -260,7 +260,7 @@
                                 <asp:Label ID="lblNumero" runat="server" CssClass="col-md-3 control-label" Text="N&uacute;mero">
                                     <asp:Label ID="lblRqrNumero" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                                    <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control" MaxLength="4" TabIndex="8" />
                                     <asp:RequiredFieldValidator ID="rfvNumero" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtNumero" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     <asp:RegularExpressionValidator ID="revNumero" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="^[0-9]*" ControlToValidate="txtNumero" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                 </div>
@@ -273,7 +273,7 @@
                                 <asp:Label ID="lblPiso" runat="server" CssClass="col-md-3 control-label" Text="Piso">
                                     <asp:Label ID="lblRqrPiso" runat="server" CssClass="require" Text="&nbsp;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtPiso" runat="server" CssClass="form-control" MaxLength="3"></asp:TextBox>
+                                    <asp:TextBox ID="txtPiso" runat="server" CssClass="form-control" MaxLength="3" TabIndex="9" />
                                     <asp:RegularExpressionValidator ID="revPiso" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="[a-zA-ZñÑ0-9]{1,3}" ControlToValidate="txtPiso" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>
@@ -283,7 +283,7 @@
                                 <asp:Label ID="lblDepartamento" runat="server" CssClass="col-md-3 control-label" Text="Departamento">
                                     <asp:Label ID="lblRqrDepartamento" runat="server" CssClass="require" Text="&nbsp;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtDepartamento" runat="server" CssClass="form-control" onchange="ValidateEmptyDepartamentoChange(this);" MaxLength="3"></asp:TextBox>
+                                    <asp:TextBox ID="txtDepartamento" runat="server" CssClass="form-control" onchange="ValidateEmptyDepartamentoChange(this);" MaxLength="3" TabIndex="10" />
                                     <asp:CustomValidator ID="cvDepartamento" runat="server" ErrorMessage="Campo obligatorio" ClientValidationFunction="ValidateEmptyDepartamento" Display="Dynamic" CssClass="custom-error" />
                                     <asp:RegularExpressionValidator ID="revDepartamento" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="[a-zA-ZñÑ]{1,3}" ControlToValidate="txtDepartamento" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                 </div>
@@ -294,11 +294,11 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <asp:Label ID="lblProvincia" runat="server" CssClass="col-md-3 control-label" Text="Provincia">
-                                    <asp:Label ID="lblRqrProvincia" runat="server" CssClass="require" Text="&nbsp;&lowast;"></asp:Label></asp:Label>
+                                    <asp:Label ID="lblRqrProvincia" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upProvincia" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;"></asp:DropDownList>
+                                            <asp:DropDownList ID="ddlProvincia" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" TabIndex="11" />
                                             <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlProvincia" Display="Dynamic" CssClass="custom-error" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
@@ -312,7 +312,7 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upLocalidad" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" />
+                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" TabIndex="12" />
                                             <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlLocalidad" Display="Dynamic" CssClass="custom-error" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
@@ -329,7 +329,7 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upBarrio" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" />
+                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" TabIndex="13" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </div>
@@ -340,7 +340,7 @@
                                 <asp:Label ID="lblCodigoPostal" runat="server" CssClass="col-md-3 control-label" Text="C&oacute;digo Postal">
                                     <asp:Label ID="lblRqrCodigoPostal" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtCodigoPostal" runat="server" CssClass="form-control" MaxLength="8"></asp:TextBox>
+                                    <asp:TextBox ID="txtCodigoPostal" runat="server" CssClass="form-control" MaxLength="8" TabIndex="14" />
                                     <asp:RequiredFieldValidator ID="rfvCodigoPostal" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtCodigoPostal" Display="Dynamic" CssClass="custom-error" />
                                     <asp:RegularExpressionValidator ID="revCodigoPostal" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="^[a-zA-ZñÑ[0-9]{2,8}]*$" ControlToValidate="txtCodigoPostal" Display="Dynamic" CssClass="custom-error" />
                                 </div>
@@ -349,9 +349,9 @@
                     </div>
                 </div>
                 <div class="form-actions text-right pal">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" OnClientClick="GetFocus();" />
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" OnClientClick="GetFocus();" TabIndex="15" />
                     &nbsp;
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-green" OnClick="btnCancelar_Click" CausesValidation="False" TabIndex="16" />
                 </div>
                 <uc1:ModalMensaje runat="server" ID="ModalMensaje" />
             </form>
