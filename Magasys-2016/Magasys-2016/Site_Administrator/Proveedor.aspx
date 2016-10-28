@@ -81,13 +81,15 @@
 
             var id = 1;
 
-            /*Recorremos los link que tiene el texto de "Seleccione una opción" de los combos.*/
+            /*Recorremos los links que tiene el texto de "Seleccione una opción" de los combos.*/
             /*Le agregamos un "id" a los tags <span> que tienen los links.*/
             $(".chzn-container-single .chzn-single").each(function () {
                 if (id == 1) {
+                    /*Agregamos un id al tag de <span> del Provincia.*/
                     this.children[0].setAttribute("id", "spn" + id);
                     id += 1;
                 } else {
+                    /*Agregamos un id al tag de <span> del Localidad.*/
                     this.children[0].setAttribute("id", "spn" + id);
                 }
             });
