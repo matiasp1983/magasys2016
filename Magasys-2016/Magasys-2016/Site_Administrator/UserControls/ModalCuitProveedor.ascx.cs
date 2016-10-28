@@ -33,7 +33,9 @@ namespace Magasys_2016.Site_Administrator.UserControls
             }
             catch (Exception ex)
             {
-                ;
+                lblMensajeError.Text = String.Format(COMMON.Mensajes.Sistema_Error, ex.Message);
+                lblMensajeError.Visible = true;
+                upModalCuitProveedor.Update();
             }
         }
     }

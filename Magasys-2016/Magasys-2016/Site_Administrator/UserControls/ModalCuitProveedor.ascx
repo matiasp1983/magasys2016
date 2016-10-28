@@ -6,6 +6,7 @@
         var rfvCuit = document.getElementById('<%= rfvCuit.ClientID %>');
         var revCuit = document.getElementById('<%= revCuit.ClientID %>');
         var mensaje = document.getElementById('<%= lblMensaje.ClientID %>');
+        var mensajeError = document.getElementById('<%= lblMensajeError.ClientID %>');
 
         if (cuit.value.trim().length > 0) {
             cuit.value = "";
@@ -22,6 +23,10 @@
         if (mensaje != null) {
             mensaje.style.display = "none";
         }
+        
+        if (mensajeError != null) {
+            mensajeError.style.display = "none";
+        }
     }
 
     function GetFocus() {
@@ -33,11 +38,13 @@
         var rfvCuit = document.getElementById('<%= rfvCuit.ClientID %>');
         var revCuit = document.getElementById('<%= revCuit.ClientID %>');
         var mensaje = document.getElementById('<%= lblMensaje.ClientID %>');
+        var mensajeError = document.getElementById('<%= lblMensajeError.ClientID %>');
 
         var inline = "inline";
 
         if (rfvCuit.style.display == inline || revCuit.style.display == inline) {
             mensaje.style.display = "none";
+            mensajeError.style.display = "none";
         }
     }
 </script>
@@ -57,7 +64,8 @@
                                 <asp:TextBox ID="txtProveedorCuit" runat="server" CssClass="form-control" MaxLength="13" onchange="MessageHidden();"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtProveedorCuit" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error"/>
                                 <asp:RegularExpressionValidator ID="revCuit" runat="server" ErrorMessage="Formato incorrecto (ej: 99-99999999-9)" ValidationExpression="^[0-9]{2}-[0-9]{8}-[0-9]$" ControlToValidate="txtProveedorCuit" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error"/>
-                                <asp:Label ID="lblMensaje" runat="server" Visible="False" CssClass="custom-error">El CUIT ingresado ya existe</asp:Label>
+                                <asp:Label ID="lblMensaje" runat="server" Visible="False" CssClass="custom-error" style="color:#00529B; background-color: #5897fb; background-color: rgba(88,151,251,0.35);">El CUIT ingresado ya existe</asp:Label>
+                                <asp:Label ID="lblMensajeError" runat="server" Visible="False" CssClass="custom-error" style="position: fixed; left: 1%; right: 1%"/>
                             </div>
                     </div>
                     <div class="modal-footer" style="margin-top: 50px">
