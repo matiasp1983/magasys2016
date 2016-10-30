@@ -39,9 +39,9 @@ namespace DAL
                                                 PR.DEPARTAMENTO,
                                                 PR.ID_PROVINCIA,
                                                 PR.ID_LOCALIDAD,
-                                                PR.ID_BARRIO,
+                                                PR.BARRIO,
                                                 PR.COD_POSTAL
-                                            FROM PROVEEDOR PR";
+                                            FROM PROVEEDORES PR";
                 using (var oCommand = new SqlCommand(cmdText, oConnection))
                 {
                     try
@@ -102,8 +102,8 @@ namespace DAL
                                 if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
                                     oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
 
-                                if (!(oDataReader["ID_BARRIO"] is DBNull))
-                                    oProveedor.PIdBarrio = Convert.ToInt32(oDataReader["ID_BARRIO"]);
+                                if (!(oDataReader["BARRIO"] is DBNull))
+                                    oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
 
                                 if (!(oDataReader["COD_POSTAL"] is DBNull))
                                     oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
@@ -148,9 +148,9 @@ namespace DAL
                                                 PR.DEPARTAMENTO,
                                                 PR.ID_PROVINCIA,
                                                 PR.ID_LOCALIDAD,
-                                                PR.ID_BARRIO,
+                                                PR.BARRIO,
                                                 PR.COD_POSTAL
-                                            FROM PROVEEDOR PR
+                                            FROM PROVEEDORES PR
                                             WHERE 1 = 1  
                                             AND PR.ID_PROVEEDOR = @ID_PROVEEDOR";
                 using (var oCommand = new SqlCommand(cmdText, oConnection))
@@ -212,8 +212,8 @@ namespace DAL
                                 if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
                                     oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
 
-                                if (!(oDataReader["ID_BARRIO"] is DBNull))
-                                    oProveedor.PIdBarrio = Convert.ToInt32(oDataReader["ID_BARRIO"]);
+                                if (!(oDataReader["BARRIO"] is DBNull))
+                                    oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
 
                                 if (!(oDataReader["COD_POSTAL"] is DBNull))
                                     oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
@@ -257,9 +257,9 @@ namespace DAL
                                                 PR.DEPARTAMENTO,
                                                 PR.ID_PROVINCIA,
                                                 PR.ID_LOCALIDAD,
-                                                PR.ID_BARRIO,
+                                                PR.BARRIO,
                                                 PR.COD_POSTAL
-                                            FROM PROVEEDOR PR
+                                            FROM PROVEEDORES PR
                                             WHERE 1 = 1  
                                             AND PR.NUM_CUIT = @NUM_CUIT";
                 using (var oCommand = new SqlCommand(cmdText, oConnection))
@@ -321,8 +321,8 @@ namespace DAL
                                 if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
                                     oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
 
-                                if (!(oDataReader["ID_BARRIO"] is DBNull))
-                                    oProveedor.PIdBarrio = Convert.ToInt32(oDataReader["ID_BARRIO"]);
+                                if (!(oDataReader["BARRIO"] is DBNull))
+                                    oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
 
                                 if (!(oDataReader["COD_POSTAL"] is DBNull))
                                     oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();

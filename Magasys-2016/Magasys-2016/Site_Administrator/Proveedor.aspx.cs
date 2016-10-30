@@ -112,8 +112,8 @@ namespace Magasys_2016.Site_Administrator
             if (ddlLocalidad.SelectedIndex >= 1)
                 oProveedor.PIdLocalidad = Convert.ToInt32(ddlLocalidad.SelectedValue);
 
-            if (ddlBarrio.SelectedIndex >= 1)
-                oProveedor.PIdBarrio = Convert.ToInt32(ddlBarrio.SelectedValue);
+            if (!String.IsNullOrEmpty(txtBarrio.Text))
+                oProveedor.PBarrio = txtBarrio.Text;
 
             if (!String.IsNullOrEmpty(txtCodigoPostal.Text))
                 oProveedor.PCodigoPostal = txtCodigoPostal.Text;
@@ -137,18 +137,8 @@ namespace Magasys_2016.Site_Administrator
             else
             {
                 ddlLocalidad.Items.Clear();
-                ddlBarrio.Items.Clear();
+                txtBarrio.Text = String.Empty;
             }
-        }
-
-        protected void ddlLocalidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void ddlBarrio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void LoadProvincia()

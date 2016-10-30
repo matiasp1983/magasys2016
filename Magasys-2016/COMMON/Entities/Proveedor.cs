@@ -71,7 +71,7 @@ namespace COMMON.Entities
 
         public int PIdLocalidad { get; set; }
 
-        public int PIdBarrio { get; set; }
+        public string PBarrio { get; set; }
 
         public string PCodigoPostal
         {

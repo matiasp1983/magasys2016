@@ -661,22 +661,31 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.Label lblRqrBarrio;
         
         /// <summary>
-        /// upBarrio control.
+        /// txtBarrio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upBarrio;
+        protected global::System.Web.UI.WebControls.TextBox txtBarrio;
         
         /// <summary>
-        /// ddlBarrio control.
+        /// rfvBarrio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBarrio;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBarrio;
+        
+        /// <summary>
+        /// revBarrio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revBarrio;
         
         /// <summary>
         /// lblCodigoPostal control.

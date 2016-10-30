@@ -60,6 +60,9 @@
             var departamento = document.getElementById('<%= txtDepartamento.ClientID %>');
             var provincia = $("#ContentPlaceHolder1_ddlProvincia_chzn");
             var localidad = $("#ContentPlaceHolder1_ddlLocalidad_chzn");
+            var rfvBarrio = document.getElementById('<%= rfvBarrio.ClientID %>');
+            var revBarrio = document.getElementById('<%= revBarrio.ClientID %>');
+            var barrio = document.getElementById('<%= txtBarrio.ClientID %>');
             var rfvCodigoPostal = document.getElementById('<%= rfvCodigoPostal.ClientID %>');
             var codigoPostal = document.getElementById('<%= txtCodigoPostal.ClientID %>');
 
@@ -111,9 +114,18 @@
                 localidad.removeClass("chzn-container-single chzn-default").addClass("chzn-container chzn-container-single chzn-container-active");
                 return;
             }
+            
 
-            /*Se controla si los mensajes de validación de Código Postal se estan mostrando*/
-            if (rfvCodigoPostal.style.display == "inline") {
+            /*Se controla si los mensajes de validación del Barrio se estan mostrando*/
+            var inline = "inline";
+            
+            if (rfvBarrio.style.display == inline || revBarrio.style.display == inline) {
+                barrio.focus();
+                return;
+            }
+
+            /*Se controla si el mensaje de validación de Código Postal se esta mostrando*/
+            if (rfvCodigoPostal.style.display == inline) {
                 codigoPostal.focus();
                 return;
             }
@@ -312,7 +324,7 @@
                                 <div class="col-md-9">
                                     <asp:UpdatePanel ID="upLocalidad" runat="server">
                                         <ContentTemplate>
-                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" AutoPostBack="True" OnSelectedIndexChanged="ddlLocalidad_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" TabIndex="12" />
+                                            <asp:DropDownList ID="ddlLocalidad" runat="server" CssClass="customSelect" AutoPostBack="True" data-rel="chosen" Style="width: 100%;" TabIndex="12" />
                                             <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="ddlLocalidad" Display="Dynamic" CssClass="custom-error" />
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
@@ -327,11 +339,9 @@
                                 <asp:Label ID="lblBarrio" runat="server" CssClass="col-md-3 control-label" Text="Barrio">
                                     <asp:Label ID="lblRqrBarrio" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:UpdatePanel ID="upBarrio" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlBarrio" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlBarrio_SelectedIndexChanged" data-rel="chosen" Style="width: 100%;" TabIndex="13" />
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                    <asp:TextBox ID="txtBarrio" runat="server" CssClass="form-control" MaxLength="50" TabIndex="13" />
+                                    <asp:RequiredFieldValidator ID="rfvBarrio" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtBarrio" Display="Dynamic" CssClass="custom-error" />
+                                    <asp:RegularExpressionValidator ID="revBarrio" runat="server" ErrorMessage="Tipo de dato incorrecto" ValidationExpression="^[[a-z A-ZñÑ0-9]{2,50}]*$" ControlToValidate="txtBarrio" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>
                         </div>

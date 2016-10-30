@@ -24,7 +24,7 @@ namespace DAL
 
             using (var oConnection = new SqlConnection(PConnectionString))
             {
-                const string cmdText = @"SELECT PRO.ID_PROVINCIA, PRO.NOMBRE FROM PROVINCIA PRO ORDER BY PRO.NOMBRE";
+                const string cmdText = @"SELECT PRO.ID_PROVINCIA, PRO.NOMBRE FROM PROVINCIAS PRO ORDER BY PRO.NOMBRE";
                 using (var oCommand = new SqlCommand(cmdText, oConnection))
                 {
                     try

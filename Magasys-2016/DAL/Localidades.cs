@@ -24,7 +24,7 @@ namespace DAL
             using (var oConnection = new SqlConnection(PConnectionString))
             {
                 const string cmdText = @"SELECT LOC.ID_LOCALIDAD, LOC.NOMBRE
-                                                FROM LOCALIDAD LOC
+                                                FROM LOCALIDADES LOC
                                             WHERE 1 = 1 
                                             AND LOC.ID_PROVINCIA = @ID_PROVINCIA
                                             ORDER BY LOC.NOMBRE";
