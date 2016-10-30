@@ -117,6 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ModalCuitProveedor_Exist" xml:space="preserve">
+    <value>El CUIT ingresado "{0}" ya existe.</value>
+    <comment>El CUIT ingresado "{0}" ya existe.</comment>
+  </data>
+  <data name="ModalCuitProveedor_Failure" xml:space="preserve">
+    <value>El CUIT ingresado "{0}" no es válido.</value>
+    <comment>El CUIT ingresado "{0}" no es válido.</comment>
+  </data>
   <data name="Proveedor_Error" xml:space="preserve">
     <value>Ocurrió un error y el proveedor no se pudo guardar.&lt;br /&gt;Error: {0}</value>
     <comment>Ocurrió un error y el proveedor no se pudo guardar. Error: {0}</comment>

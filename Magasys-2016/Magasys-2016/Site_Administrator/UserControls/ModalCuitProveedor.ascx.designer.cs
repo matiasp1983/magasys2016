@@ -58,22 +58,13 @@ namespace Magasys_2016.Site_Administrator.UserControls {
         protected global::System.Web.UI.WebControls.TextBox txtProveedorCuit;
         
         /// <summary>
-        /// rfvCuit control.
+        /// lblMensajeVacio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCuit;
-        
-        /// <summary>
-        /// revCuit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCuit;
+        protected global::System.Web.UI.WebControls.Label lblMensajeVacio;
         
         /// <summary>
         /// lblMensaje control.

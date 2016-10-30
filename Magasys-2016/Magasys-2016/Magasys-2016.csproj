@@ -206,6 +206,7 @@
     <Content Include="Site_Administrator\script\jquery.flot.spline.js" />
     <Content Include="Site_Administrator\script\jquery.flot.stack.js" />
     <Content Include="Site_Administrator\script\jquery.flot.tooltip.js" />
+    <Content Include="Site_Administrator\script\jquery.maskedinput.min.js" />
     <Content Include="Site_Administrator\script\jquery.menu.js" />
     <Content Include="Site_Administrator\script\jquery.metisMenu.js" />
     <Content Include="Site_Administrator\script\jquery.nestable.js" />

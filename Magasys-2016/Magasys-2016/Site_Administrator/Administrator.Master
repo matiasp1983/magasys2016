@@ -32,6 +32,8 @@
     <!--Estas referencias se colocaron aquí para que funcione el Mesaje Modal-->
     <script src="script/jquery-1.10.2.min.js"></script>
     <script src="script/bootstrap.min.js"></script>
+    <!--Se utiliza para aplicarle mascaras a los Texbox-->
+    <script src="script/jquery.maskedinput.min.js" type="text/javascript"></script>
 </head>
 <body>
     <div>

@@ -61,6 +61,24 @@ namespace COMMON {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to El CUIT ingresado &quot;{0}&quot; ya existe..
+        /// </summary>
+        public static string ModalCuitProveedor_Exist {
+            get {
+                return ResourceManager.GetString("ModalCuitProveedor_Exist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to El CUIT ingresado &quot;{0}&quot; no es válido..
+        /// </summary>
+        public static string ModalCuitProveedor_Failure {
+            get {
+                return ResourceManager.GetString("ModalCuitProveedor_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ocurrió un error y el proveedor no se pudo guardar.&lt;br /&gt;Error: {0}.
         /// </summary>
         public static string Proveedor_Error {

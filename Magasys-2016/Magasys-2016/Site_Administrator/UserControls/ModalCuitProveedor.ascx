@@ -1,29 +1,34 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ModalCuitProveedor.ascx.cs" Inherits="Magasys_2016.Site_Administrator.UserControls.ModalCuitProveedor" %>
 
 <script type="text/javascript">
+    $(document).ready(function () {
+        /*Esta función se utiliza para cargar la máscara del CUIT luego de hacer el POSTBACK.*/
+        Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(PageLoaded);
+    });
+
+    function PageLoaded(sender, args) {
+        $("#<%=txtProveedorCuit.ClientID%>").mask("99-99999999-9");
+    }
+
+
     function FieldClear() {
         var cuit = document.getElementById('<%= txtProveedorCuit.ClientID %>');
-        var rfvCuit = document.getElementById('<%= rfvCuit.ClientID %>');
-        var revCuit = document.getElementById('<%= revCuit.ClientID %>');
+        var mensajeVacio = document.getElementById('<%= lblMensajeVacio.ClientID %>');
         var mensaje = document.getElementById('<%= lblMensaje.ClientID %>');
         var mensajeError = document.getElementById('<%= lblMensajeError.ClientID %>');
 
         if (cuit.value.trim().length > 0) {
-            cuit.value = "";
+            cuit.value = "__-________-_";
         }
 
-        if (rfvCuit.style.display == "inline") {
-            rfvCuit.style.display = "none";
-        }
-
-        if (revCuit.style.display == "inline") {
-            revCuit.style.display = "none";
+        if (mensajeVacio != null) {
+            mensajeVacio.style.display = "none";
         }
 
         if (mensaje != null) {
             mensaje.style.display = "none";
         }
-        
+
         if (mensajeError != null) {
             mensajeError.style.display = "none";
         }
@@ -33,17 +38,21 @@
         var cuit = document.getElementById('<%= txtProveedorCuit.ClientID %>');
         setTimeout(function () { $(cuit).focus(); }, 1000);
     }
-    
+
     function MessageHidden() {
-        var rfvCuit = document.getElementById('<%= rfvCuit.ClientID %>');
-        var revCuit = document.getElementById('<%= revCuit.ClientID %>');
+        var mensajeVacio = document.getElementById('<%= lblMensajeVacio.ClientID %>');
         var mensaje = document.getElementById('<%= lblMensaje.ClientID %>');
         var mensajeError = document.getElementById('<%= lblMensajeError.ClientID %>');
 
-        var inline = "inline";
+        if (mensajeVacio != null) {
+            mensajeVacio.style.display = "none";
+        }
 
-        if (rfvCuit.style.display == inline || revCuit.style.display == inline) {
+        if (mensaje != null) {
             mensaje.style.display = "none";
+        }
+
+        if (mensajeError != null) {
             mensajeError.style.display = "none";
         }
     }
@@ -62,10 +71,9 @@
                         <asp:Label ID="lblProveedorCuit" runat="server" CssClass="col-md-3 control-label" Text="CUIT">
                             <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label><div class="col-md-9" style="width: 65%">
                                 <asp:TextBox ID="txtProveedorCuit" runat="server" CssClass="form-control" MaxLength="13" onchange="MessageHidden();"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvCuit" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtProveedorCuit" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error"/>
-                                <asp:RegularExpressionValidator ID="revCuit" runat="server" ErrorMessage="Formato incorrecto (ej: 99-99999999-9)" ValidationExpression="^[0-9]{2}-[0-9]{8}-[0-9]$" ControlToValidate="txtProveedorCuit" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error"/>
-                                <asp:Label ID="lblMensaje" runat="server" Visible="False" CssClass="custom-error" style="color:#00529B; background-color: #5897fb; background-color: rgba(88,151,251,0.35);">El CUIT ingresado ya existe</asp:Label>
-                                <asp:Label ID="lblMensajeError" runat="server" Visible="False" CssClass="custom-error" style="position: fixed; left: 1%; right: 1%"/>
+                                <asp:Label ID="lblMensajeVacio" runat="server" Visible="False" CssClass="custom-error">Campo obligatorio.</asp:Label>
+                                <asp:Label ID="lblMensaje" runat="server" Visible="False" CssClass="custom-error" Style="color: #00529B; background-color: #5897fb; background-color: rgba(88,151,251,0.35);"/>
+                                <asp:Label ID="lblMensajeError" runat="server" Visible="False" CssClass="custom-error" Style="position: fixed; left: 1%; right: 1%" />
                             </div>
                     </div>
                     <div class="modal-footer" style="margin-top: 50px">
