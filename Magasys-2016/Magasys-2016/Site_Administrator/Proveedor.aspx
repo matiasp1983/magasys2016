@@ -14,6 +14,8 @@
         function PageLoaded(sender, args) {
             $("#<%=ddlProvincia.ClientID%>").chosen();
             $("#<%=ddlLocalidad.ClientID%>").chosen();
+            $("#<%=txtTelefonoMovil.ClientID%>").mask("(999) 999-9999");
+            $("#<%=txtTelefonoFijo.ClientID%>").mask("(999) 999-9999");
         }
 
         function ValidateEmptyDepartamento(oSrc, args) {
@@ -216,8 +218,7 @@
                                     <div class="input-icon">
                                         <i class="fa fa-mobile-phone"></i>
                                         <asp:TextBox ID="txtTelefonoMovil" runat="server" CssClass="form-control" MaxLength="13" TabIndex="4" />
-                                        <asp:RequiredFieldValidator ID="rfvTelefonoMovil" runat="server" ErrorMessage="Campo obligatorio." ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
-                                        <asp:RegularExpressionValidator ID="revTelefonoMovil" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
+                                        <asp:RequiredFieldValidator ID="rfvTelefonoMovil" runat="server" ErrorMessage="Campo obligatorio." ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />                                        
                                     </div>
                                 </div>
                             </div>
@@ -229,8 +230,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon">
                                         <i class="fa fa-phone"></i>
-                                        <asp:TextBox ID="txtTelefonoFijo" runat="server" CssClass="form-control" MaxLength="11" TabIndex="5" />
-                                        <asp:RegularExpressionValidator ID="revTelefonoFijo" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoFijo" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
+                                        <asp:TextBox ID="txtTelefonoFijo" runat="server" CssClass="form-control" MaxLength="11" TabIndex="5" />                                        
                                     </div>
                                 </div>
                             </div>
