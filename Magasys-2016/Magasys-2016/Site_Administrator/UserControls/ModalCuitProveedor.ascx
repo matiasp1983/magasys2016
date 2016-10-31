@@ -70,9 +70,9 @@
                     <div class="modal-body">
                         <asp:Label ID="lblProveedorCuit" runat="server" CssClass="col-md-3 control-label" Text="CUIT">
                             <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;&lowast;" /></asp:Label><div class="col-md-9" style="width: 65%">
-                                <asp:TextBox ID="txtProveedorCuit" runat="server" CssClass="form-control" MaxLength="13" onchange="MessageHidden();"></asp:TextBox>
+                                <asp:TextBox ID="txtProveedorCuit" runat="server" CssClass="form-control" MaxLength="13" onchange="MessageHidden();" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
                                 <asp:Label ID="lblMensajeVacio" runat="server" Visible="False" CssClass="custom-error">Campo obligatorio.</asp:Label>
-                                <asp:Label ID="lblMensaje" runat="server" Visible="False" CssClass="custom-error" Style="color: #00529B; background-color: #5897fb; background-color: rgba(88,151,251,0.35);"/>
+                                <asp:Label ID="lblMensaje" runat="server" Visible="False" CssClass="custom-error" Style="color: #00529B; background-color: #5897fb; background-color: rgba(88,151,251,0.35);" />
                                 <asp:Label ID="lblMensajeError" runat="server" Visible="False" CssClass="custom-error" Style="position: fixed; left: 1%; right: 1%" />
                             </div>
                     </div>

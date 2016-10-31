@@ -158,8 +158,7 @@ namespace DAL
                     try
                     {
                         oCommand.Connection.Open();
-                        var oParameter = new SqlParameter("@ID_PROVEEDOR", idProveedor);
-                        oCommand.Parameters.Add(oParameter);
+                        LoadParameter(oCommand, "@ID_PROVEEDOR", idProveedor);
 
                         using (var oDataReader = oCommand.ExecuteReader())
                         {
@@ -267,8 +266,7 @@ namespace DAL
                     try
                     {
                         oCommand.Connection.Open();
-                        var oParameter = new SqlParameter("@NUM_CUIT", cuit);
-                        oCommand.Parameters.Add(oParameter);
+                        LoadParameter(oCommand, "@NUM_CUIT", cuit);
 
                         using (var oDataReader = oCommand.ExecuteReader())
                         {
@@ -349,8 +347,78 @@ namespace DAL
 
         public bool Insert(Proveedor oProveedor)
         {
-            /*Agregar la fecha actual al inserta el registro "getdate ()"*/
-            return false;
+            int cantRow;
+
+            using (var oConnection = new SqlConnection(PConnectionString))
+            {
+                const string cmdText = @"INSERT INTO PROVEEDORES                                                
+                                               (FECHA_ALTA,
+                                                NUM_CUIT,
+                                                RAZON_SOCIAL,
+                                                NOMBRE_RESP,
+                                                APELLIDO_RESP,
+                                                TELEFONO_MOVIL,
+                                                EMAIL,
+                                                TELEFONO_FIJO,
+                                                CALLE,
+                                                NUMERO,
+                                                PISO,
+                                                DEPARTAMENTO,
+                                                ID_PROVINCIA,
+                                                ID_LOCALIDAD,
+                                                BARRIO,
+                                                COD_POSTAL)
+                                            VALUES (GETDATE (),
+                                                    @NUM_CUIT,
+                                                    @RAZON_SOCIAL,
+                                                    @NOMBRE_RESP,
+                                                    @APELLIDO_RESP,
+                                                    @TELEFONO_MOVIL,
+                                                    @TELEFONO_FIJO,
+                                                    @EMAIL,
+                                                    @CALLE,
+                                                    @NUMERO,
+                                                    @PISO,
+                                                    @DEPARTAMENTO,
+                                                    @ID_PROVINCIA,
+                                                    @ID_LOCALIDAD,
+                                                    @BARRIO,
+                                                    @COD_POSTAL)";
+                using (var oCommand = new SqlCommand(cmdText, oConnection))
+                {
+                    try
+                    {
+                        oCommand.Connection.Open();
+                        LoadParameter(oCommand, "@NUM_CUIT", oProveedor.PCuit);
+                        LoadParameter(oCommand, "@RAZON_SOCIAL", oProveedor.PRazonSocial);
+                        LoadParameter(oCommand, "@NOMBRE_RESP", oProveedor.PNombre);
+                        LoadParameter(oCommand, "@APELLIDO_RESP", oProveedor.PApellido);
+                        LoadParameter(oCommand, "@TELEFONO_MOVIL", oProveedor.PTelefonoMovil);
+                        LoadParameter(oCommand, "@TELEFONO_FIJO", oProveedor.PTelefonoFijo);
+                        LoadParameter(oCommand, "@EMAIL", oProveedor.PEmail);
+                        LoadParameter(oCommand, "@CALLE", oProveedor.PCalle);
+                        LoadParameter(oCommand, "@NUMERO", oProveedor.PNumero);
+                        LoadParameter(oCommand, "@PISO", oProveedor.PPiso);
+                        LoadParameter(oCommand, "@DEPARTAMENTO", oProveedor.PDepartamento);
+                        LoadParameter(oCommand, "@ID_PROVINCIA", oProveedor.PIdProvincia);
+                        LoadParameter(oCommand, "@ID_LOCALIDAD", oProveedor.PIdLocalidad);
+                        LoadParameter(oCommand, "@BARRIO", oProveedor.PBarrio);
+                        LoadParameter(oCommand, "@COD_POSTAL", oProveedor.PCodigoPostal);
+
+                        cantRow = Convert.ToInt32(oCommand.ExecuteNonQuery());
+
+                        oConnection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        if (oConnection.State == ConnectionState.Closed) throw;
+                        oConnection.Close();
+                        throw;
+                    }
+                }
+            }
+
+            return cantRow > 0;
         }
 
         public bool Update(Proveedor oProveedor)
@@ -361,6 +429,11 @@ namespace DAL
         public bool Delete(Proveedor idProveedor)
         {
             return false;
+        }
+
+        private static void LoadParameter(SqlCommand oCommand, string nombreParametro, object valor)
+        {
+            oCommand.Parameters.Add(new SqlParameter(nombreParametro, valor));
         }
 
         #endregion

@@ -7,6 +7,8 @@ namespace COMMON
     {
         public static void Show(Page pagina, Enums.TipoMensaje tipoMensaje, string mensaje)
         {
+            mensaje = Utilities.ReemplazaAxB(mensaje, "'", "\"");
+
             const string modal = "$('#divModalMensajeBody').addClass({0});$('#divModalMensajeBody').html('{1}');$('#modal-header-primary').modal('show');";
             switch (tipoMensaje)
             {

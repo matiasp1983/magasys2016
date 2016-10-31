@@ -32,6 +32,11 @@ namespace COMMON
             var total = mult.Select((t, i) => int.Parse(nums[i].ToString(CultureInfo.InvariantCulture))*t).Sum();
             var resto = total % 11;
             return resto == 0 ? 0 : resto == 1 ? 9 : 11 - resto;
-        }	
+        }
+
+        public static string ReemplazaAxB(string objeto, string valorA, string valorB)
+        {
+            return objeto.Replace(valorA, valorB);
+        }
     }
 }
