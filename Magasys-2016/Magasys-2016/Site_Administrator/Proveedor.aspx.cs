@@ -116,13 +116,13 @@ namespace Magasys_2016.Site_Administrator
             LoadProvincia();
             if (oProveedor.PIdProveedor != 0)
             {
-                Modificar(oProveedor);
+                ModificarProveedor(oProveedor);
             }
         }
 
-        internal void Modificar(COMMON.Entities.Proveedor oProveedor)
+        internal void ModificarProveedor(COMMON.Entities.Proveedor oProveedor)
         {
-            divTitleHeading.InnerText = "Modificar Proveedor";
+            divTitleHeading.InnerText = COMMON.Mensajes.Proveedor_Titulo;
             divRowHidden.Visible = true;
             txtIdProveedor.Text = oProveedor.PIdProveedor.ToString(CultureInfo.InvariantCulture);
             txtFechaAlta.Text = oProveedor.PFechaAlta.ToShortDateString();

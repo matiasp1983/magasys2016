@@ -106,6 +106,15 @@ namespace COMMON {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modificar Proveedor.
+        /// </summary>
+        public static string Proveedor_Titulo {
+            get {
+                return ResourceManager.GetString("Proveedor_Titulo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error: {0}.
         /// </summary>
         public static string Sistema_Error {
