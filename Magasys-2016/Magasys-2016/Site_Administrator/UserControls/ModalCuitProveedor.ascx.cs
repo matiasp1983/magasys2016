@@ -25,7 +25,8 @@ namespace Magasys_2016.Site_Administrator.UserControls
 
                         if (oProveedor == null)
                         {
-                            Session["CUIT"] = txtProveedorCuit.Text;
+                            oProveedor = new COMMON.Entities.Proveedor {PCuit = txtProveedorCuit.Text};
+                            Session["oProveedor"] = oProveedor;
                             Response.Redirect("Proveedor.aspx", false);
                         }
                         else

@@ -53,62 +53,7 @@ namespace DAL
 
                             while (oDataReader.Read())
                             {
-                                var oProveedor = new Proveedor();
-
-                                if (!(oDataReader["ID_PROVEEDOR"] is DBNull))
-                                    oProveedor.PIdProveedor = Convert.ToInt32(oDataReader["ID_PROVEEDOR"]);
-                                else
-                                    continue;
-
-                                if (!(oDataReader["FECHA_ALTA"] is DBNull))
-                                    oProveedor.PFechaAlta = Convert.ToDateTime(oDataReader["FECHA_ALTA"]);
-
-                                if (!(oDataReader["NUM_CUIT"] is DBNull))
-                                    oProveedor.PCuit = oDataReader["NUM_CUIT"].ToString();
-
-                                if (!(oDataReader["RAZON_SOCIAL"] is DBNull))
-                                    oProveedor.PRazonSocial = oDataReader["RAZON_SOCIAL"].ToString();
-
-                                if (!(oDataReader["NOMBRE_RESP"] is DBNull))
-                                    oProveedor.PNombre = oDataReader["NOMBRE_RESP"].ToString();
-
-                                if (!(oDataReader["APELLIDO_RESP"] is DBNull))
-                                    oProveedor.PApellido = oDataReader["APELLIDO_RESP"].ToString();
-
-                                if (!(oDataReader["TELEFONO_MOVIL"] is DBNull))
-                                    oProveedor.PTelefonoMovil = oDataReader["TELEFONO_MOVIL"].ToString();
-
-                                if (!(oDataReader["EMAIL"] is DBNull))
-                                    oProveedor.PEmail = oDataReader["EMAIL"].ToString();
-
-                                if (!(oDataReader["TELEFONO_FIJO"] is DBNull))
-                                    oProveedor.PTelefonoFijo = oDataReader["TELEFONO_FIJO"].ToString();
-
-                                if (!(oDataReader["CALLE"] is DBNull))
-                                    oProveedor.PCalle = oDataReader["CALLE"].ToString();
-
-                                if (!(oDataReader["NUMERO"] is DBNull))
-                                    oProveedor.PNumero = Convert.ToInt16(oDataReader["NUMERO"]);
-
-                                if (!(oDataReader["PISO"] is DBNull))
-                                    oProveedor.PPiso = oDataReader["PISO"].ToString();
-
-                                if (!(oDataReader["DEPARTAMENTO"] is DBNull))
-                                    oProveedor.PDepartamento = oDataReader["DEPARTAMENTO"].ToString();
-
-                                if (!(oDataReader["ID_PROVINCIA"] is DBNull))
-                                    oProveedor.PIdProvincia = Convert.ToInt32(oDataReader["ID_PROVINCIA"]);
-
-                                if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
-                                    oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
-
-                                if (!(oDataReader["BARRIO"] is DBNull))
-                                    oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
-
-                                if (!(oDataReader["COD_POSTAL"] is DBNull))
-                                    oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
-
-                                lstProveedores.Add(oProveedor);
+                                lstProveedores.Add(GetProveedor(oDataReader));
                             }
                         }
 
@@ -164,58 +109,7 @@ namespace DAL
                         {
                             if (oDataReader.Read())
                             {
-                                oProveedor = new Proveedor();
-
-                                if (!(oDataReader["ID_PROVEEDOR"] is DBNull))
-                                    oProveedor.PIdProveedor = Convert.ToInt32(oDataReader["ID_PROVEEDOR"]);
-
-                                if (!(oDataReader["FECHA_ALTA"] is DBNull))
-                                    oProveedor.PFechaAlta = Convert.ToDateTime(oDataReader["FECHA_ALTA"]);
-
-                                if (!(oDataReader["NUM_CUIT"] is DBNull))
-                                    oProveedor.PCuit = oDataReader["NUM_CUIT"].ToString();
-
-                                if (!(oDataReader["RAZON_SOCIAL"] is DBNull))
-                                    oProveedor.PRazonSocial = oDataReader["RAZON_SOCIAL"].ToString();
-
-                                if (!(oDataReader["NOMBRE_RESP"] is DBNull))
-                                    oProveedor.PNombre = oDataReader["NOMBRE_RESP"].ToString();
-
-                                if (!(oDataReader["APELLIDO_RESP"] is DBNull))
-                                    oProveedor.PApellido = oDataReader["APELLIDO_RESP"].ToString();
-
-                                if (!(oDataReader["TELEFONO_MOVIL"] is DBNull))
-                                    oProveedor.PTelefonoMovil = oDataReader["TELEFONO_MOVIL"].ToString();
-
-                                if (!(oDataReader["EMAIL"] is DBNull))
-                                    oProveedor.PEmail = oDataReader["EMAIL"].ToString();
-
-                                if (!(oDataReader["TELEFONO_FIJO"] is DBNull))
-                                    oProveedor.PTelefonoFijo = oDataReader["TELEFONO_FIJO"].ToString();
-
-                                if (!(oDataReader["CALLE"] is DBNull))
-                                    oProveedor.PCalle = oDataReader["CALLE"].ToString();
-
-                                if (!(oDataReader["NUMERO"] is DBNull))
-                                    oProveedor.PNumero = Convert.ToInt16(oDataReader["NUMERO"]);
-
-                                if (!(oDataReader["PISO"] is DBNull))
-                                    oProveedor.PPiso = oDataReader["PISO"].ToString();
-
-                                if (!(oDataReader["DEPARTAMENTO"] is DBNull))
-                                    oProveedor.PDepartamento = oDataReader["DEPARTAMENTO"].ToString();
-
-                                if (!(oDataReader["ID_PROVINCIA"] is DBNull))
-                                    oProveedor.PIdProvincia = Convert.ToInt32(oDataReader["ID_PROVINCIA"]);
-
-                                if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
-                                    oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
-
-                                if (!(oDataReader["BARRIO"] is DBNull))
-                                    oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
-
-                                if (!(oDataReader["COD_POSTAL"] is DBNull))
-                                    oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
+                                oProveedor = GetProveedor(oDataReader);
                             }
                         }
 
@@ -272,58 +166,7 @@ namespace DAL
                         {
                             if (oDataReader.Read())
                             {
-                                oProveedor = new Proveedor();
-
-                                if (!(oDataReader["ID_PROVEEDOR"] is DBNull))
-                                    oProveedor.PIdProveedor = Convert.ToInt32(oDataReader["ID_PROVEEDOR"]);
-
-                                if (!(oDataReader["FECHA_ALTA"] is DBNull))
-                                    oProveedor.PFechaAlta = Convert.ToDateTime(oDataReader["FECHA_ALTA"]);
-
-                                if (!(oDataReader["NUM_CUIT"] is DBNull))
-                                    oProveedor.PCuit = oDataReader["NUM_CUIT"].ToString();
-
-                                if (!(oDataReader["RAZON_SOCIAL"] is DBNull))
-                                    oProveedor.PRazonSocial = oDataReader["RAZON_SOCIAL"].ToString();
-
-                                if (!(oDataReader["NOMBRE_RESP"] is DBNull))
-                                    oProveedor.PNombre = oDataReader["NOMBRE_RESP"].ToString();
-
-                                if (!(oDataReader["APELLIDO_RESP"] is DBNull))
-                                    oProveedor.PApellido = oDataReader["APELLIDO_RESP"].ToString();
-
-                                if (!(oDataReader["TELEFONO_MOVIL"] is DBNull))
-                                    oProveedor.PTelefonoMovil = oDataReader["TELEFONO_MOVIL"].ToString();
-
-                                if (!(oDataReader["EMAIL"] is DBNull))
-                                    oProveedor.PEmail = oDataReader["EMAIL"].ToString();
-
-                                if (!(oDataReader["TELEFONO_FIJO"] is DBNull))
-                                    oProveedor.PTelefonoFijo = oDataReader["TELEFONO_FIJO"].ToString();
-
-                                if (!(oDataReader["CALLE"] is DBNull))
-                                    oProveedor.PCalle = oDataReader["CALLE"].ToString();
-
-                                if (!(oDataReader["NUMERO"] is DBNull))
-                                    oProveedor.PNumero = Convert.ToInt16(oDataReader["NUMERO"]);
-
-                                if (!(oDataReader["PISO"] is DBNull))
-                                    oProveedor.PPiso = oDataReader["PISO"].ToString();
-
-                                if (!(oDataReader["DEPARTAMENTO"] is DBNull))
-                                    oProveedor.PDepartamento = oDataReader["DEPARTAMENTO"].ToString();
-
-                                if (!(oDataReader["ID_PROVINCIA"] is DBNull))
-                                    oProveedor.PIdProvincia = Convert.ToInt32(oDataReader["ID_PROVINCIA"]);
-
-                                if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
-                                    oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
-
-                                if (!(oDataReader["BARRIO"] is DBNull))
-                                    oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
-
-                                if (!(oDataReader["COD_POSTAL"] is DBNull))
-                                    oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
+                                oProveedor = GetProveedor(oDataReader);
                             }
                         }
 
@@ -358,8 +201,8 @@ namespace DAL
                                                 NOMBRE_RESP,
                                                 APELLIDO_RESP,
                                                 TELEFONO_MOVIL,
-                                                EMAIL,
                                                 TELEFONO_FIJO,
+                                                EMAIL,
                                                 CALLE,
                                                 NUMERO,
                                                 PISO,
@@ -423,7 +266,61 @@ namespace DAL
 
         public bool Update(Proveedor oProveedor)
         {
-            return false;
+            bool exito;
+
+            using (var oConnection = new SqlConnection(PConnectionString))
+            {
+                const string cmdText = @"UPDATE PROVEEDORES                                                
+                                         SET    RAZON_SOCIAL = @RAZON_SOCIAL,
+                                                NOMBRE_RESP = @NOMBRE_RESP,
+                                                APELLIDO_RESP = @APELLIDO_RESP,
+                                                TELEFONO_MOVIL = @TELEFONO_MOVIL,
+                                                EMAIL = @EMAIL,
+                                                TELEFONO_FIJO = @TELEFONO_FIJO,
+                                                CALLE = @CALLE,
+                                                NUMERO = @NUMERO,
+                                                PISO = @PISO,
+                                                DEPARTAMENTO = @DEPARTAMENTO,
+                                                ID_PROVINCIA = @ID_PROVINCIA,
+                                                ID_LOCALIDAD = @ID_LOCALIDAD,
+                                                BARRIO = @BARRIO,
+                                                COD_POSTAL = @COD_POSTAL
+                                         WHERE 1 = 1  
+                                         AND ID_PROVEEDOR = @ID_PROVEEDOR";
+                using (var oCommand = new SqlCommand(cmdText, oConnection))
+                {
+                    try
+                    {
+                        oCommand.Connection.Open();
+                        LoadParameter(oCommand, "@ID_PROVEEDOR", oProveedor.PIdProveedor);
+                        LoadParameter(oCommand, "@RAZON_SOCIAL", oProveedor.PRazonSocial);
+                        LoadParameter(oCommand, "@NOMBRE_RESP", oProveedor.PNombre);
+                        LoadParameter(oCommand, "@APELLIDO_RESP", oProveedor.PApellido);
+                        LoadParameter(oCommand, "@TELEFONO_MOVIL", oProveedor.PTelefonoMovil);
+                        LoadParameter(oCommand, "@TELEFONO_FIJO", oProveedor.PTelefonoFijo);
+                        LoadParameter(oCommand, "@EMAIL", oProveedor.PEmail);
+                        LoadParameter(oCommand, "@CALLE", oProveedor.PCalle);
+                        LoadParameter(oCommand, "@NUMERO", oProveedor.PNumero);
+                        LoadParameter(oCommand, "@PISO", oProveedor.PPiso);
+                        LoadParameter(oCommand, "@DEPARTAMENTO", oProveedor.PDepartamento);
+                        LoadParameter(oCommand, "@ID_PROVINCIA", oProveedor.PIdProvincia);
+                        LoadParameter(oCommand, "@ID_LOCALIDAD", oProveedor.PIdLocalidad);
+                        LoadParameter(oCommand, "@BARRIO", oProveedor.PBarrio);
+                        LoadParameter(oCommand, "@COD_POSTAL", oProveedor.PCodigoPostal);
+
+                        exito = Convert.ToBoolean(oCommand.ExecuteNonQuery());
+
+                        oConnection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        if (oConnection.State == ConnectionState.Closed) throw;
+                        oConnection.Close();
+                        throw;
+                    }
+                }
+            }
+            return exito;
         }
 
         public bool Delete(Proveedor idProveedor)
@@ -431,12 +328,73 @@ namespace DAL
             return false;
         }
 
+        #endregion
+
+        #region [-- Funciones Privadas --]
+
         private static void LoadParameter(SqlCommand oCommand, string nombreParametro, object valor)
         {
             oCommand.Parameters.Add(new SqlParameter(nombreParametro, valor));
         }
 
-        #endregion
+        private static Proveedor GetProveedor(IDataRecord oDataReader)
+        {
+            var oProveedor = new Proveedor();
 
+            if (!(oDataReader["ID_PROVEEDOR"] is DBNull))
+                oProveedor.PIdProveedor = Convert.ToInt32(oDataReader["ID_PROVEEDOR"]);
+
+            if (!(oDataReader["FECHA_ALTA"] is DBNull))
+                oProveedor.PFechaAlta = Convert.ToDateTime(oDataReader["FECHA_ALTA"]);
+
+            if (!(oDataReader["NUM_CUIT"] is DBNull))
+                oProveedor.PCuit = oDataReader["NUM_CUIT"].ToString();
+
+            if (!(oDataReader["RAZON_SOCIAL"] is DBNull))
+                oProveedor.PRazonSocial = oDataReader["RAZON_SOCIAL"].ToString();
+
+            if (!(oDataReader["NOMBRE_RESP"] is DBNull))
+                oProveedor.PNombre = oDataReader["NOMBRE_RESP"].ToString();
+
+            if (!(oDataReader["APELLIDO_RESP"] is DBNull))
+                oProveedor.PApellido = oDataReader["APELLIDO_RESP"].ToString();
+
+            if (!(oDataReader["TELEFONO_MOVIL"] is DBNull))
+                oProveedor.PTelefonoMovil = oDataReader["TELEFONO_MOVIL"].ToString();
+
+            if (!(oDataReader["EMAIL"] is DBNull))
+                oProveedor.PEmail = oDataReader["EMAIL"].ToString();
+
+            if (!(oDataReader["TELEFONO_FIJO"] is DBNull))
+                oProveedor.PTelefonoFijo = oDataReader["TELEFONO_FIJO"].ToString();
+
+            if (!(oDataReader["CALLE"] is DBNull))
+                oProveedor.PCalle = oDataReader["CALLE"].ToString();
+
+            if (!(oDataReader["NUMERO"] is DBNull))
+                oProveedor.PNumero = Convert.ToInt16(oDataReader["NUMERO"]);
+
+            if (!(oDataReader["PISO"] is DBNull))
+                oProveedor.PPiso = oDataReader["PISO"].ToString();
+
+            if (!(oDataReader["DEPARTAMENTO"] is DBNull))
+                oProveedor.PDepartamento = oDataReader["DEPARTAMENTO"].ToString();
+
+            if (!(oDataReader["ID_PROVINCIA"] is DBNull))
+                oProveedor.PIdProvincia = Convert.ToInt32(oDataReader["ID_PROVINCIA"]);
+
+            if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
+                oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
+
+            if (!(oDataReader["BARRIO"] is DBNull))
+                oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
+
+            if (!(oDataReader["COD_POSTAL"] is DBNull))
+                oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
+
+            return oProveedor;
+        }
+
+        # endregion
     }
 }

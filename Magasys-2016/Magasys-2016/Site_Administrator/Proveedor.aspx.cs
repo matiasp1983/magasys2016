@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Globalization;
 using System.Web.UI.WebControls;
+using COMMON.Entities;
 
 namespace Magasys_2016.Site_Administrator
 {
@@ -10,24 +12,14 @@ namespace Magasys_2016.Site_Administrator
             /*Comprueba si es la primera vez que se carga la página*/
             if (IsPostBack) return;
 
-            if (Session["CUIT"] != null)
+            if (Session["oProveedor"] != null)
             {
-                txtCuit.Text = Session["CUIT"].ToString();
+                CargarProveedor((COMMON.Entities.Proveedor)Session["oProveedor"]);
                 Session.Abandon();
             }
             else
             {
                 Response.Redirect("ListadoProveedor.aspx", false);
-            }
-
-            /*Comprueba si es una alta*/
-            if (String.IsNullOrEmpty(txtIdProveedor.Text))
-            {
-                LoadProvincia();
-            }
-            else
-            {
-                Modificacion();
             }
         }
 
@@ -69,9 +61,6 @@ namespace Magasys_2016.Site_Administrator
 
             if (!String.IsNullOrEmpty(txtIdProveedor.Text))
                 oProveedor.PIdProveedor = Convert.ToInt32(txtIdProveedor.Text);
-
-            if (!String.IsNullOrEmpty(txtFechaAlta.Text))
-                oProveedor.PFechaAlta = Convert.ToDateTime(txtFechaAlta);
 
             if (!String.IsNullOrEmpty(txtCuit.Text))
                 oProveedor.PCuit = txtCuit.Text;
@@ -121,10 +110,38 @@ namespace Magasys_2016.Site_Administrator
             return oProveedor;
         }
 
-        internal void Modificacion()
+        private void CargarProveedor(COMMON.Entities.Proveedor oProveedor)
+        {
+            txtCuit.Text = oProveedor.PCuit;
+            LoadProvincia();
+            if (oProveedor.PIdProveedor != 0)
+            {
+                Modificar(oProveedor);
+            }
+        }
+
+        internal void Modificar(COMMON.Entities.Proveedor oProveedor)
         {
             divTitleHeading.InnerText = "Modificar Proveedor";
             divRowHidden.Visible = true;
+            txtIdProveedor.Text = oProveedor.PIdProveedor.ToString(CultureInfo.InvariantCulture);
+            txtFechaAlta.Text = oProveedor.PFechaAlta.ToShortDateString();
+            txtCuit.Text = oProveedor.PCuit;
+            txtRazonSocial.Text = oProveedor.PRazonSocial;
+            txtNombreResponsable.Text = oProveedor.PNombre;
+            txtApellidoResponsable.Text = oProveedor.PApellido;
+            txtTelefonoMovil.Text = oProveedor.PTelefonoMovil;
+            txtTelefonoFijo.Text = oProveedor.PTelefonoFijo;
+            txtEmail.Text = oProveedor.PEmail;
+            txtCalle.Text = oProveedor.PCalle;
+            txtNumero.Text = oProveedor.PNumero.ToString(CultureInfo.InvariantCulture);
+            txtPiso.Text = oProveedor.PPiso;
+            txtDepartamento.Text = oProveedor.PDepartamento;
+            ddlProvincia.SelectedValue = oProveedor.PIdProvincia.ToString(CultureInfo.InvariantCulture);
+            LoadLocalidad(oProveedor.PIdProvincia);
+            ddlLocalidad.SelectedValue = oProveedor.PIdLocalidad.ToString(CultureInfo.InvariantCulture);
+            txtBarrio.Text = oProveedor.PBarrio;
+            txtCodigoPostal.Text = oProveedor.PCodigoPostal;
         }
 
         protected void ddlProvincia_SelectedIndexChanged(object sender, EventArgs e)
