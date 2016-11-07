@@ -126,7 +126,6 @@ namespace Magasys_2016.Site_Administrator
             divRowHidden.Visible = true;
             txtIdProveedor.Text = oProveedor.PIdProveedor.ToString(CultureInfo.InvariantCulture);
             txtFechaAlta.Text = oProveedor.PFechaAlta.ToShortDateString();
-            txtCuit.Text = oProveedor.PCuit;
             txtRazonSocial.Text = oProveedor.PRazonSocial;
             txtNombreResponsable.Text = oProveedor.PNombre;
             txtApellidoResponsable.Text = oProveedor.PApellido;

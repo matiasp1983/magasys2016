@@ -263,7 +263,7 @@
                                 <div class="col-md-9">
                                     <asp:TextBox ID="txtCalle" runat="server" CssClass="form-control" MaxLength="50" TabIndex="9" />
                                     <asp:RequiredFieldValidator ID="rfvCalle" runat="server" ErrorMessage="Campo obligatorio." ControlToValidate="txtCalle" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
-                                    <asp:RegularExpressionValidator ID="revCalle" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9]{2,50}]*$" ControlToValidate="txtCalle" Display="Dynamic" CssClass="custom-error" />
+                                    <asp:RegularExpressionValidator ID="revCalle" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\s]{2,50}]*$" ControlToValidate="txtCalle" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>
                         </div>
@@ -341,7 +341,7 @@
                                 <div class="col-md-9">
                                     <asp:TextBox ID="txtBarrio" runat="server" CssClass="form-control" MaxLength="50" TabIndex="15" />
                                     <asp:RequiredFieldValidator ID="rfvBarrio" runat="server" ErrorMessage="Campo obligatorio." ControlToValidate="txtBarrio" Display="Dynamic" CssClass="custom-error" />
-                                    <asp:RegularExpressionValidator ID="revBarrio" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9]{2,50}]*$" ControlToValidate="txtBarrio" Display="Dynamic" CssClass="custom-error" />
+                                    <asp:RegularExpressionValidator ID="revBarrio" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\s]{2,50}]*$" ControlToValidate="txtBarrio" Display="Dynamic" CssClass="custom-error" />
                                 </div>
                             </div>
                         </div>
