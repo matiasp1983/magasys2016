@@ -216,6 +216,7 @@
                                     <div class="input-icon">
                                         <i class="fa fa-mobile-phone"></i>
                                         <asp:TextBox ID="txtTelefonoMovil" runat="server" CssClass="form-control" MaxLength="13" TabIndex="6" />
+                                        <asp:Label ID="lblTelefonoMovilExamp" runat="server" Text="C&oacute;digo de &aacute;rea + N&deg;. Ej: 0351156243492."/><br/>
                                         <asp:RequiredFieldValidator ID="rfvTelefonoMovil" runat="server" ErrorMessage="Campo obligatorio." ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />                                        
                                         <asp:RegularExpressionValidator ID="revTelefonoMovil" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     </div>
@@ -230,6 +231,7 @@
                                     <div class="input-icon">
                                         <i class="fa fa-phone"></i>
                                         <asp:TextBox ID="txtTelefonoFijo" runat="server" CssClass="form-control" MaxLength="11" TabIndex="7" />
+                                        <asp:Label ID="lblTelefonoFijoExamp" runat="server" Text="C&oacute;digo de &aacute;rea + N&deg;. Ej: 03514823455."/><br/>
                                         <asp:RegularExpressionValidator ID="revTelefonoFijo" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoFijo" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />                                        
                                     </div>
                                 </div>

@@ -283,6 +283,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.TextBox txtTelefonoMovil;
         
         /// <summary>
+        /// lblTelefonoMovilExamp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTelefonoMovilExamp;
+        
+        /// <summary>
         /// rfvTelefonoMovil control.
         /// </summary>
         /// <remarks>
@@ -326,6 +335,15 @@ namespace Magasys_2016.Site_Administrator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefonoFijo;
+        
+        /// <summary>
+        /// lblTelefonoFijoExamp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTelefonoFijoExamp;
         
         /// <summary>
         /// revTelefonoFijo control.
