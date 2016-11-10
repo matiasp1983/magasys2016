@@ -221,7 +221,6 @@
     <Content Include="Site_Administrator\script\respond.min.js" />
     <Content Include="Site_Administrator\script\responsive-tabs.js" />
     <Content Include="Site_Administrator\script\ui-nestable-list.js" />
-    <Content Include="Site_Administrator\script\zabuto_calendar.min.js" />
     <Content Include="Site_Administrator\styles\all.css" />
     <Content Include="Site_Administrator\styles\animate.css" />
     <Content Include="Site_Administrator\styles\bootstrap.min.css" />
@@ -350,7 +349,6 @@
     <Content Include="Site_Administrator\styles\square\yellow.css" />
     <Content Include="Site_Administrator\styles\square\yellow.png" />
     <Content Include="Site_Administrator\styles\style-responsive.css" />
-    <Content Include="Site_Administrator\styles\zabuto_calendar.min.css" />
     <Content Include="Site_Administrator\ListadoPublicacion.aspx" />
     <Content Include="Site_Administrator\UserControls\MenuPrincipal.ascx" />
     <Content Include="Site_Administrator\UserControls\ModalCuitProveedor.ascx" />
