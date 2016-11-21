@@ -65,6 +65,7 @@
     <Compile Include="Entities\TipoProducto.cs" />
     <Compile Include="Entities\Venta.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Filters\FiltroProveedor.cs" />
     <Compile Include="Mensajes.Designer.cs">
       <DependentUpon>Mensajes.resx</DependentUpon>
       <AutoGen>True</AutoGen>

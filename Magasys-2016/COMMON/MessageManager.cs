@@ -5,11 +5,11 @@ namespace COMMON
 {
     public class MessageManager
     {
-        public static void Show(Page pagina, Enums.TipoMensaje tipoMensaje, string mensaje)
+        public static void Show(Page pagina, Enums.TipoMensaje tipoMensaje, string mensaje, bool html = false)
         {
             mensaje = Utilities.ReemplazaAxB(mensaje, "'", "\"");
-
-            const string modal = "$('#divModalMensajeBody').addClass({0});$('#divModalMensajeBody').html('{1}');$('#modal-header-primary').modal('show');";
+            var modal = !html ? "$('#divModalMensajeBody').addClass({0});$('#divModalMensajeBody').html('{1}');$('#modal-header-primary').modal('show');" : "$('#divModalMensajeHTMLBody').addClass({0});$('#divModalMensajeHTMLBody').html('{1}');$('#modal-header-primary-html').modal('show');";
+            
             switch (tipoMensaje)
             {
                 case Enums.TipoMensaje.Info:

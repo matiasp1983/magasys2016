@@ -85,4 +85,4 @@
         </asp:UpdatePanel>
     </div>
 </div>
-<button type="button" data-target="#modal-header-primary" data-toggle="modal" class="btn btn-primary" onclick="GetFocus();">Nuevo Proveedor</button>
+<button type="button" data-target="#modal-header-primary" data-toggle="modal" class="btn btn-info btn-sm" onclick="GetFocus();"><i class="fa fa-plus"></i>&nbsp;&nbsp;Nuevo Proveedor</button>

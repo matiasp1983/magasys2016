@@ -21,16 +21,19 @@
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" />
     <link type="text/css" rel="stylesheet" href="styles/jquery-ui-1.10.4.custom.min.css" />
     <link type="text/css" rel="stylesheet" href="styles/font-awesome.min.css" />
-    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="styles/animate.css" />
     <link type="text/css" rel="stylesheet" href="styles/all.css" />
     <link type="text/css" rel="stylesheet" href="styles/main.css" />
     <link type="text/css" rel="stylesheet" href="styles/style-responsive.css" />
     <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css" />
     <link type="text/css" rel="stylesheet" href="styles/magasys_custom.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap-datetimepicker.min.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/datepicker.css"/>
     <!--Estas referencias se colocaron aquí para que funcione el Mesaje Modal-->
-    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-3.1.1.js"></script>
     <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap-confirmation.min.js"></script>
     <!--Se utiliza para aplicarle mascaras a los Texbox-->
     <script src="script/jquery.maskedinput.min.js" type="text/javascript"></script>
 </head>
@@ -209,6 +212,8 @@
     <script src="script/highcharts-more.js"></script>
     <script src="script/charts-highchart-pie.js"></script>
     <script src="script/charts-highchart-more.js"></script>
+    <!--Se utiliza para los calendarios-->
+    <script src="script/bootstrap-datepicker.js"></script>
     <!--CORE JAVASCRIPT-->
     <script src="script/main.js"></script>
 </body>

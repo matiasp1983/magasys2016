@@ -167,6 +167,8 @@
     <Content Include="Site_Administrator\Reserva.aspx" />
     <Content Include="Site_Administrator\Rol.aspx" />
     <Content Include="Site_Administrator\script\animation.js" />
+    <Content Include="Site_Administrator\script\bootstrap-confirmation.min.js" />
+    <Content Include="Site_Administrator\script\bootstrap-datepicker.js" />
     <Content Include="Site_Administrator\script\bootstrap-hover-dropdown.js" />
     <Content Include="Site_Administrator\script\bootstrap.min.js" />
     <Content Include="Site_Administrator\script\charts-chartjs.js" />
@@ -193,7 +195,7 @@
     <Content Include="Site_Administrator\script\index.js" />
     <Content Include="Site_Administrator\script\jplist.js" />
     <Content Include="Site_Administrator\script\jplist.min.js" />
-    <Content Include="Site_Administrator\script\jquery-1.10.2.min.js" />
+    <Content Include="Site_Administrator\script\jquery-3.1.1.js" />
     <Content Include="Site_Administrator\script\jquery-migrate-1.2.1.min.js" />
     <Content Include="Site_Administrator\script\jquery-ui.js" />
     <Content Include="Site_Administrator\script\jquery.chosen.min.js" />
@@ -223,8 +225,10 @@
     <Content Include="Site_Administrator\script\ui-nestable-list.js" />
     <Content Include="Site_Administrator\styles\all.css" />
     <Content Include="Site_Administrator\styles\animate.css" />
-    <Content Include="Site_Administrator\styles\bootstrap.min.css" />
+    <Content Include="Site_Administrator\styles\bootstrap-datetimepicker.min.css" />
+    <Content Include="Site_Administrator\styles\bootstrap.css" />
     <Content Include="Site_Administrator\styles\chosen.css" />
+    <Content Include="Site_Administrator\styles\datepicker.css" />
     <Content Include="Site_Administrator\styles\flat\aero%402x.png" />
     <Content Include="Site_Administrator\styles\flat\aero.css" />
     <Content Include="Site_Administrator\styles\flat\aero.png" />
@@ -354,6 +358,7 @@
     <Content Include="Site_Administrator\UserControls\ModalCuitProveedor.ascx" />
     <Content Include="Site_Administrator\UserControls\ModalMensaje.ascx" />
     <Content Include="Site_Administrator\Publicacion.aspx" />
+    <Content Include="Site_Administrator\UserControls\ModalMensajeHTML.ascx" />
     <Content Include="Site_Administrator\Usuario.aspx" />
     <Content Include="Site_Administrator\Venta.aspx" />
     <Content Include="Site_Customers\Customer.Master" />
@@ -369,6 +374,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Site_Administrator\VisualizarProveedor.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -653,6 +659,13 @@
     <Compile Include="Site_Administrator\Publicacion.aspx.designer.cs">
       <DependentUpon>Publicacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site_Administrator\UserControls\ModalMensajeHTML.ascx.cs">
+      <DependentUpon>ModalMensajeHTML.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\UserControls\ModalMensajeHTML.ascx.designer.cs">
+      <DependentUpon>ModalMensajeHTML.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Site_Administrator\Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -673,6 +686,13 @@
     </Compile>
     <Compile Include="Site_Customers\Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site_Administrator\VisualizarProveedor.aspx.cs">
+      <DependentUpon>VisualizarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_Administrator\VisualizarProveedor.aspx.designer.cs">
+      <DependentUpon>VisualizarProveedor.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

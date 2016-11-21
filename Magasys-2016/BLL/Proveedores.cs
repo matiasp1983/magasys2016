@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using COMMON.Entities;
+using COMMON.Filters;
 
 namespace BLL
 {
@@ -9,6 +10,12 @@ namespace BLL
         {
             var oProveedores = new DAL.Proveedores();
             return oProveedores.GetAll();
+        }
+
+        public List<Proveedor> GetByFilter(FiltroProveedor oFiltroProveedor)
+        {
+            var oProveedores = new DAL.Proveedores();
+            return oProveedores.GetByFilter(oFiltroProveedor);
         }
 
         public Proveedor GetById(int idProveedor)
@@ -33,6 +40,12 @@ namespace BLL
         {
             var oProveedores = new DAL.Proveedores();
             return oProveedores.Update(oProveedor);
+        }
+
+        public bool Delete(int idProveedor)
+        {
+            var oProveedores = new DAL.Proveedores();
+            return oProveedores.Delete(idProveedor);
         }
     }
 }

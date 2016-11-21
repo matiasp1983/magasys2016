@@ -125,7 +125,7 @@ namespace Magasys_2016.Site_Administrator
             divTitleHeading.InnerText = COMMON.Mensajes.Proveedor_Titulo;
             divRowHidden.Visible = true;
             txtIdProveedor.Text = oProveedor.PIdProveedor.ToString(CultureInfo.InvariantCulture);
-            txtFechaAlta.Text = oProveedor.PFechaAlta.ToShortDateString();
+            txtFechaAlta.Text = oProveedor.PFechaAlta;
             txtRazonSocial.Text = oProveedor.PRazonSocial;
             txtNombreResponsable.Text = oProveedor.PNombre;
             txtApellidoResponsable.Text = oProveedor.PApellido;

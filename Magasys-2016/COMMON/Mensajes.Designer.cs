@@ -61,6 +61,42 @@ namespace COMMON {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}Ocurrió un error y el proveedor no se pudo eliminar.&lt;br /&gt;Error: {1}.
+        /// </summary>
+        public static string ListadoProveedor_ErrorEliminarProveedor {
+            get {
+                return ResourceManager.GetString("ListadoProveedor_ErrorEliminarProveedor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocurrió un error y el filtro del proveedor no se pudo realizar.&lt;br /&gt;Error: {0}.
+        /// </summary>
+        public static string ListadoProveedor_ErrorFiltrar {
+            get {
+                return ResourceManager.GetString("ListadoProveedor_ErrorFiltrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}Ocurrió un error y el proveedor con número {1} no se pudo eliminar..
+        /// </summary>
+        public static string ListadoProveedor_FailureEliminarProveedor {
+            get {
+                return ResourceManager.GetString("ListadoProveedor_FailureEliminarProveedor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ¿Seguro que quiere eliminar el proveedor con el código {0}?.
+        /// </summary>
+        public static string ListadoProveedor_PreguntaEliminar {
+            get {
+                return ResourceManager.GetString("ListadoProveedor_PreguntaEliminar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to El CUIT ingresado &quot;{0}&quot; ya existe..
         /// </summary>
         public static string ModalCuitProveedor_Exist {

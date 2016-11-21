@@ -4,6 +4,7 @@ namespace COMMON.Entities
 {
     public class Proveedor
     {
+        private DateTime _fechaAlta;
         private string _razonSocial;
         private string _nombre;
         private string _apellido;
@@ -15,14 +16,18 @@ namespace COMMON.Entities
 
         public int PIdProveedor { get; set; }
 
-        public DateTime PFechaAlta { get; set; }
+        public string PFechaAlta
+        {
+            get { return _fechaAlta.ToShortDateString(); }
+            set { _fechaAlta = Convert.ToDateTime(value); }
+        }
 
         public string PCuit { get; set; }
 
         public string PRazonSocial
         {
             get { return _razonSocial; }
-            set { _razonSocial =  Utilities.RemoveSpace(Utilities.UpperCase(value)); }
+            set { _razonSocial = Utilities.RemoveSpace(Utilities.UpperCase(value)); }
         }
 
         public string PNombre

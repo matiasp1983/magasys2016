@@ -15,7 +15,50 @@ namespace DAL
 
         private string PConnectionString { get; set; }
 
-        #region [-- GetLocalidadByProvincia --]
+        #region [-- GetById, GetLocalidadByProvincia --]
+
+        public Localidad GetById(int idLocalidad)
+        {
+            Localidad oLocalidad = null;
+
+            if (idLocalidad <= 0) return null;
+
+            using (var oConnection = new SqlConnection(PConnectionString))
+            {
+                const string cmdText = @"SELECT LOC.ID_LOCALIDAD, LOC.NOMBRE
+                                                FROM LOCALIDADES LOC
+                                            WHERE 1 = 1 
+                                            AND LOC.ID_LOCALIDAD = @ID_LOCALIDAD
+                                            ORDER BY LOC.NOMBRE";
+
+                using (var oCommand = new SqlCommand(cmdText, oConnection))
+                {
+                    try
+                    {
+                        oCommand.Connection.Open();
+                        LoadParameter(oCommand, "@ID_LOCALIDAD", idLocalidad);
+
+                        using (var oDataReader = oCommand.ExecuteReader())
+                        {
+                            if (oDataReader.Read())
+                            {
+                                oLocalidad = GetLocalidad(oDataReader);
+                            }
+                        }
+
+                        oConnection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        if (oConnection.State == ConnectionState.Closed) throw;
+                        oConnection.Close();
+                        throw;
+                    }
+                }
+            }
+
+            return oLocalidad;
+        }
 
         public List<Localidad> GetLocalidadByProvincia(int idProvincia)
         {
@@ -33,25 +76,13 @@ namespace DAL
                     try
                     {
                         oCommand.Connection.Open();
-                        var oParameter = new SqlParameter("@ID_PROVINCIA", idProvincia);
-                        oCommand.Parameters.Add(oParameter);
+                        LoadParameter(oCommand, "@ID_PROVINCIA", idProvincia);
 
                         using (var oDataReader = oCommand.ExecuteReader())
                         {
-
                             while (oDataReader.Read())
                             {
-                                var oLocalidad = new Localidad();
-
-                                if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
-                                    oLocalidad.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
-                                else
-                                    continue;
-
-                                if (!(oDataReader["NOMBRE"] is DBNull))
-                                    oLocalidad.PNombre = oDataReader["NOMBRE"].ToString();
-
-                                lstLocadidades.Add(oLocalidad);
+                                lstLocadidades.Add(GetLocalidad(oDataReader));
                             }
                         }
 
@@ -69,5 +100,27 @@ namespace DAL
         }
 
         #endregion
+
+        #region [-- Funciones Privadas --]
+
+        private static void LoadParameter(SqlCommand oCommand, string nombreParametro, object valor)
+        {
+            oCommand.Parameters.Add(new SqlParameter(nombreParametro, valor));
+        }
+
+        private static Localidad GetLocalidad(IDataRecord oDataReader)
+        {
+            var oLocalidad = new Localidad();
+
+            if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
+                oLocalidad.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
+
+            if (!(oDataReader["NOMBRE"] is DBNull))
+                oLocalidad.PNombre = oDataReader["NOMBRE"].ToString();
+
+            return oLocalidad;
+        }
+
+        # endregion
     }
 }

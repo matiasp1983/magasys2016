@@ -114,11 +114,11 @@
                 localidad.removeClass("chzn-container-single chzn-default").addClass("chzn-container chzn-container-single chzn-container-active");
                 return;
             }
-            
+
 
             /*Se controla si los mensajes de validación del Barrio se estan mostrando*/
             var inline = "inline";
-            
+
             if (rfvBarrio.style.display == inline || revBarrio.style.display == inline) {
                 barrio.focus();
                 return;
@@ -146,7 +146,7 @@
                                 <asp:Label ID="lblIdProveedor" runat="server" CssClass="col-md-3 control-label" Text="C&oacute;digo">
                                     <asp:Label ID="lblRqrIdProveedor" runat="server" CssClass="require" Text="&nbsp;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtIdProveedor" runat="server" ReadOnly="True" CssClass="form-control" style="cursor: default" TabIndex="1"/>
+                                    <asp:TextBox ID="txtIdProveedor" runat="server" ReadOnly="True" CssClass="form-control" Style="cursor: default" TabIndex="1" />
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                 <asp:Label ID="lblCuit" runat="server" CssClass="col-md-3 control-label" Text="CUIT">
                                     <asp:Label ID="lblRqrCuit" runat="server" CssClass="require" Text="&nbsp;" /></asp:Label>
                                 <div class="col-md-9">
-                                    <asp:TextBox ID="txtCuit" runat="server" ReadOnly="True" CssClass="form-control" style="cursor: default" TabIndex="2"/>
+                                    <asp:TextBox ID="txtCuit" runat="server" ReadOnly="True" CssClass="form-control" Style="cursor: default" TabIndex="2" />
                                 </div>
                             </div>
                         </div>
@@ -216,8 +216,8 @@
                                     <div class="input-icon">
                                         <i class="fa fa-mobile-phone"></i>
                                         <asp:TextBox ID="txtTelefonoMovil" runat="server" CssClass="form-control" MaxLength="13" TabIndex="6" />
-                                        <asp:Label ID="lblTelefonoMovilExamp" runat="server" Text="C&oacute;digo de &aacute;rea + N&deg;. Ej: 0351156243492."/><br/>
-                                        <asp:RequiredFieldValidator ID="rfvTelefonoMovil" runat="server" ErrorMessage="Campo obligatorio." ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />                                        
+                                        <asp:Label ID="lblTelefonoMovilExamp" runat="server" Text="C&oacute;digo de &aacute;rea + N&deg;. Ej: 0351156243492." /><br />
+                                        <asp:RequiredFieldValidator ID="rfvTelefonoMovil" runat="server" ErrorMessage="Campo obligatorio." ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                         <asp:RegularExpressionValidator ID="revTelefonoMovil" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoMovil" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     </div>
                                 </div>
@@ -231,8 +231,8 @@
                                     <div class="input-icon">
                                         <i class="fa fa-phone"></i>
                                         <asp:TextBox ID="txtTelefonoFijo" runat="server" CssClass="form-control" MaxLength="11" TabIndex="7" />
-                                        <asp:Label ID="lblTelefonoFijoExamp" runat="server" Text="C&oacute;digo de &aacute;rea + N&deg;. Ej: 03514823455."/><br/>
-                                        <asp:RegularExpressionValidator ID="revTelefonoFijo" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoFijo" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />                                        
+                                        <asp:Label ID="lblTelefonoFijoExamp" runat="server" Text="C&oacute;digo de &aacute;rea + N&deg;. Ej: 03514823455." /><br />
+                                        <asp:RegularExpressionValidator ID="revTelefonoFijo" runat="server" ErrorMessage="Tipo de dato incorrecto." ValidationExpression="^[0-9]*" ControlToValidate="txtTelefonoFijo" SetFocusOnError="True" Display="Dynamic" CssClass="custom-error" />
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +255,7 @@
                         </div>
                     </div>
 
-                    <h3>Dirección</h3>
+                    <h3>Direcci&oacute;n</h3>
 
                     <div class="row">
                         <div class="col-md-6">

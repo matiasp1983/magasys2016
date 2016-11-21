@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using COMMON.Entities;
+using COMMON.Filters;
 
 namespace DAL
 {
@@ -16,7 +17,7 @@ namespace DAL
 
         private string PConnectionString { get; set; }
 
-        #region [-- GetAll , GetById , GetByCuit --]
+        #region [-- GetAll, GetByFilter, GetById, GetByCuit --]
 
         public List<Proveedor> GetAll()
         {
@@ -51,6 +52,132 @@ namespace DAL
                         using (var oDataReader = oCommand.ExecuteReader())
                         {
 
+                            while (oDataReader.Read())
+                            {
+                                lstProveedores.Add(GetProveedor(oDataReader));
+                            }
+                        }
+
+                        oConnection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        if (oConnection.State == ConnectionState.Closed) throw;
+                        oConnection.Close();
+                        throw;
+                    }
+                }
+            }
+            return lstProveedores;
+        }
+
+        public List<Proveedor> GetByFilter(FiltroProveedor oFiltroProveedor)
+        {
+            const string fechaVacia = "01/01/0001";
+            var lstProveedores = new List<Proveedor>();
+
+            using (var oConnection = new SqlConnection(PConnectionString))
+            {
+                var cmdText = @"SELECT PR.ID_PROVEEDOR,
+                                                PR.FECHA_ALTA,
+                                                PR.NUM_CUIT,
+                                                PR.RAZON_SOCIAL,
+                                                PR.NOMBRE_RESP,
+                                                PR.APELLIDO_RESP,
+                                                PR.TELEFONO_MOVIL,
+                                                PR.EMAIL,
+                                                PR.TELEFONO_FIJO,
+                                                PR.CALLE,
+                                                PR.NUMERO,
+                                                PR.PISO,
+                                                PR.DEPARTAMENTO,
+                                                PR.ID_PROVINCIA,
+                                                PR.ID_LOCALIDAD,
+                                                PR.BARRIO,
+                                                PR.COD_POSTAL
+                                            FROM PROVEEDORES PR
+                                            WHERE 1=1";
+
+                if (oFiltroProveedor.PIdProveedor != 0)
+                {
+                    cmdText += " AND PR.ID_PROVEEDOR = @ID_PROVEEDOR";
+                }
+
+                if (!String.IsNullOrEmpty(oFiltroProveedor.PCuit))
+                {
+                    cmdText += " AND PR.NUM_CUIT = @NUM_CUIT";
+                }
+
+                if (!oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia) && !oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia))
+                {
+                    if (!oFiltroProveedor.PFechaAltaDesde.Equals(oFiltroProveedor.PFechaAltaHasta))
+                    {
+                        cmdText += " AND PR.FECHA_ALTA >= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_DESDE),'dd/MM/yyyy')";
+                        cmdText += " AND PR.FECHA_ALTA <= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_HASTA),'dd/MM/yyyy')";
+                    }
+                    else
+                    {
+                        cmdText += " AND PR.FECHA_ALTA = FORMAT(CONVERT(DATETIME, @FECHA_ALTA_DESDE),'dd/MM/yyyy')";
+                    }
+                }
+                else if ((!oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia)))
+                {
+                    cmdText += " AND PR.FECHA_ALTA >= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_DESDE),'dd/MM/yyyy')";
+                }
+                else if ((!oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia)))
+                {
+                    cmdText += " AND PR.FECHA_ALTA <= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_HASTA),'dd/MM/yyyy')";
+                }
+
+                if (!String.IsNullOrEmpty(oFiltroProveedor.PRazonSocial))
+                {
+                    cmdText += " AND PR.RAZON_SOCIAL LIKE @RAZON_SOCIAL";
+                }
+
+                using (var oCommand = new SqlCommand(cmdText, oConnection))
+                {
+                    try
+                    {
+                        oCommand.Connection.Open();
+
+                        if (oFiltroProveedor.PIdProveedor != 0)
+                        {
+                            LoadParameter(oCommand, "@ID_PROVEEDOR", oFiltroProveedor.PIdProveedor);
+                        }
+
+                        if (!String.IsNullOrEmpty(oFiltroProveedor.PCuit))
+                        {
+                            LoadParameter(oCommand, "@NUM_CUIT", oFiltroProveedor.PCuit);
+                        }
+
+                        if (!oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia) && !oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia))
+                        {
+                            if (!oFiltroProveedor.PFechaAltaDesde.Equals(oFiltroProveedor.PFechaAltaHasta))
+                            {
+                                LoadParameter(oCommand, "@FECHA_ALTA_DESDE", oFiltroProveedor.PFechaAltaDesde);
+                                LoadParameter(oCommand, "@FECHA_ALTA_HASTA", oFiltroProveedor.PFechaAltaHasta);
+                            }
+                            else
+                            {
+                                LoadParameter(oCommand, "@FECHA_ALTA_DESDE", oFiltroProveedor.PFechaAltaDesde);
+                            }
+                        }
+                        else if ((!oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia)))
+                        {
+                            LoadParameter(oCommand, "@FECHA_ALTA_DESDE", oFiltroProveedor.PFechaAltaDesde);
+                        }
+                        else if ((!oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia)))
+                        {
+                            LoadParameter(oCommand, "@FECHA_ALTA_HASTA", oFiltroProveedor.PFechaAltaHasta);
+                        }
+
+                        if (!String.IsNullOrEmpty(oFiltroProveedor.PRazonSocial))
+                        {
+                            LoadParameter(oCommand, "@RAZON_SOCIAL", String.Format("%{0}%", oFiltroProveedor.PRazonSocial));
+                        }
+
+                        using (var oDataReader = oCommand.ExecuteReader())
+                        {
                             while (oDataReader.Read())
                             {
                                 lstProveedores.Add(GetProveedor(oDataReader));
@@ -135,26 +262,7 @@ namespace DAL
 
             using (var oConnection = new SqlConnection(PConnectionString))
             {
-                const string cmdText = @"SELECT PR.ID_PROVEEDOR,
-                                                PR.FECHA_ALTA,
-                                                PR.NUM_CUIT,
-                                                PR.RAZON_SOCIAL,
-                                                PR.NOMBRE_RESP,
-                                                PR.APELLIDO_RESP,
-                                                PR.TELEFONO_MOVIL,
-                                                PR.EMAIL,
-                                                PR.TELEFONO_FIJO,
-                                                PR.CALLE,
-                                                PR.NUMERO,
-                                                PR.PISO,
-                                                PR.DEPARTAMENTO,
-                                                PR.ID_PROVINCIA,
-                                                PR.ID_LOCALIDAD,
-                                                PR.BARRIO,
-                                                PR.COD_POSTAL
-                                            FROM PROVEEDORES PR
-                                            WHERE 1 = 1  
-                                            AND PR.NUM_CUIT = @NUM_CUIT";
+                const string cmdText = @"SELECT PR.NUM_CUIT FROM PROVEEDORES PR WHERE 1 = 1 AND PR.NUM_CUIT = @NUM_CUIT";
                 using (var oCommand = new SqlCommand(cmdText, oConnection))
                 {
                     try
@@ -323,7 +431,7 @@ namespace DAL
             return exito;
         }
 
-        public bool Delete(Proveedor idProveedor)
+        public bool Delete(int idProveedor)
         {
             return false;
         }
@@ -341,56 +449,59 @@ namespace DAL
         {
             var oProveedor = new Proveedor();
 
-            if (!(oDataReader["ID_PROVEEDOR"] is DBNull))
-                oProveedor.PIdProveedor = Convert.ToInt32(oDataReader["ID_PROVEEDOR"]);
+            if (oDataReader.FieldCount > 1)
+            {
+                if (!(oDataReader["ID_PROVEEDOR"] is DBNull))
+                    oProveedor.PIdProveedor = Convert.ToInt32(oDataReader["ID_PROVEEDOR"]);
 
-            if (!(oDataReader["FECHA_ALTA"] is DBNull))
-                oProveedor.PFechaAlta = Convert.ToDateTime(oDataReader["FECHA_ALTA"]);
+                if (!(oDataReader["FECHA_ALTA"] is DBNull))
+                    oProveedor.PFechaAlta = oDataReader["FECHA_ALTA"].ToString();
+
+                if (!(oDataReader["RAZON_SOCIAL"] is DBNull))
+                    oProveedor.PRazonSocial = oDataReader["RAZON_SOCIAL"].ToString();
+
+                if (!(oDataReader["NOMBRE_RESP"] is DBNull))
+                    oProveedor.PNombre = oDataReader["NOMBRE_RESP"].ToString();
+
+                if (!(oDataReader["APELLIDO_RESP"] is DBNull))
+                    oProveedor.PApellido = oDataReader["APELLIDO_RESP"].ToString();
+
+                if (!(oDataReader["TELEFONO_MOVIL"] is DBNull))
+                    oProveedor.PTelefonoMovil = oDataReader["TELEFONO_MOVIL"].ToString();
+
+                if (!(oDataReader["EMAIL"] is DBNull))
+                    oProveedor.PEmail = oDataReader["EMAIL"].ToString();
+
+                if (!(oDataReader["TELEFONO_FIJO"] is DBNull))
+                    oProveedor.PTelefonoFijo = oDataReader["TELEFONO_FIJO"].ToString();
+
+                if (!(oDataReader["CALLE"] is DBNull))
+                    oProveedor.PCalle = oDataReader["CALLE"].ToString();
+
+                if (!(oDataReader["NUMERO"] is DBNull))
+                    oProveedor.PNumero = Convert.ToInt16(oDataReader["NUMERO"]);
+
+                if (!(oDataReader["PISO"] is DBNull))
+                    oProveedor.PPiso = oDataReader["PISO"].ToString();
+
+                if (!(oDataReader["DEPARTAMENTO"] is DBNull))
+                    oProveedor.PDepartamento = oDataReader["DEPARTAMENTO"].ToString();
+
+                if (!(oDataReader["ID_PROVINCIA"] is DBNull))
+                    oProveedor.PIdProvincia = Convert.ToInt32(oDataReader["ID_PROVINCIA"]);
+
+                if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
+                    oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
+
+                if (!(oDataReader["BARRIO"] is DBNull))
+                    oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
+
+                if (!(oDataReader["COD_POSTAL"] is DBNull))
+                    oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
+            }
 
             if (!(oDataReader["NUM_CUIT"] is DBNull))
                 oProveedor.PCuit = oDataReader["NUM_CUIT"].ToString();
-
-            if (!(oDataReader["RAZON_SOCIAL"] is DBNull))
-                oProveedor.PRazonSocial = oDataReader["RAZON_SOCIAL"].ToString();
-
-            if (!(oDataReader["NOMBRE_RESP"] is DBNull))
-                oProveedor.PNombre = oDataReader["NOMBRE_RESP"].ToString();
-
-            if (!(oDataReader["APELLIDO_RESP"] is DBNull))
-                oProveedor.PApellido = oDataReader["APELLIDO_RESP"].ToString();
-
-            if (!(oDataReader["TELEFONO_MOVIL"] is DBNull))
-                oProveedor.PTelefonoMovil = oDataReader["TELEFONO_MOVIL"].ToString();
-
-            if (!(oDataReader["EMAIL"] is DBNull))
-                oProveedor.PEmail = oDataReader["EMAIL"].ToString();
-
-            if (!(oDataReader["TELEFONO_FIJO"] is DBNull))
-                oProveedor.PTelefonoFijo = oDataReader["TELEFONO_FIJO"].ToString();
-
-            if (!(oDataReader["CALLE"] is DBNull))
-                oProveedor.PCalle = oDataReader["CALLE"].ToString();
-
-            if (!(oDataReader["NUMERO"] is DBNull))
-                oProveedor.PNumero = Convert.ToInt16(oDataReader["NUMERO"]);
-
-            if (!(oDataReader["PISO"] is DBNull))
-                oProveedor.PPiso = oDataReader["PISO"].ToString();
-
-            if (!(oDataReader["DEPARTAMENTO"] is DBNull))
-                oProveedor.PDepartamento = oDataReader["DEPARTAMENTO"].ToString();
-
-            if (!(oDataReader["ID_PROVINCIA"] is DBNull))
-                oProveedor.PIdProvincia = Convert.ToInt32(oDataReader["ID_PROVINCIA"]);
-
-            if (!(oDataReader["ID_LOCALIDAD"] is DBNull))
-                oProveedor.PIdLocalidad = Convert.ToInt32(oDataReader["ID_LOCALIDAD"]);
-
-            if (!(oDataReader["BARRIO"] is DBNull))
-                oProveedor.PBarrio = oDataReader["BARRIO"].ToString();
-
-            if (!(oDataReader["COD_POSTAL"] is DBNull))
-                oProveedor.PCodigoPostal = oDataReader["COD_POSTAL"].ToString();
 
             return oProveedor;
         }
