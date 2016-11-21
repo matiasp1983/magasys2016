@@ -10,7 +10,7 @@
 namespace Magasys_2016.Site_Administrator.UserControls {
     
     
-    public partial class ModalMensajeHTML {
+    public partial class ModalMensajeHtml {
         
         /// <summary>
         /// upModalMensajeHTML control.

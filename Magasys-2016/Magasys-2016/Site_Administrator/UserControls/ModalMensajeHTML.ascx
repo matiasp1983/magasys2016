@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ModalMensajeHTML.ascx.cs" Inherits="Magasys_2016.Site_Administrator.UserControls.ModalMensajeHTML" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ModalMensajeHTML.ascx.cs" Inherits="Magasys_2016.Site_Administrator.UserControls.ModalMensajeHtml" %>
 <div id="modal-header-primary-html" tabindex="-1" role="dialog" aria-labelledby="modal-header-primary-label" aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
         <asp:UpdatePanel ID="upModalMensajeHTML" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
