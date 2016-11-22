@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.Services;
 using System.Web.UI.WebControls;
-using COMMON.Filters;
 
 namespace Magasys_2016.Site_Administrator
 {
@@ -15,7 +14,7 @@ namespace Magasys_2016.Site_Administrator
 
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
-            var oFiltroProveedor = new FiltroProveedor();
+            var oFiltroProveedor = new COMMON.Filters.FiltroProveedor();
 
             if (!String.IsNullOrEmpty(txtIdProveedor.Text))
             {
@@ -52,7 +51,7 @@ namespace Magasys_2016.Site_Administrator
             }
         }
 
-        private void Filtrar(FiltroProveedor oFiltroProveedor)
+        private void Filtrar(COMMON.Filters.FiltroProveedor oFiltroProveedor)
         {
             var oProveedores = new BLL.Proveedores();
             lsvProveedores.DataSource = oProveedores.GetByFilter(oFiltroProveedor);

@@ -13,7 +13,7 @@ namespace Magasys_2016.Site_Administrator
             if (Session["oProveedor"] != null)
             {
                 CargarProveedor((COMMON.Entities.Proveedor)Session["oProveedor"]);
-                Session.Abandon();
+                Session["oProveedor"] = null;
             }
             else
             {

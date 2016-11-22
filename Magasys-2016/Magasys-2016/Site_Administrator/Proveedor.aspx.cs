@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using System.Web.UI.WebControls;
-using COMMON.Entities;
 
 namespace Magasys_2016.Site_Administrator
 {
@@ -15,7 +14,7 @@ namespace Magasys_2016.Site_Administrator
             if (Session["oProveedor"] != null)
             {
                 CargarProveedor((COMMON.Entities.Proveedor)Session["oProveedor"]);
-                Session.Abandon();
+                Session["oProveedor"] = null;
             }
             else
             {
