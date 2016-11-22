@@ -103,7 +103,7 @@ namespace Magasys_2016.Site_Administrator
             Response.Redirect("Proveedor.aspx", false);
         }
 
-        [WebMethod()]
+        [WebMethod]
         public static string EliminarProveedor(int idProveedor)
         {
             try

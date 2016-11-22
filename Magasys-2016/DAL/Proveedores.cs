@@ -112,21 +112,21 @@ namespace DAL
                 {
                     if (!oFiltroProveedor.PFechaAltaDesde.Equals(oFiltroProveedor.PFechaAltaHasta))
                     {
-                        cmdText += " AND PR.FECHA_ALTA >= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_DESDE),'dd/MM/yyyy')";
-                        cmdText += " AND PR.FECHA_ALTA <= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_HASTA),'dd/MM/yyyy')";
+                        cmdText += " AND PR.FECHA_ALTA >= CONVERT(DATE, @FECHA_ALTA_DESDE)";
+                        cmdText += " AND PR.FECHA_ALTA <= CONVERT(DATE, @FECHA_ALTA_HASTA)";
                     }
                     else
                     {
-                        cmdText += " AND PR.FECHA_ALTA = FORMAT(CONVERT(DATETIME, @FECHA_ALTA_DESDE),'dd/MM/yyyy')";
+                        cmdText += " AND PR.FECHA_ALTA = CONVERT(DATE, @FECHA_ALTA_DESDE)";
                     }
                 }
                 else if ((!oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia)))
                 {
-                    cmdText += " AND PR.FECHA_ALTA >= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_DESDE),'dd/MM/yyyy')";
+                    cmdText += " AND PR.FECHA_ALTA >= CONVERT(DATE, @FECHA_ALTA_DESDE)";
                 }
                 else if ((!oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia)))
                 {
-                    cmdText += " AND PR.FECHA_ALTA <= FORMAT(CONVERT(DATETIME, @FECHA_ALTA_HASTA),'dd/MM/yyyy')";
+                    cmdText += " AND PR.FECHA_ALTA <= CONVERT(DATE, @FECHA_ALTA_HASTA)";
                 }
 
                 if (!String.IsNullOrEmpty(oFiltroProveedor.PRazonSocial))
@@ -154,21 +154,21 @@ namespace DAL
                         {
                             if (!oFiltroProveedor.PFechaAltaDesde.Equals(oFiltroProveedor.PFechaAltaHasta))
                             {
-                                LoadParameter(oCommand, "@FECHA_ALTA_DESDE", oFiltroProveedor.PFechaAltaDesde);
-                                LoadParameter(oCommand, "@FECHA_ALTA_HASTA", oFiltroProveedor.PFechaAltaHasta);
+                                LoadParameter(oCommand, "@FECHA_ALTA_DESDE", COMMON.Utilities.FormatDate(oFiltroProveedor.PFechaAltaDesde));
+                                LoadParameter(oCommand, "@FECHA_ALTA_HASTA", COMMON.Utilities.FormatDate(oFiltroProveedor.PFechaAltaHasta));
                             }
                             else
                             {
-                                LoadParameter(oCommand, "@FECHA_ALTA_DESDE", oFiltroProveedor.PFechaAltaDesde);
+                                LoadParameter(oCommand, "@FECHA_ALTA_DESDE", COMMON.Utilities.FormatDate(oFiltroProveedor.PFechaAltaDesde));
                             }
                         }
                         else if ((!oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia)))
                         {
-                            LoadParameter(oCommand, "@FECHA_ALTA_DESDE", oFiltroProveedor.PFechaAltaDesde);
+                            LoadParameter(oCommand, "@FECHA_ALTA_DESDE", COMMON.Utilities.FormatDate(oFiltroProveedor.PFechaAltaDesde));
                         }
                         else if ((!oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia) && oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia)))
                         {
-                            LoadParameter(oCommand, "@FECHA_ALTA_HASTA", oFiltroProveedor.PFechaAltaHasta);
+                            LoadParameter(oCommand, "@FECHA_ALTA_HASTA", COMMON.Utilities.FormatDate(oFiltroProveedor.PFechaAltaHasta));
                         }
 
                         if (!String.IsNullOrEmpty(oFiltroProveedor.PRazonSocial))

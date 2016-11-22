@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Linq;
 
 namespace COMMON
@@ -37,6 +38,11 @@ namespace COMMON
         public static string ReemplazaAxB(string objeto, string valorA, string valorB)
         {
             return objeto.Replace(valorA, valorB);
+        }
+
+        public static string FormatDate(string fecha)
+        {
+            return Convert.ToDateTime(fecha).ToString("yyyyMMdd");
         }
     }
 }
