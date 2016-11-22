@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Globalization;
-using System.Runtime.InteropServices;
 
 namespace Magasys_2016.Site_Administrator.UserControls
 {
