@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Web.Services;
 using System.Web.UI.WebControls;
 
@@ -8,8 +9,12 @@ namespace Magasys_2016.Site_Administrator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) return;
-            LimpiarControles();
+            if (!IsPostBack)
+            {
+                LimpiarControles();
+            }
+
+            CargarSessionFiltroProveedor();
         }
 
         protected void btnFiltrar_Click(object sender, EventArgs e)
@@ -56,6 +61,47 @@ namespace Magasys_2016.Site_Administrator
             var oProveedores = new BLL.Proveedores();
             lsvProveedores.DataSource = oProveedores.GetByFilter(oFiltroProveedor);
             lsvProveedores.DataBind();
+            CrearSessionFiltroProveedor(oFiltroProveedor);
+        }
+
+        private void CrearSessionFiltroProveedor(COMMON.Filters.FiltroProveedor oFiltroProveedor)
+        {
+            Session["oFiltroProveedor"] = oFiltroProveedor;
+        }
+
+        private void CargarSessionFiltroProveedor()
+        {
+            if (Session["oFiltroProveedor"] == null) return;
+
+            const string fechaVacia = "01/01/0001";
+            var oFiltroProveedor = (COMMON.Filters.FiltroProveedor)Session["oFiltroProveedor"];
+
+            if (oFiltroProveedor.PIdProveedor != 0)
+            {
+                txtIdProveedor.Text = oFiltroProveedor.PIdProveedor.ToString(CultureInfo.InvariantCulture);
+            }
+
+            if (!String.IsNullOrEmpty(oFiltroProveedor.PCuit))
+            {
+                txtCuit.Text = oFiltroProveedor.PCuit;
+            }
+
+            if (!oFiltroProveedor.PFechaAltaDesde.Equals(fechaVacia))
+            {
+                txtFechaAltaDesde.Text = oFiltroProveedor.PFechaAltaDesde;
+            }
+
+            if (!oFiltroProveedor.PFechaAltaHasta.Equals(fechaVacia))
+            {
+                txtFechaAltaHasta.Text = oFiltroProveedor.PFechaAltaHasta;
+            }
+
+            if (!String.IsNullOrEmpty(oFiltroProveedor.PRazonSocial))
+            {
+                txtRazonSocial.Text = oFiltroProveedor.PRazonSocial;
+            }
+
+            Filtrar(oFiltroProveedor);
         }
 
         protected void btnLimpiar_Click(object sender, EventArgs e)
@@ -72,6 +118,19 @@ namespace Magasys_2016.Site_Administrator
             txtRazonSocial.Text = String.Empty;
             lsvProveedores.DataSource = null;
             lsvProveedores.DataBind();
+
+            if (Request.UrlReferrer != null)
+            {
+                var paginaAnterior = Request.UrlReferrer.Segments[2];
+                if (paginaAnterior != "Proveedor.aspx" && paginaAnterior != "VisualizarProveedor.aspx")
+                {
+                    Session["oFiltroProveedor"] = null;
+                }
+            }
+            else
+            {
+                Session["oFiltroProveedor"] = null;
+            }
         }
 
         protected void lsvProveedores_ItemDataBound(object sender, ListViewItemEventArgs e)
@@ -108,7 +167,7 @@ namespace Magasys_2016.Site_Administrator
             try
             {
                 var oProveedores = new BLL.Proveedores();
-                return oProveedores.Delete(idProveedor) ? "1" : String.Format(COMMON.Mensajes.ListadoProveedor_FailureEliminarProveedor,"0", idProveedor);
+                return oProveedores.Delete(idProveedor) ? "1" : String.Format(COMMON.Mensajes.ListadoProveedor_FailureEliminarProveedor, "0", idProveedor);
             }
             catch (Exception ex)
             {
