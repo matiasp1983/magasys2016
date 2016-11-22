@@ -9,11 +9,8 @@ namespace Magasys_2016.Site_Administrator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                LimpiarControles();
-            }
-
+            if (IsPostBack) return;
+            LimpiarControles();
             CargarSessionFiltroProveedor();
         }
 
