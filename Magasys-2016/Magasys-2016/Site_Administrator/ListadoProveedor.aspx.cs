@@ -135,7 +135,11 @@ namespace Magasys_2016.Site_Administrator
             lblTotalFilasProveedores.Visible = false;
             lsvProveedores.DataSource = null;
             lsvProveedores.DataBind();
+            ManejoSessionFiltroProveedor();
+        }
 
+        private void ManejoSessionFiltroProveedor()
+        {
             if (Request.UrlReferrer != null)
             {
                 var paginaAnterior = Request.UrlReferrer.Segments[2];
@@ -147,6 +151,9 @@ namespace Magasys_2016.Site_Administrator
                 {
                     if (paginaAnterior != "Proveedor.aspx") return;
                     if (Session["NuevoProveedor"] == null || !(bool)Session["NuevoProveedor"]) return;
+                    /*Esta acción se realiza si es una nueva alta de proveedor. 
+                     *Se limpia los campos del filtro y se modifica las fechas 
+                     *con la fecha actual de sistema.*/
                     var oFiltroProveedor = (COMMON.Filters.FiltroProveedor)Session["oFiltroProveedor"];
                     oFiltroProveedor.PIdProveedor = 0;
                     oFiltroProveedor.PCuit = String.Empty;
