@@ -129,6 +129,18 @@
     <value>{0}El proveedor no se pudo eliminar.</value>
     <comment>{0}El proveedor no se pudo eliminar.</comment>
   </data>
+  <data name="ListadoProveedor_FiltrarTotalFila" xml:space="preserve">
+    <value>Se encontraron un total de {0} proveedor.</value>
+    <comment>Se encontraron un total de {0} proveedor.</comment>
+  </data>
+  <data name="ListadoProveedor_FiltrarTotalFilaCero" xml:space="preserve">
+    <value>No se encontraron proveedores.</value>
+    <comment>No se encontraron proveedores.</comment>
+  </data>
+  <data name="ListadoProveedor_FiltrarTotalFilas" xml:space="preserve">
+    <value>Se encontraron un total de {0} proveedores.</value>
+    <comment>Se encontraron un total de {0} proveedores.</comment>
+  </data>
   <data name="ListadoProveedor_PreguntaEliminar" xml:space="preserve">
     <value>¿Seguro que quiere eliminar el proveedor CUIT: {0}?</value>
     <comment>¿Seguro que quiere eliminar el proveedor CUIT: {0}?</comment>

@@ -157,6 +157,15 @@ namespace Magasys_2016.Site_Administrator {
         protected global::System.Web.UI.WebControls.HiddenField hfIdProveedor;
         
         /// <summary>
+        /// lblTotalFilasProveedores control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalFilasProveedores;
+        
+        /// <summary>
         /// ModalMensajeHTML control.
         /// </summary>
         /// <remarks>

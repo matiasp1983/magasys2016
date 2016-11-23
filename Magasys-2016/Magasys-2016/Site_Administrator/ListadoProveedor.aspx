@@ -179,17 +179,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="pagination-panel">
-                                                Page
-                                                        &nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-left"></i></a>&nbsp;<input maxlenght="5" value="1" class="pagination-panel-input form-control input-mini input-inline input-sm text-center" type="text">&nbsp;<a href="#" class="btn btn-sm btn-default btn-prev"><i class="fa fa-angle-right"></i></a>&nbsp;
-                                                        of 6 | View
-                                                        &nbsp;<select class="form-control input-xsmall input-sm input-inline">
-                                                            <option value="20" selected="selected">20</option>
-                                                            <option value="50">50</option>
-                                                            <option value="100">100</option>
-                                                            <option value="150">150</option>
-                                                            <option value="-1">All</option>
-                                                        </select>&nbsp;
-                                                        records | Found total 58 records
+                                                <asp:Label ID="lblTotalFilasProveedores" runat="server" Visible="False"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 text-right">

@@ -88,6 +88,33 @@ namespace COMMON {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Se encontraron un total de {0} proveedor..
+        /// </summary>
+        public static string ListadoProveedor_FiltrarTotalFila {
+            get {
+                return ResourceManager.GetString("ListadoProveedor_FiltrarTotalFila", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No se encontraron proveedores..
+        /// </summary>
+        public static string ListadoProveedor_FiltrarTotalFilaCero {
+            get {
+                return ResourceManager.GetString("ListadoProveedor_FiltrarTotalFilaCero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se encontraron un total de {0} proveedores..
+        /// </summary>
+        public static string ListadoProveedor_FiltrarTotalFilas {
+            get {
+                return ResourceManager.GetString("ListadoProveedor_FiltrarTotalFilas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ¿Seguro que quiere eliminar el proveedor CUIT: {0}?.
         /// </summary>
         public static string ListadoProveedor_PreguntaEliminar {

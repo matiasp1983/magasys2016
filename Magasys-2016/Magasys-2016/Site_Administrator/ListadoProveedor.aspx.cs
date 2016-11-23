@@ -58,7 +58,26 @@ namespace Magasys_2016.Site_Administrator
             var oProveedores = new BLL.Proveedores();
             lsvProveedores.DataSource = oProveedores.GetByFilter(oFiltroProveedor);
             lsvProveedores.DataBind();
+            TotalFilasProveedores(lsvProveedores.Items.Count);
             CrearSessionFiltroProveedor(oFiltroProveedor);
+        }
+
+        private void TotalFilasProveedores(int total)
+        {
+            switch (lsvProveedores.Items.Count)
+            {
+                case 0:
+                    lblTotalFilasProveedores.Text = COMMON.Mensajes.ListadoProveedor_FiltrarTotalFilaCero;
+                    break;
+                case 1:
+                    lblTotalFilasProveedores.Text = String.Format(COMMON.Mensajes.ListadoProveedor_FiltrarTotalFila, total);
+                    break;
+                default:
+                    lblTotalFilasProveedores.Text = String.Format(COMMON.Mensajes.ListadoProveedor_FiltrarTotalFilas, total);
+                    break;
+            }
+
+            lblTotalFilasProveedores.Visible = true;
         }
 
         private void CrearSessionFiltroProveedor(COMMON.Filters.FiltroProveedor oFiltroProveedor)
@@ -113,6 +132,7 @@ namespace Magasys_2016.Site_Administrator
             txtFechaAltaDesde.Text = String.Empty;
             txtFechaAltaHasta.Text = String.Empty;
             txtRazonSocial.Text = String.Empty;
+            lblTotalFilasProveedores.Visible = false;
             lsvProveedores.DataSource = null;
             lsvProveedores.DataBind();
 
