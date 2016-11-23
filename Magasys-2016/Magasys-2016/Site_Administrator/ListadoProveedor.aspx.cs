@@ -123,6 +123,18 @@ namespace Magasys_2016.Site_Administrator
                 {
                     Session["oFiltroProveedor"] = null;
                 }
+                else
+                {
+                    if (paginaAnterior != "Proveedor.aspx") return;
+                    if (Session["NuevoProveedor"] == null || !(bool)Session["NuevoProveedor"]) return;
+                    var oFiltroProveedor = (COMMON.Filters.FiltroProveedor)Session["oFiltroProveedor"];
+                    oFiltroProveedor.PIdProveedor = 0;
+                    oFiltroProveedor.PCuit = String.Empty;
+                    oFiltroProveedor.PFechaAltaDesde = oFiltroProveedor.PFechaAltaHasta = DateTime.Today.ToShortDateString();
+                    oFiltroProveedor.PRazonSocial = String.Empty;
+                    Session["oFiltroProveedor"] = oFiltroProveedor;
+                    Session["NuevoProveedor"] = null;
+                }
             }
             else
             {

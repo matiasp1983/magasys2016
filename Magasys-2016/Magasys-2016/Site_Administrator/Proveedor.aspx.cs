@@ -32,7 +32,17 @@ namespace Magasys_2016.Site_Administrator
 
             try
             {
-                var resultado = oProveedor.PIdProveedor == 0 ? oProveedores.Insert(oProveedor) : oProveedores.Update(oProveedor);
+                bool resultado;
+                if (oProveedor != null && oProveedor.PIdProveedor == 0)
+                {
+                    resultado = oProveedores.Insert(oProveedor);
+                    Session["NuevoProveedor"] = true;
+                }
+                else
+                {
+                    resultado = oProveedores.Update(oProveedor);
+                    Session["NuevoProveedor"] = false;
+                }
 
                 if (resultado)
                 {
