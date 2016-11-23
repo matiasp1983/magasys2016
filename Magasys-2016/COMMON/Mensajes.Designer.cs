@@ -79,7 +79,7 @@ namespace COMMON {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}Ocurrió un error y el proveedor con número {1} no se pudo eliminar..
+        ///   Looks up a localized string similar to {0}El proveedor no se pudo eliminar..
         /// </summary>
         public static string ListadoProveedor_FailureEliminarProveedor {
             get {
@@ -88,7 +88,7 @@ namespace COMMON {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ¿Seguro que quiere eliminar el proveedor con el código {0}?.
+        ///   Looks up a localized string similar to ¿Seguro que quiere eliminar el proveedor CUIT: {0}?.
         /// </summary>
         public static string ListadoProveedor_PreguntaEliminar {
             get {

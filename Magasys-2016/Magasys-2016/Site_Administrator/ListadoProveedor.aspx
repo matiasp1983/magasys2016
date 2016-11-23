@@ -128,9 +128,8 @@
                                                             <table class="table table-hover table-striped table-bordered table-advanced tablesorter mbn">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th style="width: 10%;">C&oacute;digo Proveedor</th>
-                                                                        <th style="width: 10%;">CUIT</th>
                                                                         <th style="width: 7%;">Fecha Alta</th>
+                                                                        <th style="width: 10%;">CUIT</th>
                                                                         <th style="width: 12%;">Raz&oacute;n Social</th>
                                                                         <th style="width: 12%;">Nombre Responsable</th>
                                                                         <th style="width: 12%;">Apellido Responsable</th>
@@ -147,12 +146,9 @@
                                                         <ItemTemplate>
                                                             <tr>
                                                                 <td>
-                                                                    <asp:Label ID="lblIdProveedorColumna" runat="server" Text='<%#Bind("PIdProveedor")%>' />
-                                                                </td>
+                                                                    <asp:Label ID="lblFechaAltaColumna" runat="server" Text='<%#Bind("PFechaAlta")%>' /></td>
                                                                 <td>
                                                                     <asp:Label ID="lblCuitColumna" runat="server" Text='<%#Bind("PCuit")%>' /></td>
-                                                                <td>
-                                                                    <asp:Label ID="lblFechaAltaColumna" runat="server" Text='<%#Bind("PFechaAlta")%>' /></td>
                                                                 <td>
                                                                     <asp:Label ID="lblRazonSocialColumna" runat="server" Text='<%#Bind("PRazonSocial")%>' /></td>
                                                                 <td>

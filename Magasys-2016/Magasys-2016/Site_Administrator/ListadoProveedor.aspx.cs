@@ -135,13 +135,14 @@ namespace Magasys_2016.Site_Administrator
             if (e.Item.ItemType != ListViewItemType.DataItem) return;
 
             var idProveedor = ((COMMON.Entities.Proveedor)(e.Item.DataItem)).PIdProveedor;
+            var cuit = ((COMMON.Entities.Proveedor)(e.Item.DataItem)).PCuit;
             var btnVisualizar = (System.Web.UI.HtmlControls.HtmlButton)e.Item.FindControl("btnVisualizar");
             var btnModificar = (System.Web.UI.HtmlControls.HtmlButton)e.Item.FindControl("btnModificar");
             var btnEliminar = (System.Web.UI.HtmlControls.HtmlButton)e.Item.FindControl("btnEliminar");
             btnVisualizar.Attributes.Add("value", Convert.ToString(idProveedor));
             btnModificar.Attributes.Add("value", Convert.ToString(idProveedor));
             btnEliminar.Attributes.Add("value", Convert.ToString(idProveedor));
-            btnEliminar.Attributes.Add("data-content", String.Format(COMMON.Mensajes.ListadoProveedor_PreguntaEliminar, idProveedor));
+            btnEliminar.Attributes.Add("data-content", String.Format(COMMON.Mensajes.ListadoProveedor_PreguntaEliminar, cuit));
         }
 
         protected void btnVisualizar_Click(object sender, EventArgs e)
@@ -164,7 +165,7 @@ namespace Magasys_2016.Site_Administrator
             try
             {
                 var oProveedores = new BLL.Proveedores();
-                return oProveedores.Delete(idProveedor) ? "1" : String.Format(COMMON.Mensajes.ListadoProveedor_FailureEliminarProveedor, "0", idProveedor);
+                return oProveedores.Delete(idProveedor) ? "1" : String.Format(COMMON.Mensajes.ListadoProveedor_FailureEliminarProveedor, "0");
             }
             catch (Exception ex)
             {

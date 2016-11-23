@@ -126,12 +126,12 @@
     <comment>Ocurrió un error y el filtro del proveedor no se pudo realizar.&lt;br /&gt;Error: {0}</comment>
   </data>
   <data name="ListadoProveedor_FailureEliminarProveedor" xml:space="preserve">
-    <value>{0}Ocurrió un error y el proveedor con número {1} no se pudo eliminar.</value>
-    <comment>{0}Ocurrió un error y el proveedor con número {1} no se pudo eliminar.</comment>
+    <value>{0}El proveedor no se pudo eliminar.</value>
+    <comment>{0}El proveedor no se pudo eliminar.</comment>
   </data>
   <data name="ListadoProveedor_PreguntaEliminar" xml:space="preserve">
-    <value>¿Seguro que quiere eliminar el proveedor con el código {0}?</value>
-    <comment>¿Seguro que quiere eliminar el proveedor con el código {0}?</comment>
+    <value>¿Seguro que quiere eliminar el proveedor CUIT: {0}?</value>
+    <comment>¿Seguro que quiere eliminar el proveedor CUIT: {0}?</comment>
   </data>
   <data name="ModalCuitProveedor_Exist" xml:space="preserve">
     <value>El CUIT ingresado "{0}" ya existe.</value>
