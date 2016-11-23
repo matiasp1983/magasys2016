@@ -18,7 +18,7 @@
         var mensajeError = document.getElementById('<%= lblMensajeError.ClientID %>');
 
         if (cuit.value.trim().length > 0) {
-            cuit.value = "__-________-_";
+            cuit.value = "";
         }
 
         if (mensajeVacio != null) {
