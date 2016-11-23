@@ -170,10 +170,6 @@
                                                                 </td>
                                                             </tr>
                                                         </ItemTemplate>
-                                                        <%-- Plantilla para cuando no se devuelven registros --%>
-                                                        <EmptyDataTemplate>
-                                                            Ver el mensaje que se le pone cuando está vacio.
-                                                        </EmptyDataTemplate>
                                                     </asp:ListView>
                                                     <asp:HiddenField runat="server" ID="hfIdProveedor" Value="" />
                                                 </div>
