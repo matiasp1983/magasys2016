@@ -179,7 +179,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="pagination-panel">
-                                                <asp:Label ID="lblTotalFilasProveedores" runat="server" Visible="False"/>
+                                                <asp:Label ID="lblTotalFilasProveedores" runat="server" Visible="False" />
                                             </div>
                                         </div>
                                         <div class="col-lg-6 text-right">
